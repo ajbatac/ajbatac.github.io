@@ -6,11 +6,14 @@
   <title>AJ Batac - Tech Leader & Web Developer</title>
   <style>
     :root {
-      --primary-color: #2C3E50;
-      --accent-color: #3498DB;
-      --text-color: #333;
-      --bg-color: #F9F9F9;
+      --primary-color: #2C3E50; /* Dark Blue-Gray for headings and primary elements */
+      --accent-color: #3498DB; /* Bright Blue for links and accents */
+      --text-color: #333; /* Dark Gray for body text for readability */
+      --bg-color: #F9F9F9; /* Very Light Gray for page background */
+      --section-bg-color: #FFFFFF; /* White for section backgrounds */
+      --border-color: #E0E0E0; /* Light Gray for subtle borders */
       --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      --font-headings: 'Georgia', serif; /* Serif font for headings for a classic touch */
     }
 
     body {
@@ -18,6 +21,8 @@
       font-family: var(--font-main);
       background-color: var(--bg-color);
       color: var(--text-color);
+      font-size: 18px; /* Adjusted body font size to 18px */
+      line-height: 1.8; /* Increased line height for body text to 1.8 */
     }
 
     .container {
@@ -28,102 +33,239 @@
 
     header {
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 4rem; /* Further Increased margin-bottom for header */
     }
 
     header h1 {
+      font-family: var(--font-headings); /* Applied serif font to h1 */
       color: var(--primary-color);
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 3.3rem; /* Slightly adjusted h1 font size for impact */
+      font-weight: bold; 
     }
 
     header p {
-      color: var(--accent-color);
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
+      color: var(--primary-color); /* Changed subtitle color to primary for better harmony */
+      font-size: 1.35rem; /* Slightly increased font size for subtitle */
+      margin-top: 0.85rem; /* Adjusted margin-top for subtitle */
+      font-weight: 500; /* Added font-weight to subtitle */
     }
 
     .contact-info {
       display: flex;
       justify-content: center;
-      gap: 1rem;
+      gap: 2rem; /* Increased gap for contact info to 2rem */
       flex-wrap: wrap;
-      margin-bottom: 2rem;
+      margin-bottom: 3.5rem; /* Increased margin-bottom for contact info */
     }
 
     .contact-info a {
       color: var(--accent-color);
       text-decoration: none;
       font-weight: bold;
+      font-size: 1.15rem; /* Slightly Increased font size for contact links */
+      display: inline-flex; /* For better icon alignment */
+      align-items: center; /* Vertically align icon and text */
+    }
+
+    .contact-info a:hover {
+      color: var(--primary-color); /* Darken link color on hover */
+      text-decoration: underline; /* Underline on hover for better affordance */
     }
 
     section {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      margin-bottom: 1.5rem;
+      background: var(--section-bg-color); /* Used variable for section background */
+      padding: 2.5rem; 
+      border-radius: 12px; /* Slightly more rounded corners for sections */
+      box-shadow: 0 6px 15px rgba(0,0,0,0.07); /* Adjusted box-shadow for depth */
+      margin-bottom: 2.5rem; 
     }
 
     h2 {
+      font-family: var(--font-headings); /* Applied serif font to h2 */
       color: var(--primary-color);
-      border-bottom: 2px solid var(--accent-color);
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
+      border-bottom: 3px solid var(--accent-color); 
+      padding-bottom: 0.5rem; /* Increased padding-bottom for h2 underline */
+      margin-bottom: 2rem; /* Increased margin-bottom to h2 elements */
+      font-size: 2.2rem; /* Adjusted h2 font size to 2.2rem */
+      font-weight: bold; 
+      transition: color 0.2s ease-in-out; /* Smooth transition for hover effect */
     }
 
-    .experience,
-    .education {
-      margin-top: 1rem;
+    h2:hover {
+      color: var(--accent-color); /* Change color on hover */
+    }
+    
+    h3 { /* Added styling for h3, assuming job titles might become h3 */
+      font-family: var(--font-headings);
+      color: var(--primary-color);
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
     }
 
-    .job-title {
+    .experience {
+      margin-top: 1.5rem; /* Existing margin-top */
+      margin-bottom: 2.5rem; /* Added margin-bottom to separate job entries */
+      padding-left: 1rem; /* Added padding-left for the border */
+      border-left: 3px solid var(--accent-color); /* Added left border */
+    }
+    
+    .education { /* Retaining original .education styling, separating from .experience */
+      margin-top: 1.5rem;
+    }
+
+    .education p {
+      margin-bottom: 1rem; /* Added margin-bottom to distinguish education entries */
+      line-height: 1.8; /* Ensure consistent line-height */
+    }
+
+    .education p strong {
+      color: var(--primary-color);
+      font-weight: bold;
+      font-size: 1.1em; /* Make institution name slightly larger */
+      display: block; /* Give it its own line/block for emphasis and spacing */
+      margin-bottom: 0.25rem; /* Space between institution and degree line */
+    }
+
+    .job-title { 
       font-weight: bold;
       color: var(--accent-color);
+      font-size: 1.25rem; /* Slightly increased job title font size */
+      margin-bottom: 0.25rem; /* Added margin-bottom for spacing */
+    }
+    
+    /* Styling for the <p><strong>Financial...</strong></p> structure */
+    .experience p strong { 
+        font-weight: bold; /* Ensuring company name is bold if needed */
+        color: var(--primary-color); /* Differentiating company color */
+        font-size: 1.1rem; 
+        display: block; /* Make it block to control margin */
+        margin-bottom: 0.25rem; /* Spacing below company name */
+    }
+    
+    .company-name { /* This class is not directly used in the HTML for company, but kept for other potential uses */
+        font-weight:normal;
+        color: var(--text-color);
+        font-size: 1.1rem;
+        margin-bottom: 0.25rem;
     }
 
     .time-location {
       float: right;
-      font-size: 0.9rem;
-      color: gray;
+      font-size: 0.95rem; 
+      color: #555; 
+      margin-bottom: 0.5rem; /* Added margin-bottom for spacing before responsibilities */
     }
 
-    ul {
-      padding-left: 1.2rem;
+    /* Targeting ULs specifically within .experience */
+    .experience ul {
+      padding-left: 1.5rem; 
+      margin-bottom: 1rem; /* Adjusted margin-bottom for ul inside experience */
+      margin-top: 0.75rem; /* Added margin-top to ul inside experience */
+    }
+    
+    /* General ul styling if needed outside .experience */
+    ul { 
+      padding-left: 1.5rem; 
+      margin-bottom: 1.5rem;
+    }
+    
+    /* Styling for ul within Certifications, if specific adjustments are needed */
+    section:has(h2:contains("Certifications")) ul {
+        margin-top: 1rem; /* Ensuring space between heading and list, if h2 margin isn't enough */
     }
 
     li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem; /* Standardized li margin-bottom for consistency */
+      line-height: 1.8; 
     }
 
     .skills {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 0.8rem; /* Increased gap for skill tags */
     }
 
     .skill-tag {
-      background: #EBF5FB;
-      color: var(--primary-color);
-      padding: 0.3rem 0.7rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
+      background: var(--accent-color); /* Changed skill tag background to accent color */
+      color: white; /* Changed skill tag text to white */
+      padding: 0.5rem 1rem; /* Increased padding for skill tags */
+      border-radius: 8px; /* Adjusted border-radius for a more contemporary feel */
+      font-size: 0.95rem; /* Slightly increased font size for skill tags */
+      font-weight: 500; /* Added font-weight to skill tags */
+      transition: filter 0.2s ease-in-out; /* Smooth transition for hover effect */
+    }
+
+    .skill-tag:hover {
+      filter: brightness(90%); /* Darken background slightly on hover */
     }
 
     footer {
       text-align: center;
-      font-size: 0.9rem;
-      color: gray;
-      margin-top: 3rem;
-      padding: 1rem;
+      font-size: 1rem; /* Increased footer font size */
+      color: #777; /* Slightly lighter gray for footer */
+      margin-top: 4rem; /* Increased margin-top for footer */
+      padding: 1.5rem; /* Increased padding for footer */
+      border-top: 1px solid var(--border-color); /* Added a top border to footer */
+    }
+
+    @media (max-width: 768px) { /* Adjusted breakpoint for responsiveness */
+      header h1 {
+        font-size: 2.5rem; /* Responsive h1 font size */
+      }
+      h2 {
+        font-size: 1.8rem; /* Responsive h2 font size */
+      }
+      .container {
+        padding: 1.5rem; /* Reduced padding for smaller screens */
+      }
+      section {
+        padding: 1.5rem; /* Reduced section padding for smaller screens */
+      }
     }
 
     @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem; /* Further reduce h1 font size for very small screens */
+      }
+      header p {
+        font-size: 1.05rem; /* Further reduce subtitle font size */
+      }
+      .container {
+        padding: 1rem; /* Further reduce container padding for very small screens */
+      }
+      section {
+        padding: 1.2rem; /* Further reduce section padding for very small screens */
+      }
+      .experience {
+        padding-left: 0.75rem; /* Reduce left padding for experience section */
+        margin-bottom: 2rem; /* Adjust margin for experience section */
+      }
+      .experience ul {
+        padding-left: 1rem; /* Adjust ul padding in experience section */
+      }
+      .contact-info a { /* Adjust contact link font size for smaller screens */
+        font-size: 1rem;
+      }
+      .skills {
+        gap: 0.5rem; /* Reduce gap for skills on very small screens */
+      }
+      .skill-tag {
+        padding: 0.4rem 0.8rem; /* Adjust padding for skill tags */
+        font-size: 0.9rem; /* Adjust font size for skill tags */
+      }
       .time-location {
         float: none;
         display: block;
         margin-top: 0.5rem;
-        color: #666;
+        font-size: 0.9rem; /* Adjust time-location font size */
+        color: #555; /* Ensured consistent color */
+      }
+      .contact-info {
+        flex-direction: column; /* Stack contact items vertically */
+        align-items: center;
+        gap: 0.8rem;
       }
     }
   </style>
@@ -138,9 +280,9 @@
     </header>
 
     <div class="contact-info">
-      <a href="tel:+12042281074">📱 +1 204 281 074</a> |
-      <a href="mailto:ajbatac@gmail.com">✉️ ajbatac@gmail.com</a> |
-      <a href="https://linkedin.com/in/ajbatac " target="_blank">💼 LinkedIn</a> |
+      <a href="tel:+12042281074">📱 +1 204 281 074</a>
+      <a href="mailto:ajbatac@gmail.com">✉️ ajbatac@gmail.com</a>
+      <a href="https://linkedin.com/in/ajbatac " target="_blank">💼 LinkedIn</a>
       <a href="https://ajbatac.com " target="_blank">🌐 Personal Site</a>
     </div>
 
