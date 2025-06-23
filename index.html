@@ -16,6 +16,15 @@
       --font-headings: 'Georgia', serif; /* Serif font for headings for a classic touch */
     }
 
+    :root[data-theme="dark"] {
+      --primary-color: #BB86FC; /* Light Purple for headings and primary elements in dark mode */
+      --accent-color: #03DAC6; /* Teal for links and accents in dark mode */
+      --text-color: #E0E0E0; /* Light Gray for body text in dark mode */
+      --bg-color: #121212; /* Very Dark Gray for page background in dark mode */
+      --section-bg-color: #1E1E1E; /* Dark Gray for section backgrounds in dark mode */
+      --border-color: #333333; /* Darker Gray for subtle borders in dark mode */
+    }
+
     body {
       margin: 0;
       font-family: var(--font-main);
@@ -225,7 +234,78 @@
       }
     }
 
+    /* Theme Switch Styles */
+    .theme-switch-wrapper {
+      display: flex;
+      align-items: center;
+      position: absolute; /* Changed from float to absolute */
+      top: 2rem; /* Adjust as needed */
+      right: 2rem; /* Adjust as needed */
+      z-index: 1000; /* Ensure it's above other elements */
+    }
+
+    .theme-switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+
+    .theme-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: var(--accent-color);
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px var(--accent-color);
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .slider.round {
+      border-radius: 34px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+    /* End Theme Switch Styles */
+
+
     @media (max-width: 600px) {
+      .theme-switch-wrapper {
+        top: 1rem; /* Adjust for smaller screens */
+        right: 1rem; /* Adjust for smaller screens */
+      }
       header h1 {
         font-size: 2.2rem; /* Further reduce h1 font size for very small screens */
       }
@@ -275,6 +355,12 @@
   <div class="container">
 
     <header>
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-checkbox">
+          <input type="checkbox" id="theme-checkbox" />
+          <span class="slider round"></span>
+        </label>
+      </div>
       <h1>Allan "AJ" Batac</h1>
       <p>Tech Leader | Web Application Developer | Futurist</p>
     </header>
@@ -383,5 +469,46 @@
 
   </div>
 
+  <script>
+    const themeCheckbox = document.getElementById('theme-checkbox');
+    const htmlElement = document.documentElement;
+    const currentTheme = localStorage.getItem('theme');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+    function setTheme(theme) {
+      htmlElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      themeCheckbox.checked = theme === 'dark';
+    }
+
+    if (currentTheme) {
+      setTheme(currentTheme);
+    } else {
+      if (prefersDarkScheme.matches) {
+        setTheme('dark');
+      } else {
+        setTheme('light');
+      }
+    }
+
+    themeCheckbox.addEventListener('change', function() {
+      if (this.checked) {
+        setTheme('dark');
+      } else {
+        setTheme('light');
+      }
+    });
+
+    prefersDarkScheme.addEventListener('change', (e) => {
+      // Only change theme if no user preference is stored
+      if (!localStorage.getItem('theme')) {
+        if (e.matches) {
+          setTheme('dark');
+        } else {
+          setTheme('light');
+        }
+      }
+    });
+  </script>
 </body>
 </html>
