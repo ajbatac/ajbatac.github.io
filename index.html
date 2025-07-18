@@ -3,8 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AJ Batac - Tech Leader & Web Developer</title>
+  <meta name="description" content="Allan Batac's portfolio showcasing 25+ years of experience in tech leadership and web application development, including expertise in cloud platforms, LAMP/MERN stacks, UI/UX, CMS, and emerging AI technologies.">
+  <meta name="keywords" content="Allan Batac, AJ Batac, Tech Leader, Web Application Developer, Portfolio, AWS, GCP, Digital Ocean, LAMP Stack, MERN Stack, React, Node.js, PHP, UI/UX, CMS, Generative AI, AI Agents, LLM, Toronto, Canada">
+  <title>Allan "AJ" Batac - Tech Leader & Full-Stack Web Developer Portfolio</title>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ajbatac.github.io/"> <!-- Replace with your website URL -->
+  <meta property="og:title" content="AJ Batac - Tech Leader & Web Developer">
+  <meta property="og:description" content="Allan Batac's portfolio showcasing 25+ years of experience in tech leadership and web application development, including expertise in cloud platforms, LAMP/MERN stacks, UI/UX, CMS, and emerging AI technologies.">
+  <meta property="og:image" content="">
   <style>
+    .jump-links {
+ text-align: center;
+ margin-bottom: 2rem;
+ }
     :root {
       --primary-color: #2C3E50; /* Dark Blue-Gray for headings and primary elements */
       --accent-color: #3498DB; /* Bright Blue for links and accents */
@@ -24,6 +36,12 @@
       --section-bg-color: #1E1E1E; /* Dark Gray for section backgrounds in dark mode */
       --border-color: #333333; /* Darker Gray for subtle borders in dark mode */
     }
+ .section-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ cursor: pointer;
+ }
 
     body {
       margin: 0;
@@ -56,6 +74,11 @@
     header p {
       font-family: 'Calibri', sans-serif;
       font-size: 1.35rem; /* Slightly increased font size for subtitle */
+ margin-top: 0.85rem; /* Adjusted margin-top for subtitle */
+ font-weight: 500; /* Added font-weight to subtitle */
+ }
+
+    .section-header h2 {
       margin-top: 0.85rem; /* Adjusted margin-top for subtitle */
       font-weight: 500; /* Added font-weight to subtitle */
     }
@@ -91,11 +114,10 @@
     }
 
     h2 {
-      font-family: 'Calibri', sans-serif;
       color: var(--primary-color);
       border-bottom: 3px solid var(--accent-color); 
       padding-bottom: 0.5rem; /* Increased padding-bottom for h2 underline */
-      margin-bottom: 2rem; /* Increased margin-bottom to h2 elements */
+ margin-bottom: 0; /* Increased margin-bottom to h2 elements */
       font-size: 2.2rem; /* Adjusted h2 font size to 2.2rem */
       font-weight: bold; 
       transition: color 0.2s ease-in-out; /* Smooth transition for hover effect */
@@ -104,6 +126,11 @@
     h2:hover {
       color: var(--accent-color); /* Change color on hover */
     }
+ .section-icon {
+ font-size: 1.5rem;
+ font-weight: bold;
+ color: var(--primary-color);
+ }
     
     h3 { /* Added styling for h3, assuming job titles might become h3 */
       font-family: var(--font-headings);
@@ -220,6 +247,13 @@
     }
 
     @media (max-width: 768px) { /* Adjusted breakpoint for responsiveness */
+ .jump-links {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap: 0.5rem;
+ font-size: 0.9rem;
+ }
       header h1 {
         font-size: 2.5rem; /* Responsive h1 font size */
       }
@@ -301,6 +335,7 @@
     /* End Theme Switch Styles */
 
 
+
     @media (max-width: 600px) {
       .theme-switch-wrapper {
         top: 1rem; /* Adjust for smaller screens */
@@ -365,6 +400,15 @@
       <p>Tech Leader | Web Application Developer | Futurist</p>
     </header>
 
+ <div class="jump-links">
+ <a href="#summary" title="Jump to the Summary section">Summary</a> |
+ <a href="#recent-apps" title="Jump to the Recent Web Applications Developed section">Recent Apps</a> |
+ <a href="#skills" title="Jump to the Skills section">Skills</a> |
+ <a href="#experience" title="Jump to the Experience section">Experience</a> |
+ <a href="#certifications" title="Jump to the Certifications section">Certifications</a> |
+ <a href="#education" title="Jump to the Education section">Education</a>
+ </div>
+
     <div class="contact-info">
       <a href="tel:+12042281074">📱 +1 204 228 1074</a>
       <a href="mailto:ajbatac@gmail.com">✉️ ajbatac@gmail.com</a>
@@ -372,7 +416,7 @@
       <a href="https://ajbatac.com " target="_blank">🌐 Personal Site</a>
     </div>
 
-    <section>
+    <section id="summary">
       <h2>Summary</h2>
       <p>
         Results-driven Tech Leader & Web Application Developer with 25+ years of experience.
@@ -386,8 +430,12 @@
       </p>
     </section>
 
-    <section>
-      <h2>Recent Web Applications Developed</h2>
+ <section id="recent-apps">
+ <div class="section-header" aria-expanded="true" aria-controls="recent-apps-content" role="button" tabindex="0">
+ <h2>Recent Web Applications Developed</h2>
+ <span class="section-icon">+</span>
+ </div>
+ <div class="section-content" id="recent-apps-content">
       <ul>
         <li>
           Email Signatures: <a href="https://www.emailsig.website/" target="_blank">https://www.emailsig.website/</a>
@@ -421,30 +469,39 @@
         </li>
       </ul>
     </section>
+ </div>
 
-    <section>
-      <h2>Skills</h2>
+
+    <section id="skills">
+ <div class="section-header" aria-expanded="true" aria-controls="skills-content" role="button" tabindex="0">
+ <h2>Skills</h2> <span class="section-icon">+</span></div>
       <div class="skills">
-        <div class="skill-tag">SQL</div>
-        <div class="skill-tag">HTML</div>
-        <div class="skill-tag">Jira</div>
-        <div class="skill-tag">JavaScript</div>
-        <div class="skill-tag">PHP</div>
-        <div class="skill-tag">React</div>
-        <div class="skill-tag">Node.js</div>
+        <div class="skill-tag">Leadership</div>
+        <div class="skill-tag">Project Management</div>
         <div class="skill-tag">AWS</div>
         <div class="skill-tag">GCP</div>
+        <div class="skill-tag">Digital Ocean</div>
+        <div class="skill-tag">LAMP Stack</div>
+        <div class="skill-tag">MERN Stack</div>
+        <div class="skill-tag">React</div>
+        <div class="skill-tag">Node.js</div>
+        <div class="skill-tag">PHP</div>
+        <div class="skill-tag">SQL</div>
+        <div class="skill-tag">HTML</div>
+        <div class="skill-tag">JavaScript</div>
+        <div class="skill-tag">Jira</div>
         <div class="skill-tag">Flutter</div>
         <div class="skill-tag">UI/UX</div>
-        <div class="skill-tag">Project Management</div>
-        <div class="skill-tag">AI/LLM</div>
-        <div class="skill-tag">Leadership</div>
+        <div class="skill-tag">Generative AI / AI Agents / LLM</div>
       </div>
     </section>
+ </div>
 
-    <section>
-      <h2>Experience</h2>
-
+    <section id="experience">
+ <div class="section-header" aria-expanded="true" aria-controls="experience-content" role="button" tabindex="0">
+ <h2>Experience</h2> <span class="section-icon">+</span>
+ </div>
+ <div class="section-content" id="experience-content">
       <div class="experience">
         <p><span class="job-title">Senior Webmaster</span> <span class="time-location">Mar 2023 – Present | Toronto, Ontario</span></p>
         <p><strong>Financial Services Regulatory Authority of Ontario (FSRA)</strong></p>
@@ -478,9 +535,12 @@
       <!-- Add more job entries as needed -->
 
     </section>
+ </div>
 
-    <section>
-      <h2>Certifications</h2>
+    <section id="certifications">
+ <div class="section-header" aria-expanded="true" aria-controls="certifications-content" role="button" tabindex="0">
+ <h2>Certifications</h2> <span class="section-icon">+</span>
+ </div>
       <ul>
         <li>Inclusive Leadership</li>
         <li>Critical Thinking for More Effective Communication</li>
@@ -489,9 +549,12 @@
         <li>Building ChatGPT Plugins</li>
       </ul>
     </section>
+ </div>
 
-    <section>
-      <h2>Education</h2>
+    <section id="education">
+ <div class="section-header" aria-expanded="true" aria-controls="education-content" role="button" tabindex="0">
+ <h2>Education</h2> <span class="section-icon">+</span>
+ </div>
       <div class="education">
         <p><strong>University of Santo Tomas</strong> – BSECE, Electronics and Communications</p>
         <p><strong>Holy Angel University</strong> – BSCS, Computer Science</p>
@@ -499,6 +562,7 @@
       </div>
     </section>
 
+ </div>
     <footer>
       © 2025 Allan Batac | All Rights Reserved
     </footer>
@@ -544,6 +608,29 @@
           setTheme('light');
         }
       }
+    });
+
+    // Collapsible Sections
+    document.querySelectorAll('.section-header').forEach(header => {
+      const content = header.nextElementSibling;
+      const icon = header.querySelector('.section-icon');
+
+      // Initially collapse all sections except the first (Summary)
+      if (header.parentElement.id !== 'summary') {
+ content.style.display = 'none';
+ icon.textContent = '+';
+ header.setAttribute('aria-expanded', 'false');
+      } else {
+ icon.textContent = '-';
+ header.setAttribute('aria-expanded', 'true');
+      }
+
+      header.addEventListener('click', () => {
+ const isExpanded = header.getAttribute('aria-expanded') === 'true';
+ content.style.display = isExpanded ? 'none' : 'block';
+ icon.textContent = isExpanded ? '+' : '-';
+ header.setAttribute('aria-expanded', !isExpanded);
+      });
     });
   </script>
 </body>
