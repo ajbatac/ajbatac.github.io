@@ -221,16 +221,22 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0.8rem; /* Increased gap for skill tags */
+      justify-content: center; /* Center the skill tags */
+      align-items: center; /* Vertically center skill tags if they have different heights */
+      flex-direction: row; /* Ensure skill tags are side-by-side */
     }
 
+
     .skill-tag {
-      background: var(--accent-color); /* Changed skill tag background to accent color */
-      color: white; /* Changed skill tag text to white */
-      padding: 0.5rem 1rem; /* Increased padding for skill tags */
+      background: #F0F0F0; /* Light grey background for pills */
+      color: #555; /* Dark grey text color */
+      padding: 0.5rem 1rem; /* Added padding for better spacing inside pills */
       border-radius: 8px; /* Adjusted border-radius for a more contemporary feel */
+      margin: 0.2rem; /* Added margin around skill tags for spacing */
       font-size: 0.95rem; /* Slightly increased font size for skill tags */
       font-weight: 500; /* Added font-weight to skill tags */
       transition: filter 0.2s ease-in-out; /* Smooth transition for hover effect */
+      display: inline-block; /* Ensure they sit side-by-side */
     }
 
     .skill-tag:hover {
@@ -488,8 +494,12 @@
         <div class="skill-tag">JavaScript</div>
         <div class="skill-tag">Jira</div>
         <div class="skill-tag">Flutter</div>
-        <div class="skill-tag">UI/UX</div>
-        <div class="skill-tag">Generative AI / AI Agents / LLM</div>
+ <div class="skill-tag">UI/UX</div>
+ <div class="skill-tag">AI</div>
+ <div class="skill-tag">LLM</div>
+ <div class="skill-tag">RAG</div>
+ <div class="skill-tag">MCP</div>
+ <div class="skill-tag">Context Engineering</div>
       </div>
     </section>
 
@@ -554,10 +564,10 @@
         <p><strong>Holy Angel University</strong> – BSCS, Computer Science</p>
         <p><strong>Don Bosco Academy</strong> – Diploma, High School</p>
       </div>
-    </footer>
-    </section>
-  © 2025 Allan Batac | All Rights Reserved
-    </footer>
+ </section>
+ <footer>
+ © 2025 Allan Batac | All Rights Reserved
+ </footer>
 
   </div>
 
