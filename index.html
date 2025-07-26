@@ -13,18 +13,49 @@
   <meta property="og:description" content="Allan Batac's portfolio showcasing 25+ years of experience in tech leadership and web application development, including expertise in cloud platforms, LAMP/MERN stacks, UI/UX, CMS, and emerging AI technologies.">
   <meta property="og:image" content="">
   <style>
+    /* Existing styles */
     .jump-links {
- text-align: center;
- margin-bottom: 2rem;
- }
+      text-align: center;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px; /* Adjust gap between pills */
+    }
+
+    .jump-links a {
+      text-decoration: none;
+      padding: 8px 15px; /* Adjust padding for pill size */
+      border-radius: 20px; /* Adjust border-radius for pill shape */
+      transition: background-color 0.3s ease;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    /* Light mode pill styles */
+    .jump-links a {
+      background-color: #e0e0e0; /* Light gray background */
+      color: #333; /* Dark text */
+    }
+
+    /* Dark mode pill styles */
+    :root[data-theme="dark"] .jump-links a {
+      background-color: #333; /* Dark gray background */
+      color: #e0e0e0; /* Light text */
+    }
+
+    .jump-links a:hover {
+      opacity: 0.8; /* Slight opacity change on hover */
+    }
+
     :root {
       --primary-color: #2C3E50; /* Dark Blue-Gray for headings and primary elements */
       --accent-color: #3498DB; /* Bright Blue for links and accents */
       --text-color: #333; /* Dark Gray for body text for readability */
       --bg-color: #F9F9F9; /* Very Light Gray for page background */
- --section-bg-color: #FFFFFF; /* White for section backgrounds */
- --border-color: #E0E0E0; /* Light Gray for subtle borders */
- --font-main: 'Calibri', sans-serif;
+      --section-bg-color: #FFFFFF; /* White for section backgrounds */
+      --border-color: #E0E0E0; /* Light Gray for subtle borders */
+      --font-main: 'Calibri', sans-serif;
       --font-headings: 'Georgia', serif; /* Serif font for headings for a classic touch */
     }
 
@@ -36,12 +67,13 @@
       --section-bg-color: #1E1E1E; /* Dark Gray for section backgrounds in dark mode */
       --border-color: #333333; /* Darker Gray for subtle borders in dark mode */
     }
- .section-header {
- display: flex;
- justify-content: space-between;
- align-items: center;
- cursor: pointer;
- }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
 
     body {
       margin: 0;
@@ -68,15 +100,15 @@
       color: var(--primary-color);
       margin: 0;
       font-size: 3.3rem; /* Slightly adjusted h1 font size for impact */
-      font-weight: bold; 
+      font-weight: bold;
     }
 
     header p {
       font-family: 'Calibri', sans-serif;
       font-size: 1.35rem; /* Slightly increased font size for subtitle */
- margin-top: 0.85rem; /* Adjusted margin-top for subtitle */
- font-weight: 500; /* Added font-weight to subtitle */
- }
+      margin-top: 0.85rem; /* Adjusted margin-top for subtitle */
+      font-weight: 500; /* Added font-weight to subtitle */
+    }
 
     .section-header h2 {
       margin-top: 0.85rem; /* Adjusted margin-top for subtitle */
@@ -107,34 +139,35 @@
 
     section {
       background: var(--section-bg-color); /* Used variable for section background */
-      padding: 2.5rem; 
+      padding: 2.5rem;
       border-radius: 12px; /* Slightly more rounded corners for sections */
       box-shadow: 0 6px 15px rgba(0,0,0,0.07); /* Adjusted box-shadow for depth */
-      margin-bottom: 2.5rem; 
+      margin-bottom: 2.5rem;
     }
 
     h2 {
       color: var(--primary-color);
-      border-bottom: 3px solid var(--accent-color); 
+      border-bottom: 3px solid var(--accent-color);
       padding-bottom: 0.5rem; /* Increased padding-bottom for h2 underline */
- margin-bottom: 0; /* Increased margin-bottom to h2 elements */
+      margin-bottom: 0; /* Increased margin-bottom to h2 elements */
       font-size: 2.2rem; /* Adjusted h2 font size to 2.2rem */
-      font-weight: bold; 
+      font-weight: bold;
       transition: color 0.2s ease-in-out; /* Smooth transition for hover effect */
     }
 
     h2:hover {
       color: var(--accent-color); /* Change color on hover */
     }
- .section-icon {
- font-size: 1.5rem;
- font-weight: bold;
- color: var(--primary-color);
- }
-    
+
+    .section-icon {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+
     h3 { /* Added styling for h3, assuming job titles might become h3 */
       font-family: var(--font-headings);
- color: var(--primary-color);
+      color: var(--primary-color);
       font-size: 1.4rem;
       margin-bottom: 0.5rem;
       font-weight: bold;
@@ -146,7 +179,7 @@
       padding-left: 1rem; /* Added padding-left for the border */
       border-left: 3px solid var(--accent-color); /* Added left border */
     }
-    
+
     .education { /* Retaining original .education styling, separating from .experience */
       margin-top: 1.5rem;
     }
@@ -164,57 +197,57 @@
       margin-bottom: 0.25rem; /* Space between institution and degree line */
     }
 
-    .job-title { 
+    .job-title {
       font-weight: bold;
       color: var(--accent-color);
       font-size: 1.25rem; /* Slightly increased job title font size */
       margin-bottom: 0.25rem; /* Added margin-bottom for spacing */
     }
-    
+
     /* Styling for the <p><strong>Financial...</strong></p> structure */
-    .experience p strong { 
-        font-weight: bold; /* Ensuring company name is bold if needed */
-        color: var(--primary-color); /* Differentiating company color */
-        font-size: 1.1rem; 
-        display: block; /* Make it block to control margin */
-        margin-bottom: 0.25rem; /* Spacing below company name */
+    .experience p strong {
+      font-weight: bold; /* Ensuring company name is bold if needed */
+      color: var(--primary-color); /* Differentiating company color */
+      font-size: 1.1rem;
+      display: block; /* Make it block to control margin */
+      margin-bottom: 0.25rem; /* Spacing below company name */
     }
-    
+
     .company-name { /* This class is not directly used in the HTML for company, but kept for other potential uses */
-        font-weight:normal;
-        color: var(--text-color);
-        font-size: 1.1rem;
-        margin-bottom: 0.25rem;
+      font-weight: normal;
+      color: var(--text-color);
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
     }
 
     .time-location {
       float: right;
-      font-size: 0.95rem; 
-      color: #555; 
+      font-size: 0.95rem;
+      color: #555;
       margin-bottom: 0.5rem; /* Added margin-bottom for spacing before responsibilities */
     }
 
     /* Targeting ULs specifically within .experience */
     .experience ul {
-      padding-left: 1.5rem; 
+      padding-left: 1.5rem;
       margin-bottom: 1rem; /* Adjusted margin-bottom for ul inside experience */
       margin-top: 0.75rem; /* Added margin-top to ul inside experience */
     }
-    
+
     /* General ul styling if needed outside .experience */
-    ul { 
-      padding-left: 1.5rem; 
+    ul {
+      padding-left: 1.5rem;
       margin-bottom: 1.5rem;
     }
-    
+
     /* Styling for ul within Certifications, if specific adjustments are needed */
     section:has(h2:contains("Certifications")) ul {
-        margin-top: 1rem; /* Ensuring space between heading and list, if h2 margin isn't enough */
+      margin-top: 1rem; /* Ensuring space between heading and list, if h2 margin isn't enough */
     }
 
     li {
       margin-bottom: 0.75rem; /* Standardized li margin-bottom for consistency */
-      line-height: 1.8; 
+      line-height: 1.8;
     }
 
     .skills {
@@ -225,7 +258,6 @@
       align-items: center; /* Vertically center skill tags if they have different heights */
       flex-direction: row; /* Ensure skill tags are side-by-side */
     }
-
 
     .skill-tag {
       background: #F0F0F0; /* Light grey background for pills */
@@ -253,22 +285,26 @@
     }
 
     @media (max-width: 768px) { /* Adjusted breakpoint for responsiveness */
- .jump-links {
- display: flex;
- flex-wrap: wrap;
- justify-content: center;
- gap: 0.5rem;
- font-size: 0.9rem;
- }
+      .jump-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+      }
+
       header h1 {
         font-size: 2.5rem; /* Responsive h1 font size */
       }
+
       h2 {
         font-size: 1.8rem; /* Responsive h2 font size */
       }
+
       .container {
         padding: 1.5rem; /* Reduced padding for smaller screens */
       }
+
       section {
         padding: 1.5rem; /* Reduced section padding for smaller screens */
       }
@@ -338,44 +374,52 @@
     .slider.round:before {
       border-radius: 50%;
     }
+
     /* End Theme Switch Styles */
-
-
-
     @media (max-width: 600px) {
       .theme-switch-wrapper {
         top: 1rem; /* Adjust for smaller screens */
         right: 1rem; /* Adjust for smaller screens */
       }
+
       header h1 {
         font-size: 2.2rem; /* Further reduce h1 font size for very small screens */
       }
+
       header p {
         font-size: 1.05rem; /* Further reduce subtitle font size */
       }
+
       .container {
         padding: 1rem; /* Further reduce container padding for very small screens */
       }
+
       section {
         padding: 1.2rem; /* Further reduce section padding for very small screens */
       }
+
       .experience {
         padding-left: 0.75rem; /* Reduce left padding for experience section */
         margin-bottom: 2rem; /* Adjust margin for experience section */
       }
+
       .experience ul {
         padding-left: 1rem; /* Adjust ul padding in experience section */
       }
+
       .contact-info a { /* Adjust contact link font size for smaller screens */
         font-size: 1rem;
       }
+
       .skills {
         gap: 0.5rem; /* Reduce gap for skills on very small screens */
       }
+
       .skill-tag {
         padding: 0.4rem 0.8rem; /* Adjust padding for skill tags */
         font-size: 0.9rem; /* Adjust font size for skill tags */
       }
+
       .time-location {
         float: none;
         display: block;
@@ -383,6 +427,7 @@
         font-size: 0.9rem; /* Adjust time-location font size */
         color: #555; /* Ensured consistent color */
       }
+
       .contact-info {
         flex-direction: column; /* Stack contact items vertically */
         align-items: center;
@@ -405,84 +450,86 @@
 
   <div class="container">
 
- <div class="jump-links">
- <a href="#summary" title="Jump to the Summary section">Summary</a> |
- <a href="#recent-apps" title="Jump to the Recent Web Applications Developed section">Recent Apps</a> |
- <a href="#skills" title="Jump to the Skills section">Skills</a> |
- <a href="#experience" title="Jump to the Experience section">Experience</a> |
- <a href="#certifications" title="Jump to the Certifications section">Certifications</a> |
- <a href="#education" title="Jump to the Education section">Education</a>
- </div>
+    <div class="jump-links">
+      <a href="#summary" title="Jump to the Summary section">Summary</a>
+      <a href="#recent-apps" title="Jump to the Recent Web Applications Developed section">Recent Apps</a>
+      <a href="#skills" title="Jump to the Skills section">Skills</a>
+      <a href="#experience" title="Jump to the Experience section">Experience</a>
+      <a href="#certifications" title="Jump to the Certifications section">Certifications</a>
+      <a href="#education" title="Jump to the Education section">Education</a>
+    </div>
 
-  <div class="contact-info">
-    <a href="tel:+12042281074">📱 +1 204 228 1074</a>
-    <a href="mailto:ajbatac@gmail.com">✉️ ajbatac@gmail.com</a>
-    <a href="https://linkedin.com/in/ajbatac " target="_blank">💼 LinkedIn</a>
-    <a href="https://ajbatac.com " target="_blank">🌐 Personal Site</a>
-  </div>
+    <div class="contact-info">
+      <a href="tel:+12042281074">📱 +1 204 228 1074</a>
+      <a href="mailto:ajbatac@gmail.com">✉️ ajbatac@gmail.com</a>
+      <a href="https://linkedin.com/in/ajbatac " target="_blank">💼 LinkedIn</a>
+      <a href="https://ajbatac.com " target="_blank">🌐 Personal Site</a>
+    </div>
 
-  <section id="summary">
-    <h2>Summary</h2>
-    <p>
-      Results-driven Tech Leader & Web Application Developer with 25+ years of experience.
-      Proven ability to lead diverse teams (Dev, UI/UX, DevOps, QA) and deliver 100+ successful website launches.
-      Expertise in Cloud (AWS, GCP, Digital Ocean), LAMP/MERN stacks, Flutter/Dart, CMS platforms (WordPress/Drupal),
-      ensuring AODA/WCAG 2.1 compliance.
-    </p>
-    <p>
-      Passionate about innovation, currently exploring Generative AI, AI Agents, and LLMs to drive future solutions.
-      Let's connect to discuss how I can elevate your projects.
-    </p>
-  </section>
-
- <section id="recent-apps">
- <div class="section-header" aria-expanded="true" aria-controls="recent-apps-content" role="button" tabindex="0">
- <h2>Recent Web Applications Developed</h2>
- <span class="section-icon">+</span>
- </div>
-  <div class="section-content" id="recent-apps-content">
-      <ul>
-        <li>
-          Email Signatures: <a href="https://www.emailsig.website/" target="_blank">https://www.emailsig.website/</a>
-        </li>
-        <li>
-          Headless Wordpress CMS to React: <a href="https://photos-tech.netlify.app/" target="_blank">https://photos-tech.netlify.app/</a>
-        </li>
-        <li>
-          Social Spark: <a href="https://socialspark.website/" target="_blank">https://socialspark.website/</a>
-        </li>
-        <li>
-          Report Hotel: <a href="https://reclamo.ca/" target="_blank">https://reclamo.ca/</a>
-        </li>
-        <li>
-          Email IQ: <a href="https://www.emailiq.tech" target="_blank">https://www.emailiq.tech</a>
-        </li>
-        <li>
-          Global Trends: <a href="https://globaltrends.netlify.app/" target="_blank">https://globaltrends.netlify.app/</a>
-        </li>
-        <li>
-          SpotBack (Open-Source): <a href="https://spotback.website/" target="_blank">https://spotback.website/</a>
-        </li>
-        <li>
-          MetaData Parser (Open-Source): <a href="https://exif-parser.netlify.app/" target="_blank">https://exif-parser.netlify.app/</a>
-        </li>
-        <li>
-          Critter Poop (Game): <a href="https://critter-poop.netlify.app/" target="_blank">https://critter-poop.netlify.app/</a>
-        </li>
-        <li>
-          Type Invaders (Game): <a href="https://www.typeinvaders.space/" target="_blank">https://www.typeinvaders.space/</a>
-        </li>
-      </ul>
+    <section id="summary">
+      <h2>Summary</h2>
+      <p>
+        Results-driven Tech Leader & Web Application Developer with 25+ years of experience.
+        Proven ability to lead diverse teams (Dev, UI/UX, DevOps, QA) and deliver 100+ successful website launches.
+        Expertise in Cloud (AWS, GCP, Digital Ocean), LAMP/MERN stacks, Flutter/Dart, CMS platforms (WordPress/Drupal),
+        ensuring AODA/WCAG 2.1 compliance.
+      </p>
+      <p>
+        Passionate about innovation, currently exploring Generative AI, AI Agents, and LLMs to drive future solutions.
+        Let's connect to discuss how I can elevate your projects.
+      </p>
     </section>
- 
 
-  <section id="skills">
- <div class="section-header" aria-expanded="true" aria-controls="skills-content" role="button" tabindex="0">
- <h2>Skills</h2> <span class="section-icon">+</span></div>
-    <div class="skills">
+    <section id="recent-apps">
+      <div class="section-header" aria-expanded="true" aria-controls="recent-apps-content" role="button" tabindex="0">
+        <h2>Recent Web Applications Developed</h2>
+        <span class="section-icon">+</span>
+      </div>
+      <div class="section-content" id="recent-apps-content">
+        <ul>
+          <li>
+            Email Signatures: <a href="https://www.emailsig.website/" target="_blank">https://www.emailsig.website/</a>
+          </li>
+          <li>
+            Headless Wordpress CMS to React: <a href="https://photos-tech.netlify.app/" target="_blank">https://photos-tech.netlify.app/</a>
+          </li>
+          <li>
+            Social Spark: <a href="https://socialspark.website/" target="_blank">https://socialspark.website/</a>
+          </li>
+          <li>
+            Report Hotel: <a href="https://reclamo.ca/" target="_blank">https://reclamo.ca/</a>
+          </li>
+          <li>
+            Email IQ: <a href="https://www.emailiq.tech" target="_blank">https://www.emailiq.tech</a>
+          </li>
+          <li>
+            Global Trends: <a href="https://globaltrends.netlify.app/" target="_blank">https://globaltrends.netlify.app/</a>
+          </li>
+          <li>
+            SpotBack (Open-Source): <a href="https://spotback.website/" target="_blank">https://spotback.website/</a>
+          </li>
+          <li>
+            MetaData Parser (Open-Source): <a href="https://exif-parser.netlify.app/" target="_blank">https://exif-parser.netlify.app/</a>
+          </li>
+          <li>
+            Critter Poop (Game): <a href="https://critter-poop.netlify.app/" target="_blank">https://critter-poop.netlify.app/</a>
+          </li>
+          <li>
+            Type Invaders (Game): <a href="https://www.typeinvaders.space/" target="_blank">https://www.typeinvaders.space/</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-header" aria-expanded="true" aria-controls="skills-content" role="button" tabindex="0">
+        <h2>Skills</h2> <span class="section-icon">+</span>
+      </div>
+      <div class="skills">
         <div class="skill-tag">Leadership</div>
         <div class="skill-tag">Project Management</div>
-        <div class="skill-tag">AWS</div>        <div class="skill-tag">GCP</div>
+        <div class="skill-tag">AWS</div>
+        <div class="skill-tag">GCP</div>
         <div class="skill-tag">Digital Ocean</div>
         <div class="skill-tag">LAMP Stack</div>
         <div class="skill-tag">MERN Stack</div>
@@ -494,80 +541,81 @@
         <div class="skill-tag">JavaScript</div>
         <div class="skill-tag">Jira</div>
         <div class="skill-tag">Flutter</div>
- <div class="skill-tag">UI/UX</div>
- <div class="skill-tag">AI</div>
- <div class="skill-tag">LLM</div>
- <div class="skill-tag">RAG</div>
- <div class="skill-tag">MCP</div>
- <div class="skill-tag">Context Engineering</div>
+        <div class="skill-tag">UI/UX</div>
+        <div class="skill-tag">AI</div>
+        <div class="skill-tag">LLM</div>
+        <div class="skill-tag">RAG</div>
+        <div class="skill-tag">MCP</div>
+        <div class="skill-tag">Context Engineering</div>
       </div>
     </section>
 
-  <section id="experience">
- <div class="section-header" aria-expanded="true" aria-controls="experience-content" role="button" tabindex="0">
- <h2>Experience</h2> <span class="section-icon">+</span>
- </div>
-  <div class="section-content" id="experience-content">
-    <div class="experience">
-        <p><span class="job-title">Senior Webmaster</span> <span class="time-location">Mar 2023 – Present | Toronto, Ontario</span></p>
-        <p><strong>Financial Services Regulatory Authority of Ontario (FSRA)</strong></p>
-        <ul>
-          <li>Lead technical development and deployment of public-facing web platforms including FSRA's website and social media channels.</li>
-          <li>Collaborate with cross-functional teams to ensure exceptional user experiences aligned with stakeholder needs.</li>
-          <li>Leverage expertise in cloud infrastructure, programming languages, and web tools to build scalable applications.</li>
-        </ul>
+    <section id="experience">
+      <div class="section-header" aria-expanded="true" aria-controls="experience-content" role="button" tabindex="0">
+        <h2>Experience</h2> <span class="section-icon">+</span>
       </div>
- 
-      <div class="experience">
-        <p><span class="job-title">IT Leader</span> <span class="time-location">May 2022 – Mar 2023 | Winnipeg, Manitoba</span></p>
-        <p><strong>Association TV</strong></p>
-        <ul>
-          <li>Managed IT and Web professionals to enhance technology infrastructure and systems performance.</li>
-          <li>Migrated sites to load-balanced auto-scaling clusters; reduced response time by 30%.</li>
-          <li>Streamlined workflows and led digital transformation initiatives.</li>
-        </ul>
+      <div class="section-content" id="experience-content">
+        <div class="experience">
+          <p><span class="job-title">Senior Webmaster</span> <span class="time-location">Mar 2023 – Present | Toronto, Ontario</span></p>
+          <p><strong>Financial Services Regulatory Authority of Ontario (FSRA)</strong></p>
+          <ul>
+            <li>Lead technical development and deployment of public-facing web platforms including FSRA's website and social media channels.</li>
+            <li>Collaborate with cross-functional teams to ensure exceptional user experiences aligned with stakeholder needs.</li>
+            <li>Leverage expertise in cloud infrastructure, programming languages, and web tools to build scalable applications.</li>
+          </ul>
+        </div>
+
+        <div class="experience">
+          <p><span class="job-title">IT Leader</span> <span class="time-location">May 2022 – Mar 2023 | Winnipeg, Manitoba</span></p>
+          <p><strong>Association TV</strong></p>
+          <ul>
+            <li>Managed IT and Web professionals to enhance technology infrastructure and systems performance.</li>
+            <li>Migrated sites to load-balanced auto-scaling clusters; reduced response time by 30%.</li>
+            <li>Streamlined workflows and led digital transformation initiatives.</li>
+          </ul>
+        </div>
+
+        <div class="experience">
+          <p><span class="job-title">Web Team Leader</span> <span class="time-location">Aug 2010 – Jun 2022 | Winnipeg, Manitoba</span></p>
+          <p><strong>Association TV</strong></p>
+          <ul>
+            <li>Built and expanded a high-performing web team managing over 100 web properties.</li>
+            <li>Expert in LAMP stack, AWS, GCP, and Google Dart/Flutter.</li>
+            <li>Focused on UI/UX, accessibility, and continuous improvement through emerging tech trends.</li>
+          </ul>
+        </div>
+        <!-- Add more job entries as needed -->
       </div>
- 
-      <div class="experience">
-        <p><span class="job-title">Web Team Leader</span> <span class="time-location">Aug 2010 – Jun 2022 | Winnipeg, Manitoba</span></p>
-        <p><strong>Association TV</strong></p>
-        <ul>
-          <li>Built and expanded a high-performing web team managing over 100 web properties.</li>
-          <li>Expert in LAMP stack, AWS, GCP, and Google Dart/Flutter.</li>
-          <li>Focused on UI/UX, accessibility, and continuous improvement through emerging tech trends.</li>
-        </ul>
-      </div>
-      <!-- Add more job entries as needed -->
     </section>
 
-  <section id="certifications">
- <div class="section-header" aria-expanded="true" aria-controls="certifications-content" role="button" tabindex="0">
- <h2>Certifications</h2> <span class="section-icon">+</span>
- </div>
-  <div class="section-content" id="certifications-content">
-      <ul>
-        <li>Inclusive Leadership</li>
-        <li>Critical Thinking for More Effective Communication</li>
-        <li>Managing a Multigenerational Team</li>
-        <li>Understanding Deepfake Videos</li>
-        <li>Building ChatGPT Plugins</li>
-      </ul>
-  </div>
-  </section>
+    <section id="certifications">
+      <div class="section-header" aria-expanded="true" aria-controls="certifications-content" role="button" tabindex="0">
+        <h2>Certifications</h2> <span class="section-icon">+</span>
+      </div>
+      <div class="section-content" id="certifications-content">
+        <ul>
+          <li>Inclusive Leadership</li>
+          <li>Critical Thinking for More Effective Communication</li>
+          <li>Managing a Multigenerational Team</li>
+          <li>Understanding Deepfake Videos</li>
+          <li>Building ChatGPT Plugins</li>
+        </ul>
+      </div>
+    </section>
 
-  <section id="education">
- <div class="section-header" aria-expanded="true" aria-controls="education-content" role="button" tabindex="0">
- <h2>Education</h2> <span class="section-icon">+</span>
- </div>
-    <div class="education section-content" id="education-content">
+    <section id="education">
+      <div class="section-header" aria-expanded="true" aria-controls="education-content" role="button" tabindex="0">
+        <h2>Education</h2> <span class="section-icon">+</span>
+      </div>
+      <div class="education section-content" id="education-content">
         <p><strong>University of Santo Tomas</strong> – BSECE, Electronics and Communications</p>
         <p><strong>Holy Angel University</strong> – BSCS, Computer Science</p>
         <p><strong>Don Bosco Academy</strong> – Diploma, High School</p>
       </div>
- </section>
- <footer>
- © 2025 Allan Batac | All Rights Reserved
- </footer>
+    </section>
+    <footer>
+      © 2025 Allan Batac | All Rights Reserved
+    </footer>
 
   </div>
 
@@ -619,21 +667,22 @@
 
       // Initially collapse all sections except the first (Summary)
       if (header.parentElement.id !== 'summary') {
- content.style.display = 'none';
- icon.textContent = '+';
- header.setAttribute('aria-expanded', 'false');
+        content.style.display = 'none';
+        icon.textContent = '+';
+        header.setAttribute('aria-expanded', 'false');
       } else {
- icon.textContent = '-';
- header.setAttribute('aria-expanded', 'true');
+        icon.textContent = '-';
+        header.setAttribute('aria-expanded', 'true');
       }
 
       header.addEventListener('click', () => {
- const isExpanded = header.getAttribute('aria-expanded') === 'true';
- content.style.display = isExpanded ? 'none' : 'block';
- icon.textContent = isExpanded ? '+' : '-';
- header.setAttribute('aria-expanded', !isExpanded);
+        const isExpanded = header.getAttribute('aria-expanded') === 'true';
+        content.style.display = isExpanded ? 'none' : 'block';
+        icon.textContent = isExpanded ? '+' : '-';
+        header.setAttribute('aria-expanded', !isExpanded);
       });
     });
   </script>
 </body>
+
 </html>
