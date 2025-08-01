@@ -66,6 +66,7 @@
       --bg-color: #121212; /* Very Dark Gray for page background in dark mode */
       --section-bg-color: #1E1E1E; /* Dark Gray for section backgrounds in dark mode */
       --border-color: #333333; /* Darker Gray for subtle borders in dark mode */
+      --dark-link-color: #e0e0e0; /* Light gray for links in dark mode */
     }
 
     .section-header {
@@ -434,6 +435,12 @@
         gap: 0.8rem;
       }
     }
+
+    /* Style for general links in dark mode */
+    :root[data-theme="dark"] a {
+      color: var(--dark-link-color);
+    }
+
   </style>
 </head>
 <body>

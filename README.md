@@ -41,5 +41,6 @@ Recent Web Applications Developed
 - MetaData Parser (Open-Source): [https://exif-parser.netlify.app/](https://exif-parser.netlify.app/)
 - Critter Poop (Game): [https://critter-poop.netlify.app/](https://critter-poop.netlify.app/)
 - Type Invaders (Game): [https://www.typeinvaders.space/](https://www.typeinvaders.space/)
+- Sudokuh: https://sudokuh.netlify.app
 
 The recent projects showcase a diverse range of web development expertise, from business-oriented tools like email signature and management platforms to data visualization with global trends. The portfolio also includes examples of modern front-end development with React and headless CMS integration, as well as open-source contributions. Furthermore, it highlights experience in game development, demonstrating a breadth of skills across different web application domains.
