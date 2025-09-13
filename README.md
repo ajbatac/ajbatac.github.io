@@ -44,3 +44,11 @@ Recent Web Applications Developed
 - Sudokuh: https://sudokuh.netlify.app
 
 The recent projects showcase a diverse range of web development expertise, from business-oriented tools like email signature and management platforms to data visualization with global trends. The portfolio also includes examples of modern front-end development with React and headless CMS integration, as well as open-source contributions. Furthermore, it highlights experience in game development, demonstrating a breadth of skills across different web application domains.
+
+## Changelog
+
+### 2025-09-13: AODA Compliance and Accessibility Improvements
+*   **Keyboard Navigation:** Implemented keyboard accessibility for all interactive elements, allowing users to navigate and interact with the site using 'Enter' and 'Space' keys.
+*   **Color Contrast:** Adjusted color schemes in dark mode to meet WCAG 2.1 AA contrast requirements, ensuring readability for users with visual impairments.
+*   **Link Security:** Added `rel="noopener noreferrer"` to all external links to enhance security.
+*   **Social Media Accessibility:** Included an `og:image` and `og:image:alt` tag to improve the experience of sharing the site on social media.
