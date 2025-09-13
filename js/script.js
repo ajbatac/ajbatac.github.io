@@ -54,11 +54,20 @@ document.querySelectorAll('.section-header').forEach(header => {
     header.setAttribute('aria-expanded', 'true');
   }
 
-  header.addEventListener('click', () => {
+  const toggleSection = () => {
     const isExpanded = header.getAttribute('aria-expanded') === 'true';
     content.style.display = isExpanded ? 'none' : 'block';
     icon.textContent = isExpanded ? '+' : '-';
     header.setAttribute('aria-expanded', !isExpanded);
+  };
+
+  header.addEventListener('click', toggleSection);
+
+  header.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      toggleSection();
+    }
   });
 });
 
