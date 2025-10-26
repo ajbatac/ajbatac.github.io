@@ -18,17 +18,19 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="font-sizer-wrapper">
-    <button class="font-sizer-btn" id="font-decrease">A-</button>
-    <button class="font-sizer-btn" id="font-reset">A</button>
-    <button class="font-sizer-btn" id="font-increase">A+</button>
-  </div>
   <header>
-    <div class="theme-switch-wrapper">
-      <label class="theme-switch" for="theme-checkbox">
-        <input type="checkbox" id="theme-checkbox" />
-        <span class="slider round"></span>
-      </label>
+    <div class="header-controls">
+      <div class="font-sizer-wrapper">
+        <button class="font-sizer-btn" id="font-decrease">A-</button>
+        <button class="font-sizer-btn" id="font-reset">A</button>
+        <button class="font-sizer-btn" id="font-increase">A+</button>
+      </div>
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-checkbox">
+          <input type="checkbox" id="theme-checkbox" />
+          <span class="slider round"></span>
+        </label>
+      </div>
     </div>
     <h1>Allan "AJ" Batac</h1>
     <p>Tech Leader | Web Applications Developer | Futurist | Ideator | SWE</p>
@@ -43,6 +45,7 @@
       <a href="#experience" title="Jump to the Experience section">Experience</a>
       <a href="#certifications" title="Jump to the Certifications section">Certifications</a>
       <a href="#education" title="Jump to the Education section">Education</a>
+      <a href="#contact" title="Jump to the Contact section">Contact</a>
     </div>
 
     <div class="contact-info">
@@ -53,7 +56,7 @@
     </div>
 
     <section id="summary">
-      <h2>Summary</h2>
+      <h2>📝 Summary</h2>
       <p>
         Results-driven Tech Leader & Web Application Developer with 25+ years of experience.
         Proven ability to lead diverse teams (Development, UI/UX, DevOps, QA) and deliver 100+ successful website launches.
@@ -68,69 +71,39 @@
 
     <section id="recent-apps">
       <div class="section-header" aria-expanded="true" aria-controls="recent-apps-content" role="button" tabindex="0">
-        <h2>Recent Web Applications Designed and Developed (AI-Powered)</h2>
+        <h2>🚀 Recent Web Applications Designed and Developed (AI-Powered)</h2>
         <span class="section-icon">+</span>
       </div>
       <div class="section-content" id="recent-apps-content">
-        <ul>
-          <li>
-            kulay: <a href="https://kulay.ca/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Kulay website">kulay.ca</a>
-          </li>
-          <li>
-            Palayok: <a href="https://palayok.ca/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Palayok website">palayok.ca</a>
-          </li>
-          <li>
-            Celebrity r8r: <a href="https://celebrity.r8r.website/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Celebrity R8r website">celebrity.r8r.website</a>
-          </li>
-          <li>
-            Email Signatures: <a href="https://www.emailsig.website/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Email Signatures website">emailsig.website</a>
-          </li>
-          <li>
-            Headless Wordpress CMS to React: <a href="https://photos-tech.netlify.app/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Headless Wordpress CMS to React application">photos-tech.netlify.app</a>
-          </li>
-          <li>
-            Social Spark: <a href="https://socialspark.website/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Social Spark website">socialspark.website</a>
-          </li>
-          <li>
-            Report Hotel: <a href="https://reclamo.ca/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Report Hotel website">reclamo.ca</a>
-          </li>
-          <li>
-            Email IQ: <a href="https://www.emailiq.tech/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Email IQ website">emailiq.tech</a>
-          </li>
-          <li>
-            Global Trends: <a href="https://gtrends.website/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Global Trends website">gtrends.website</a>
-          </li>
-          <li>
-            SpotBack (Open-Source): <a href="https://spotback.website/?=github" target="_blank" rel="noopener noreferrer" title="Visit the SpotBack website (Open-Source)">spotback.website</a>
-          </li>
-          <li>
-            MetaData Parser (Open-Source): <a href="https://exif-parser.netlify.app/?=github" target="_blank" rel="noopener noreferrer" title="Visit the MetaData Parser application (Open-Source)">exif-parser.netlify.app</a>
-          </li>
-          <li>
-            Critter Poop (Game): <a href="https://critter-poop.netlify.app/?=github" target="_blank" rel="noopener noreferrer" title="Play the Critter Poop game">https://critter-poop.netlify.app</a>
-          </li>
-          <li>
-            Type Invaders (Game): <a href="https://www.typeinvaders.space/?=github" target="_blank" rel="noopener noreferrer" title="Play the Type Invaders game">https://www.typeinvaders.space</a>
-          </li>
-          <li>
-            Sudokuh (Game) (Open-Source): <a href="https://sudokuh.netlify.app/?=github" target="_blank" rel="noopener noreferrer" title="Play the Sudokuh game (Open-Source)">sudokuh.netlify.app</a>
-          </li>
-          <li>
-            QRky (Open-Source): <a href="https://qrky.site/?=github" target="_blank" rel="noopener noreferrer" title="QRky QR Code Generator and Decoder (Open-Source)">qrky.site</a>
-          </li>
-          <li>
-            Canvas Crop (Open Source): <a href="https://canvas-crop.netlify.app/?=github" target="_blank" rel="noopener noreferrer" title="Canvas Crop">Canvas Crop</a>
-          </li>
-          <li>
-            RetroSnap (Nostalgia): <a href="https://retrosnap.ca/?=github" target="_blank" rel="noopener noreferrer" title"RetroSnap">RetroSnap</a>
-          </li>
-        </ul>
+        <div class="apps-grid">
+          <div class="app-card"><h3>kulay</h3><p>A color palette generator for designers.</p><a href="https://kulay.ca/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Kulay website">Visit the Kulay website</a></div>
+          <div class="app-card"><h3>Palayok</h3><p>A collection of Filipino recipes.</p><a href="https://palayok.ca/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Palayok website">Visit the Palayok website</a></div>
+          <div class="app-card"><h3>Celebrity r8r</h3><p>Rate your favorite celebrities.</p><a href="https://celebrity.r8r.website/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Celebrity R8r website">Visit the Celebrity R8r website</a></div>
+          <div class="app-card"><h3>Email Signatures</h3><p>Create professional email signatures.</p><a href="https://www.emailsig.website/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Email Signatures website">Visit the Email Signatures website</a></div>
+          <div class="app-card"><h3>Headless Wordpress CMS to React</h3><p>A demonstration of a headless CMS setup.</p><a href="https://photos-tech.netlify.app/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Headless Wordpress CMS to React application">Visit the Headless Wordpress CMS to React application</a></div>
+          <div class="app-card"><h3>Social Spark</h3><p>Generate social media content with AI.</p><a href="https://socialspark.website/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Social Spark website">Visit the Social Spark website</a></div>
+          <div class="app-card"><h3>Report Hotel</h3><p>A platform for reporting hotel issues.</p><a href="https://reclamo.ca/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Report Hotel website">Visit the Report Hotel website</a></div>
+          <div class="app-card"><h3>Email IQ</h3><p>Analyze the quality of your emails.</p><a href="https://www.emailiq.tech/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Email IQ website">Visit the Email IQ website</a></div>
+          <div class="app-card"><h3>Global Trends</h3><p>Visualize global trends with data.</p><a href="https://gtrends.website/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Global Trends website">Visit the Global Trends website</a></div>
+          <div class="app-card"><h3>SpotBack (Open-Source)</h3><p>A tool for Spotify data analysis.</p><a href="https://spotback.website/?=github" target="_blank" rel="noopener noreferrer" title="Visit the SpotBack website (Open-Source)">Visit the SpotBack website</a></div>
+          <div class="app-card"><h3>MetaData Parser (Open-Source)</h3><p>Parse metadata from your files.</p><a href="https://exif-parser.netlify.app/?=github" target="_blank" rel="noopener noreferrer" title="Visit the MetaData Parser application (Open-Source)">Visit the MetaData Parser application</a></div>
+          <div class="app-card"><h3>Critter Poop (Game)</h3><p>A fun and addictive game.</p><a href="https://critter-poop.netlify.app/?=github" target="_blank" rel="noopener noreferrer" title="Play the Critter Poop game">Play the Critter Poop game</a></div>
+          <div class="app-card"><h3>Type Invaders (Game)</h3><p>A typing game to improve your skills.</p><a href="https://www.typeinvaders.space/?=github" target="_blank" rel="noopener noreferrer" title="Play the Type Invaders game">Play the Type Invaders game</a></div>
+          <div class="app-card"><h3>Sudokuh (Game) (Open-Source)</h3><p>A classic Sudoku game.</p><a href="https://sudokuh.netlify.app/?=github" target="_blank" rel="noopener noreferrer" title="Play the Sudokuh game (Open-Source)">Play the Sudokuh game</a></div>
+          <div class="app-card"><h3>QRky (Open-Source)</h3><p>A QR code generator and decoder.</p><a href="https://qrky.site/?=github" target="_blank" rel="noopener noreferrer" title="QRky QR Code Generator and Decoder (Open-Source)">Visit the QRky website</a></div>
+          <div class="app-card"><h3>Canvas Crop (Open Source)</h3><p>A tool for cropping images on a canvas.</p><a href="https://canvas-crop.netlify.app/?=github" target="_blank" rel="noopener noreferrer" title="Canvas Crop">Visit the Canvas Crop website</a></div>
+          <div class="app-card"><h3>RetroSnap (Nostalgia)</h3><p>Add a retro look to your photos.</p><a href="https://retrosnap.ca/?=github" target="_blank" rel="noopener noreferrer" title="RetroSnap">Visit the RetroSnap website</a></div>
+        </div>
       </div>
     </section>
 
     <section id="skills">
       <div class="section-header" aria-expanded="true" aria-controls="skills-content" role="button" tabindex="0">
-        <h2>Skills</h2> <span class="section-icon">+</span>
+        <h2>🛠️ Skills</h2> <span class="section-icon">+</span>
+      </div>
+      <div class="skills-controls">
+        <input type="text" id="skill-search" placeholder="Search skills...">
+        <button id="reset-skills-btn">Reset Filters</button>
       </div>
       <div class="skills">
         <div class="skill-tag">Leadership</div>
@@ -159,7 +132,7 @@
 
     <section id="experience">
       <div class="section-header" aria-expanded="true" aria-controls="experience-content" role="button" tabindex="0">
-        <h2>Experience</h2> <span class="section-icon">+</span>
+        <h2>🏢 Experience</h2> <span class="section-icon">+</span>
       </div>
       <div class="section-content" id="experience-content" aria-live="polite">
         <div class="experience">
@@ -197,7 +170,7 @@
 
     <section id="certifications">
       <div class="section-header" aria-expanded="true" aria-controls="certifications-content" role="button" tabindex="0">
-        <h2>Certifications</h2> <span class="section-icon">+</span>
+        <h2>📜 Certifications</h2> <span class="section-icon">+</span>
       </div>
       <div class="section-content" id="certifications-content" aria-live="polite">
         <ul>
@@ -217,7 +190,7 @@
 
     <section id="education">
       <div class="section-header" aria-expanded="true" aria-controls="education-content" role="button" tabindex="0">
-        <h2>Education</h2> <span class="section-icon">+</span>
+        <h2>🎓 Education</h2> <span class="section-icon">+</span>
       </div>
       <div class="education section-content" id="education-content" aria-live="polite">
         <p><strong>University of Santo Tomas</strong> – BSECE, Electronics and Communications</p>
@@ -225,11 +198,38 @@
         <p><strong>Don Bosco Academy</strong> – Diploma, High School</p>
       </div>
     </section>
+
+    <section id="contact">
+      <div class="section-header" aria-expanded="true" aria-controls="contact-content" role="button" tabindex="0">
+        <h2>✉️ Contact Me</h2> <span class="section-icon">+</span>
+      </div>
+      <div class="section-content" id="contact-content" aria-live="polite">
+        <p>Feel free to reach out using the form below, or connect with me via email or LinkedIn.</p>
+        <form id="contact-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
     <footer>
-      © 2025 Allan Batac | All Rights Reserved
+      © <span id="current-year"></span> Allan Batac | All Rights Reserved
     </footer>
 
   </div>
+
+  <button id="back-to-top-btn" title="Back to Top">⬆️</button>
 
   <script src="js/script.js"></script>
 

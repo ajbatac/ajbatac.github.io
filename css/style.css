@@ -6,6 +6,16 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 1rem; 
+      position: sticky;
+      top: 0;
+      background-color: var(--bg-color);
+      padding: 1rem 0;
+      z-index: 999;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    :root[data-theme="dark"] .jump-links {
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     }
 
     .jump-links a {
@@ -80,6 +90,20 @@
       text-align: center;
       margin-bottom: 5rem; 
       padding-top: 4rem;
+      position: relative; /* Needed for absolute positioning of controls */
+    }
+
+    .header-controls {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      right: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: calc(100% - 4rem);
+      max-width: 960px;
+      margin: 0 auto;
     }
 
     header h1 {
@@ -275,6 +299,27 @@
       border-top: 1px solid var(--border-color); 
     }
 
+    #back-to-top-btn {
+      display: none; /* Hidden by default */
+      position: fixed; /* Fixed/sticky position */
+      bottom: 20px; /* Place the button at the bottom of the page */
+      right: 30px; /* Place the button 30px from the right */
+      z-index: 1000; /* Make sure it does not overlap */
+      border: none; /* Remove borders */
+      outline: none; /* Remove outline */
+      background-color: var(--accent-color); /* Set a background color */
+      color: white; /* Text color */
+      cursor: pointer; /* Add a mouse pointer on hover */
+      padding: 15px; /* Some padding */
+      border-radius: 10px; /* Rounded corners */
+      font-size: 18px; /* Increase font size */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    #back-to-top-btn:hover {
+      background-color: var(--primary-color); /* Add a darker background on hover */
+    }
+
     @media (max-width: 992px) {
       header h1 {
         font-size: 2.8rem;
@@ -316,15 +361,22 @@
       section {
         padding: 1.5rem; 
       }
+
+      #back-to-top-btn {
+        right: 20px;
+        bottom: 15px;
+        padding: 12px;
+        font-size: 16px;
+      }
     }
 
     .theme-switch-wrapper {
       display: flex;
       align-items: center;
-      position: absolute; 
-      top: 2rem; 
-      right: 2rem; 
-      z-index: 1000; 
+      position: static; /* Changed from absolute */
+      top: auto; 
+      right: auto; 
+      z-index: auto; 
     }
 
     .theme-switch {
@@ -448,6 +500,25 @@
         top: 1rem;
         left: 1rem;
       }
+
+      .header-controls {
+        flex-direction: column; /* Stack controls vertically on small screens */
+        align-items: center;
+        gap: 1rem;
+        top: 1rem;
+        left: 1rem;
+        right: 1rem;
+        width: calc(100% - 2rem);
+      }
+
+      .jump-links {
+        padding: 0.8rem 0; /* Adjust padding for smaller screens */
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      }
+
+      :root[data-theme="dark"] .jump-links {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+      }
     }
 
     :root[data-theme="dark"] a {
@@ -461,10 +532,10 @@
     .font-sizer-wrapper {
       display: flex;
       align-items: center;
-      position: absolute;
-      top: 2rem;
-      left: 2rem;
-      z-index: 1000;
+      position: static; /* Changed from absolute */
+      top: auto;
+      left: auto;
+      z-index: auto;
     }
 
     .font-sizer-btn {
@@ -485,4 +556,175 @@
 
     .font-sizer-btn:hover {
       background-color: #ccc;
+    }
+
+    /* Styles for the new Recent Apps grid */
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .app-card {
+      background: var(--bg-color);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .app-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .app-card h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+      font-size: 1.4rem;
+    }
+
+    .app-card p {
+      font-size: 0.95rem;
+      color: var(--text-color);
+      margin-bottom: 1rem;
+      flex-grow: 1; /* Allows paragraphs to take up available space */
+    }
+
+    .app-card a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: bold;
+      align-self: flex-start;
+    }
+
+    .app-card a:hover {
+      text-decoration: underline;
+    }
+
+    :root[data-theme="dark"] .app-card {
+      background: var(--section-bg-color);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Styles for the Contact Form */
+    #contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+      padding: 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-size: 1rem;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+
+    .form-group input[type="text"]:focus,
+    .form-group input[type="email"]:focus,
+    .form-group textarea:focus {
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 3px rgba(var(--accent-color-rgb), 0.2);
+      outline: none;
+    }
+
+    :root[data-theme="dark"] .form-group input[type="text"],
+    :root[data-theme="dark"] .form-group input[type="email"],
+    :root[data-theme="dark"] .form-group textarea {
+      background-color: var(--section-bg-color);
+      border-color: var(--border-color);
+      color: var(--text-color);
+    }
+
+    .submit-btn {
+      background-color: var(--accent-color);
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+      align-self: flex-start;
+    }
+
+    .submit-btn:hover {
+      background-color: var(--primary-color);
+      transform: translateY(-2px);
+    }
+
+    .submit-btn:active {
+      transform: translateY(0);
+    }
+
+    /* Styles for Skills Filtering */
+    .skills-controls {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    #skill-search {
+      flex-grow: 1;
+      max-width: 300px;
+      padding: 10px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-size: 1rem;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+
+    #skill-search:focus {
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 3px rgba(var(--accent-color-rgb), 0.2);
+      outline: none;
+    }
+
+    :root[data-theme="dark"] #skill-search {
+      background-color: var(--section-bg-color);
+      border-color: var(--border-color);
+      color: var(--text-color);
+    }
+
+    #reset-skills-btn {
+      background-color: #6c757d;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    #reset-skills-btn:hover {
+      background-color: #5a6268;
     }
