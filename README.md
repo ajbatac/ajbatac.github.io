@@ -1,54 +1,97 @@
-Allan Batac is an accomplished technology leader and web application developer with over 25 years of hands-on experience delivering innovative digital solutions. Based in the Greater Toronto Area, Allan has a proven track record of leading cross-functional teams and managing the successful launch of 100+ websites and applications. His expertise spans cloud platforms (AWS, GCP, Digital Ocean), LAMP/MERN stacks, UI/UX design, and CMS development, all while ensuring accessibility and compliance standards are met. Allan is passionate about leveraging emerging technologies such as Generative AI and AI Agents to drive organizational growth. He is eager to connect with HR professionals and recruiters to explore opportunities where his technical depth, leadership skills, and commitment to excellence can add value to forward-thinking organizations.
+# Allan "AJ" Batac - Tech Leader & Full-Stack Portfolio
 
-## Skills
+Allan Batac is a results-driven Tech Leader & Web Application Developer with 25+ years of experience. He has a proven ability to lead diverse teams (Development, UI/UX, DevOps, QA) and deliver 100+ successful website launches. Allan's expertise includes Cloud platforms (AWS, GCP, Digital Ocean), LAMP/MERN stacks, Flutter/Dart, and CMS platforms (WordPress/Drupal), ensuring AODA/WCAG 2.1 compliance. He is passionate about innovation and is currently exploring Generative AI, AI Agents, and LLMs to drive future solutions.
 
-Allan possesses a comprehensive skill set honed over 25+ years, highly relevant to modern web development and technology leadership:
+## Contact Information
 
-**Cloud Platforms:**
-- AWS (Amazon Web Services)
-- GCP (Google Cloud Platform)
-- Digital Ocean
+*   📱 +1 204 228 1074
+*   ✉️ ajbatac@gmail.com
+*   💼 [LinkedIn](https://linkedin.com/in/ajbatac)
+*   🌐 [Personal Site](https://ajbatac.com)
 
-**Development Stacks:**
-- LAMP (Linux, Apache, MySQL, PHP)
-- MERN (MongoDB, Express.js, React, Node.js)
+## 📝 Summary
 
-**Front-end & UI/UX:**
-- UI/UX Design Principles
-- React
-- HTML5, CSS3, JavaScript
+Results-driven Tech Leader & Web Application Developer with 25+ years of experience. Proven ability to lead diverse teams (Development, UI/UX, DevOps, QA) and deliver 100+ successful website launches. Expertise in Cloud (AWS, GCP, Digital Ocean), LAMP/MERN stacks, Flutter/Dart, CMS platforms (WordPress/Drupal), ensuring AODA/WCAG 2.1 compliance. Passionate about innovation, currently exploring Generative AI, AI Agents, and LLMs to drive future solutions.
 
-**Back-end & CMS:**
-- CMS Development (including Headless CMS)
-- PHP
-- Node.js
+## 🚀 Recent Web Applications Designed and Developed (AI-Powered)
 
-**Emerging Technologies:**
-- Generative AI
-- AI Agents
+*   **kulay**: A color palette generator for designers. [https://kulay.ca/?=github](https://kulay.ca/?=github)
+*   **Palayok**: A collection of Filipino recipes. [https://palayok.ca/?=github](https://palayok.ca/?=github)
+*   **Celebrity r8r**: Rate your favorite celebrities. [https://celebrity.r8r.website/?=github](https://celebrity.r8r.website/?=github)
+*   **Email Signatures**: Create professional email signatures. [https://www.emailsig.website/?=github](https://www.emailsig.website/?=github)
+*   **Headless Wordpress CMS to React**: A demonstration of a headless CMS setup. [https://photos-tech.netlify.app/?=github](https://photos-tech.netlify.app/?=github)
+*   **Social Spark**: Generate social media content with AI. [https://socialspark.website/?=github](https://socialspark.website/?=github)
+*   **Report Hotel**: A platform for reporting hotel issues. [https://reclamo.ca/?=github](https://reclamo.ca/?=github)
+*   **Email IQ**: Analyze the quality of your emails. [https://www.emailiq.tech/?=github](https://www.emailiq.tech/?=github)
+*   **Global Trends**: Visualize global trends with data. [https://gtrends.website/?=github](https://gtrends.website/?=github)
+*   **SpotBack (Open-Source)**: A tool for Spotify data analysis. [https://spotback.website/?=github](https://spotback.website/?=github)
+*   **MetaData Parser (Open-Source)**: Parse metadata from your files. [https://exif-parser.netlify.app/?=github](https://exif-parser.netlify.app/?=github)
+*   **Critter Poop (Game)**: A fun and addictive game. [https://critter-poop.netlify.app/?=github](https://critter-poop.netlify.app/?=github)
+*   **Type Invaders (Game)**: A typing game to improve your skills. [https://www.typeinvaders.space/?=github](https://www.typeinvaders.space/?=github)
+*   **Sudokuh (Game) (Open-Source)**: A classic Sudoku game. [https://sudokuh.netlify.app/?=github](https://sudokuh.netlify.app/?=github)
+*   **QRky (Open-Source)**: A QR code generator and decoder. [https://qrky.site/?=github](https://qrky.site/?=github)
+*   **Canvas Crop (Open Source)**: A tool for cropping images on a canvas. [https://canvas-crop.netlify.app/?=github](https://canvas-crop.netlify.app/?=github)
+*   **RetroSnap (Nostalgia)**: Add a retro look to your photos. [https://retrosnap.ca/?=github](https://retrosnap.ca/?=github)
 
-**Other:**
-- Accessibility and Compliance Standards
+## 🛠️ Skills
 
-Recent Web Applications Developed
-- Email Signatures: [https://www.emailsig.website/](https://www.emailsig.website/)
-- Headless Wordpress CMS to React: [https://photos-tech.netlify.app/](https://photos-tech.netlify.app/)
-- Social Spark: [https://socialspark.website/](https://socialspark.website/)
-- Report Hotel: [https://reclamo.ca/](https://reclamo.ca/)
-- Email IQ: [https://www.emailiq.tech](https://www.emailiq.tech)
-- Global Trends: [https://globaltrends.netlify.app/](https://globaltrends.netlify.app/)
-- SpotBack (Open-Source): [https://spotback.website/](https://spotback.website/)
-- MetaData Parser (Open-Source): [https://exif-parser.netlify.app/](https://exif-parser.netlify.app/)
-- Critter Poop (Game): [https://critter-poop.netlify.app/](https://critter-poop.netlify.app/)
-- Type Invaders (Game): [https://www.typeinvaders.space/](https://www.typeinvaders.space/)
-- Sudokuh: https://sudokuh.netlify.app
+*   Leadership
+*   Project Management
+*   AWS
+*   GCP
+*   Digital Ocean
+*   LAMP Stack
+*   MERN Stack
+*   React
+*   Node.js
+*   PHP
+*   SQL
+*   HTML
+*   JavaScript
+*   Jira
+*   Flutter
+*   UI/UX
+*   AI
+*   LLM
+*   RAG
+*   MCP
+*   Context Engineering
 
-The recent projects showcase a diverse range of web development expertise, from business-oriented tools like email signature and management platforms to data visualization with global trends. The portfolio also includes examples of modern front-end development with React and headless CMS integration, as well as open-source contributions. Furthermore, it highlights experience in game development, demonstrating a breadth of skills across different web application domains.
+## 🏢 Experience
 
-## Changelog
+### Senior Webmaster
+**Financial Services Regulatory Authority of Ontario (FSRA)** | Mar 2023 – Present | Toronto, Ontario
+*   Lead technical development and deployment of public-facing web platforms including FSRA's website and social media channels.
+*   Collaborate with cross-functional teams to ensure exceptional user experiences aligned with stakeholder needs.
+*   Leverage expertise in cloud infrastructure, programming languages, and web tools to build scalable applications.
 
-### 2025-09-13: AODA Compliance and Accessibility Improvements
-*   **Keyboard Navigation:** Implemented keyboard accessibility for all interactive elements, allowing users to navigate and interact with the site using 'Enter' and 'Space' keys.
-*   **Color Contrast:** Adjusted color schemes in dark mode to meet WCAG 2.1 AA contrast requirements, ensuring readability for users with visual impairments.
-*   **Link Security:** Added `rel="noopener noreferrer"` to all external links to enhance security.
-*   **Social Media Accessibility:** Included an `og:image` and `og:image:alt` tag to improve the experience of sharing the site on social media.
+### IT Leader
+**Association TV** | May 2022 – Mar 2023 | Winnipeg, Manitoba
+*   Managed IT and Web professionals to enhance technology infrastructure and systems performance.
+*   Migrated sites to load-balanced auto-scaling clusters; reduced response time by 30%.
+*   Streamlined workflows and led digital transformation initiatives.
+
+### Web Team Leader
+**Association TV** | Aug 2010 – Jun 2022 | Winnipeg, Manitoba
+*   Built and expanded a high-performing web team managing over 100 web properties.
+*   Expert in LAMP stack, AWS, GCP, and Google Dart/Flutter.
+*   Focused on UI/UX, accessibility, and continuous improvement through emerging tech trends.
+
+## 📜 Certifications
+
+*   Inclusive Leadership
+*   Critical Thinking for More Effective Communication
+*   Managing a Multigenerational Team
+*   Understanding Deepfake
+*   Building ChatGPT Plugins
+*   Understanding RAG/Inference
+*   Understanding Generative AI
+*   HTML5/CSS3/Javascript Certifications
+*   Advanced Google Analytics Certified
+*   AWS DevOps Certified
+
+## 🎓 Education
+
+*   **University of Santo Tomas** – BSECE, Electronics and Communications
+*   **Holy Angel University** – BSCS, Computer Science
+*   **Don Bosco Academy** – Diploma, High School
