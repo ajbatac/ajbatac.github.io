@@ -123,6 +123,12 @@ header p {
   opacity: 0.9;
 }
 
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     .section-header h2 {
       margin-top: 1rem; 
       font-weight: 700; 
@@ -547,6 +553,40 @@ footer {
 
     :root[data-theme="dark"] a {
       color: var(--dark-link-color);
+    }
+
+    a, [role="button"] {
+      cursor: pointer;
+    }
+
+    .accordion-toggle {
+      background-color: transparent;
+      border: none;
+      color: var(--primary-color);
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 1rem 0;
+      text-align: left;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: color 0.3s;
+    }
+
+    .accordion-toggle:hover {
+      color: var(--accent-color);
+    }
+
+    .accordion-toggle::after {
+      content: '+'; /* Changed from \25BC to + */
+      font-size: 1rem;
+      transition: transform 0.3s;
+    }
+
+    .accordion-content.show + .accordion-toggle::after {
+      content: '\D7'; /* Changed to X sign when open */
+      transform: rotate(0deg); /* No rotation needed for X */
     }
 
     a:focus, button:focus, input[type="checkbox"]:focus, [role="button"]:focus {

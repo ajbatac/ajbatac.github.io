@@ -145,3 +145,26 @@ resetSkillsBtn.addEventListener('click', () => {
   skillSearchInput.value = '';
   filterSkills(''); // Show all skills
 });
+
+// Function to animate the plus signs in the section headers
+function animateSectionHeaders() {
+  document.querySelectorAll('.section-header').forEach(header => {
+    const h2 = header.querySelector('h2');
+    if (h2) {
+      const originalText = h2.textContent;
+      let pluses = '';
+      setInterval(() => {
+        pluses += ' +';
+        if (pluses.length > 20) {
+          pluses = '';
+        }
+        h2.textContent = `${originalText} ${'-'.repeat(20 - pluses.length)} ${pluses}`;
+      }, 200);
+    }
+  });
+}
+
+// Call the animation function when the DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  animateSectionHeaders();
+});
