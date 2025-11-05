@@ -132,6 +132,7 @@ header p {
     .section-header h2 {
       margin-top: 1rem; 
       font-weight: 700; 
+      margin-right: auto;
     }
 
 .contact-info {
@@ -181,9 +182,7 @@ h2 {
 }
 
     .section-icon {
-      font-size: 2rem;
-      font-weight: bold;
-      color: var(--primary-color);
+      display: none;
     }
 
 h3 {
