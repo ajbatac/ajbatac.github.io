@@ -1,18 +1,33 @@
 {
   "mcpServers": {
-    "byterover-mcp": {
-      "url": "https://mcp.byterover.dev/mcp?machineId=1f07a0da-09b6-6f30-8a82-f5790d5d3028"
+    "next-devtools": {
+      "command": "npx",
+      "args": [
+        "-y", 
+        "next-devtools-mcp@latest"
+      ]
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+    "firebase": {
+      "command": "npx",
+      "args": ["-y", "firebase-tools@latest", "mcp"]
     },
     "context7": {
       "url": "https://mcp.context7.com/mcp",
       "headers": {
-        "CONTEXT7_API_KEY": "ctx7sk-753444ab-f24e-456d-a729-d7b5f667b365",
+        "CONTEXT7_API_KEY": "ctx7sk-95f42586-ff08-4a65-9d5b-b230987c64f9",
         "command": "npx",
         "args": [
           "-y",
           "@upstash/context7-mcp",
           "--api-key",
-          "ctx7sk-753444ab-f24e-456d-a729-d7b5f667b365"
+          "ctx7sk-95f42586-ff08-4a65-9d5b-b230987c64f9"
         ]
       }
     }
