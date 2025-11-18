@@ -129,7 +129,7 @@ header {
   text-align: center;
   margin-bottom: 5rem;
   padding: 6rem 2rem 4rem;
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
   color: #fff;
   border-radius: 0 0 30px 30px;
   position: relative;
