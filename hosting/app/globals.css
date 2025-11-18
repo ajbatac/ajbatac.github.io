@@ -1,0 +1,185 @@
+/* Typography improvements with modern font system */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+  --primary-color: #3498db; /* A modern blue */
+  --accent-color: #2ecc71; /* A vibrant green for accents */
+  --text-color: #333333;
+  --bg-color: #f4f7f9; /* A light, clean background */
+  --section-bg-color: #FFFFFF;
+  --border-color: #e0e0e0;
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-headings: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  
+  /* Typography scale using modular scale (1.25 ratio) */
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.875rem;    /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg: 1.125rem;    /* 18px */
+  --text-xl: 1.25rem;     /* 20px */
+  --text-2xl: 1.563rem;   /* 25px */
+  --text-3xl: 1.953rem;   /* 31px */
+  --text-4xl: 2.441rem;   /* 39px */
+  --text-5xl: 3.052rem;   /* 49px */
+  
+  /* Line heights optimized for readability */
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+  
+  /* Letter spacing */
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+}
+
+:root[data-theme="dark"] {
+  --primary-color: #3498db;
+  --accent-color: #2ecc71;
+  --text-color: #f4f7f9;
+  --bg-color: #1a1a1a;
+  --section-bg-color: #2c2c2c;
+  --border-color: #444444;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  letter-spacing: var(--tracking-normal);
+  font-weight: 400;
+  transition: background-color 0.3s, color 0.3s;
+  
+  /* Enhanced font smoothing and anti-aliasing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  font-variant-ligatures: common-ligatures;
+  font-kerning: normal;
+  
+  /* Ensure consistent text rendering across browsers */
+  text-shadow: 0 0 0 transparent;
+}
+
+h1 {
+  font-family: var(--font-headings);
+  color: var(--primary-color);
+  margin: 0;
+  font-size: var(--text-5xl);
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  
+  /* Font smoothing for headings */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h2 {
+  font-family: var(--font-headings);
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--accent-color);
+  padding-bottom: 0.8rem;
+  margin-bottom: 2rem;
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  
+  /* Enhanced font smoothing for headings */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h3 {
+  font-family: var(--font-headings);
+  color: var(--primary-color);
+  font-size: var(--text-2xl);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  
+  /* Font smoothing for subheadings */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+p {
+  line-height: var(--leading-relaxed);
+  font-size: var(--text-base);
+  letter-spacing: var(--tracking-normal);
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--text-base);
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s;
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-normal);
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+ul {
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 1rem;
+  line-height: var(--leading-relaxed);
+  font-size: var(--text-base);
+  letter-spacing: var(--tracking-normal);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  body {
+    font-size: var(--text-base);
+  }
+
+  h1 {
+    font-size: var(--text-3xl);
+  }
+
+  h2 {
+    font-size: var(--text-3xl);
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: var(--text-2xl);
+  }
+}

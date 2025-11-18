@@ -24,8 +24,10 @@
       padding: 10px 20px; 
       border-radius: 25px; 
       transition: background-color 0.3s ease;
-      font-size: 1.1rem;
+      font-size: var(--text-base);
       font-weight: 500;
+      line-height: var(--leading-normal);
+      letter-spacing: var(--tracking-normal);
     }
 
     /* Light mode pill styles */
@@ -44,6 +46,7 @@
       opacity: 0.8; /* Slight opacity change on hover */
     }
 
+/* Typography improvements with modern font system */
 :root {
   --primary-color: #3498db; /* A modern blue */
   --accent-color: #2ecc71; /* A vibrant green for accents */
@@ -51,9 +54,36 @@
   --bg-color: #f4f7f9; /* A light, clean background */
   --section-bg-color: #FFFFFF;
   --border-color: #e0e0e0;
-  --font-main: 'Poppins', sans-serif;
-  --font-headings: 'Montserrat', sans-serif;
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-headings: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
   --shadow-color: rgba(0, 0, 0, 0.1);
+  
+  /* Typography scale using modular scale (1.25 ratio) */
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.875rem;    /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg: 1.125rem;    /* 18px */
+  --text-xl: 1.25rem;     /* 20px */
+  --text-2xl: 1.563rem;   /* 25px */
+  --text-3xl: 1.953rem;   /* 31px */
+  --text-4xl: 2.441rem;   /* 39px */
+  --text-5xl: 3.052rem;   /* 49px */
+  
+  /* Line heights optimized for readability */
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+  
+  /* Letter spacing */
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
 }
 
 :root[data-theme="dark"] {
@@ -71,9 +101,22 @@ body {
   font-family: var(--font-main);
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-size: 18px;
-  line-height: 1.8;
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  letter-spacing: var(--tracking-normal);
+  font-weight: 400;
   transition: background-color 0.3s, color 0.3s;
+  
+  /* Enhanced font smoothing and anti-aliasing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  font-variant-ligatures: common-ligatures;
+  font-kerning: normal;
+  
+  /* Ensure consistent text rendering across browsers */
+  text-shadow: 0 0 0 transparent;
 }
 
 .container {
@@ -110,17 +153,26 @@ header h1 {
   font-family: var(--font-headings);
   color: #fff;
   margin: 0;
-  font-size: 3.5rem;
+  font-size: var(--text-5xl);
   font-weight: 700;
   margin-bottom: 1rem;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  
+  /* Font smoothing for headings */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 header p {
   font-family: var(--font-main);
-  font-size: 1.3rem;
+  font-size: var(--text-xl);
   margin-top: 1rem;
   font-weight: 400;
   opacity: 0.9;
+  line-height: var(--leading-relaxed);
+  letter-spacing: var(--tracking-wide);
 }
 
     .section-header {
@@ -147,10 +199,12 @@ header p {
   color: var(--primary-color);
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: var(--text-lg);
   display: inline-flex;
   align-items: center;
   transition: color 0.3s;
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-normal);
 }
 
 .contact-info a:hover {
@@ -177,8 +231,15 @@ h2 {
   border-bottom: 3px solid var(--accent-color);
   padding-bottom: 0.8rem;
   margin-bottom: 2rem;
-  font-size: 2.8rem;
+  font-size: var(--text-4xl);
   font-weight: 700;
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  
+  /* Enhanced font smoothing for headings */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
     .section-icon {
@@ -188,9 +249,16 @@ h2 {
 h3 {
   font-family: var(--font-headings);
   color: var(--primary-color);
-  font-size: 1.8rem;
+  font-size: var(--text-2xl);
   margin-bottom: 1rem;
   font-weight: 600;
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  
+  /* Font smoothing for subheadings */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .experience {
@@ -218,45 +286,57 @@ h3 {
     }
 
     .education p {
-      margin-bottom: 1.5rem; 
-      line-height: 1.8; 
+      margin-bottom: 1.5rem;
+      line-height: var(--leading-relaxed);
+      font-size: var(--text-base);
+      letter-spacing: var(--tracking-normal);
     }
 
     .education p strong {
       color: var(--primary-color);
       font-weight: 700;
-      font-size: 1.2em; 
-      display: block; 
-      margin-bottom: 0.3rem; 
+      font-size: var(--text-lg);
+      display: block;
+      margin-bottom: 0.3rem;
+      line-height: var(--leading-snug);
+      letter-spacing: var(--tracking-tight);
     }
 
     .job-title {
       font-weight: 700;
       color: var(--primary-color);
-      font-size: 1.6rem; 
-      margin-bottom: 0.3rem; 
+      font-size: var(--text-xl);
+      margin-bottom: 0.3rem;
+      line-height: var(--leading-snug);
+      letter-spacing: var(--tracking-tight);
     }
 
     .experience p strong {
-      font-weight: 700; 
-      color: var(--primary-color); 
-      font-size: 1.2rem;
-      display: block; 
-      margin-bottom: 0.3rem; 
+      font-weight: 700;
+      color: var(--primary-color);
+      font-size: var(--text-lg);
+      display: block;
+      margin-bottom: 0.3rem;
+      line-height: var(--leading-snug);
+      letter-spacing: var(--tracking-tight);
     }
 
-    .company-name { 
+    .company-name {
       font-weight: 500;
       color: var(--text-color);
-      font-size: 1.1rem;
+      font-size: var(--text-base);
       margin-bottom: 0.3rem;
+      line-height: var(--leading-normal);
+      letter-spacing: var(--tracking-normal);
     }
 
     .time-location {
       float: right;
-      font-size: 1rem;
+      font-size: var(--text-sm);
       color: #777;
-      margin-bottom: 0.5rem; 
+      margin-bottom: 0.5rem;
+      line-height: var(--leading-normal);
+      letter-spacing: var(--tracking-wide);
     }
 
 :root[data-theme="dark"] .time-location {
@@ -265,8 +345,8 @@ h3 {
 
     .experience ul {
       padding-left: 2rem;
-      margin-bottom: 1rem; 
-      margin-top: 1rem; 
+      margin-bottom: 1rem;
+      margin-top: 1rem;
     }
 
     ul {
@@ -275,12 +355,14 @@ h3 {
     }
 
     section:has(h2:contains("Certifications")) ul {
-      margin-top: 1.5rem; 
+      margin-top: 1.5rem;
     }
 
     li {
-      margin-bottom: 1rem; 
-      line-height: 1.8;
+      margin-bottom: 1rem;
+      line-height: var(--leading-relaxed);
+      font-size: var(--text-base);
+      letter-spacing: var(--tracking-normal);
     }
 
 .skills {
@@ -295,10 +377,17 @@ h3 {
   color: var(--primary-color);
   padding: 0.8rem 1.5rem;
   border-radius: 30px;
-  font-size: 1rem;
+  font-size: var(--text-sm);
   font-weight: 600;
   transition: background-color 0.3s, color 0.3s;
   border: 2px solid var(--primary-color);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-wide);
+  font-family: var(--font-main);
+  
+  /* Font smoothing for skill tags */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .skill-tag:hover {
@@ -319,11 +408,13 @@ h3 {
 
 footer {
   text-align: center;
-  font-size: 1rem;
+  font-size: var(--text-sm);
   color: #777;
   margin-top: 5rem;
   padding: 3rem;
   background-color: var(--section-bg-color);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-wide);
 }
 
 #back-to-top-btn {
@@ -339,11 +430,16 @@ footer {
   cursor: pointer;
   padding: 1rem;
   border-radius: 50%;
-  font-size: 1.5rem;
+  font-size: var(--text-xl);
   box-shadow: 0 5px 15px var(--shadow-color);
   width: 60px;
   height: 60px;
   transition: background-color 0.3s, transform 0.3s;
+  font-family: var(--font-main);
+  
+  /* Font smoothing for button */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #back-to-top-btn:hover {
@@ -353,16 +449,16 @@ footer {
 
     @media (max-width: 992px) {
       header h1 {
-        font-size: 2.8rem;
+        font-size: var(--text-4xl);
       }
       h2 {
-        font-size: 2.2rem;
+        font-size: var(--text-3xl);
       }
     }
 
 @media (max-width: 768px) {
   body {
-    font-size: 16px;
+    font-size: var(--text-base);
   }
   header {
     padding: 4rem 1rem 3rem;
@@ -371,19 +467,19 @@ footer {
 
       .jump-links {
         gap: 0.8rem;
-        font-size: 1rem;
+        font-size: var(--text-sm);
       }
 
   header h1 {
-    font-size: 2.5rem;
+    font-size: var(--text-3xl);
   }
 
   header p {
-    font-size: 1.1rem;
+    font-size: var(--text-lg);
   }
 
   h2 {
-    font-size: 2.2rem;
+    font-size: var(--text-3xl);
   }
 
   .container {
@@ -398,7 +494,7 @@ footer {
         right: 20px;
         bottom: 15px;
         padding: 12px;
-        font-size: 16px;
+        font-size: var(--text-base);
       }
     }
 
@@ -476,11 +572,11 @@ footer {
       }
 
   header h1 {
-    font-size: 2rem;
+    font-size: var(--text-2xl);
   }
 
       header p {
-        font-size: 1rem; 
+        font-size: var(--text-base); 
       }
 
       .container {
@@ -500,7 +596,7 @@ footer {
       }
 
       .contact-info a { 
-        font-size: 1rem;
+        font-size: var(--text-base);
       }
 
       .skills {
@@ -509,14 +605,14 @@ footer {
 
       .skill-tag {
         padding: 0.6rem 1rem; 
-        font-size: 0.9rem; 
+        font-size: var(--text-xs); 
       }
 
       .time-location {
         float: none;
         display: block;
         margin-top: 0.5rem;
-        font-size: 0.9rem; 
+        font-size: var(--text-xs); 
       }
 
       .contact-info {
@@ -562,7 +658,7 @@ footer {
       background-color: transparent;
       border: none;
       color: var(--primary-color);
-      font-size: 1.2rem;
+      font-size: var(--text-lg);
       font-weight: 600;
       padding: 1rem 0;
       text-align: left;
@@ -571,6 +667,9 @@ footer {
       justify-content: space-between;
       align-items: center;
       transition: color 0.3s;
+      line-height: var(--leading-normal);
+      letter-spacing: var(--tracking-normal);
+      font-family: var(--font-main);
     }
 
     .accordion-toggle:hover {
@@ -579,7 +678,7 @@ footer {
 
     .accordion-toggle::after {
       content: '+'; /* Changed from \25BC to + */
-      font-size: 1rem;
+      font-size: var(--text-base);
       transition: transform 0.3s;
     }
 
@@ -608,7 +707,7 @@ footer {
   padding: 10px;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: var(--text-base);
   margin: 0 5px;
   width: 40px;
   height: 40px;
@@ -616,6 +715,12 @@ footer {
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s, transform 0.3s;
+  font-family: var(--font-main);
+  font-weight: 600;
+  
+  /* Font smoothing for buttons */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .font-sizer-btn:hover {
@@ -650,14 +755,23 @@ footer {
   margin-top: 0;
   margin-bottom: 1rem;
   color: var(--primary-color);
-  font-size: 1.6rem;
+  font-size: var(--text-xl);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  
+  /* Font smoothing for app card headings */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .app-card p {
-  font-size: 1rem;
+  font-size: var(--text-base);
   color: var(--text-color);
   margin-bottom: 1.5rem;
   flex-grow: 1;
+  line-height: var(--leading-relaxed);
+  letter-spacing: var(--tracking-normal);
 }
 
 .app-card a {
@@ -666,6 +780,9 @@ footer {
   font-weight: bold;
   align-self: flex-start;
   transition: color 0.3s;
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-wide);
 }
 
 .app-card a:hover {
@@ -689,6 +806,10 @@ footer {
   margin-bottom: 0.5rem;
   font-weight: 600;
   color: var(--primary-color);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-wide);
+  font-family: var(--font-main);
 }
 
 .form-group input,
@@ -696,10 +817,17 @@ footer {
   padding: 1rem;
   border: 2px solid var(--border-color);
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: var(--text-base);
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: border-color 0.3s, box-shadow 0.3s;
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-normal);
+  font-family: var(--font-main);
+  
+  /* Font smoothing for form inputs */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .form-group input:focus,
@@ -715,11 +843,18 @@ footer {
   padding: 1rem 2rem;
   border: none;
   border-radius: 30px;
-  font-size: 1.1rem;
+  font-size: var(--text-base);
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
   justify-self: start;
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-wide);
+  font-family: var(--font-main);
+  
+  /* Font smoothing for buttons */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .submit-btn:hover {
@@ -748,10 +883,17 @@ footer {
   padding: 1rem;
   border: 2px solid var(--border-color);
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: var(--text-base);
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: border-color 0.3s, box-shadow 0.3s;
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-normal);
+  font-family: var(--font-main);
+  
+  /* Font smoothing for search input */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #skill-search:focus {
@@ -766,9 +908,16 @@ footer {
   padding: 1rem 1.5rem;
   border: none;
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: var(--text-sm);
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-wide);
+  font-family: var(--font-main);
+  
+  /* Font smoothing for button */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #reset-skills-btn:hover {
