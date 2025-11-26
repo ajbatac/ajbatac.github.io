@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -12,46 +12,47 @@
   <meta property="og:url" content="https://ajbatac.github.io/">
   <meta property="og:title" content="AJ Batac - Tech Leader & Web Developer">
   <meta property="og:description" content="Allan Batac's portfolio showcasing 25+ years of experience in tech leadership and web application development, including expertise in cloud platforms, LAMP/MERN stacks, UI/UX, CMS, and emerging AI technologies.">
-  <meta property="og:image" content="public/linkn-logo-trans.png">
-  <meta property="og:image:alt" content="Linkn Logo">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <meta property="og:image" content="public/avatar.png">
+  <meta property="og:image:alt" content="Allan Batac">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=SF+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
-  <header>
-    <div class="header-controls">
-      <div class="font-sizer-wrapper">
-        <button class="font-sizer-btn" id="font-decrease">A-</button>
-        <button class="font-sizer-btn" id="font-reset">A</button>
-        <button class="font-sizer-btn" id="font-increase">A+</button>
-      </div>
-      <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="theme-checkbox">
-          <input type="checkbox" id="theme-checkbox" />
-          <span class="slider round"></span>
-        </label>
-      </div>
-    </div>
-    <h1>Allan "AJ" Batac</h1>
-    <p>Tech Leader | Web Applications Developer | Futurist | Ideator | SWE</p>
-  </header>
-
+  
   <div class="container">
+    <header>
+      <div class="header-controls">
+        <div class="theme-switch-wrapper">
+          <label class="theme-switch" for="theme-checkbox" title="Toggle Dark/Light Mode">
+            <input type="checkbox" id="theme-checkbox" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="font-sizer-wrapper">
+          <button class="font-sizer-btn" id="font-decrease" title="Decrease Font Size">-A</button>
+          <button class="font-sizer-btn" id="font-reset" title="Reset Font Size">T</button>
+          <button class="font-sizer-btn" id="font-increase" title="Increase Font Size">+A</button>
+        </div>
+      </div>
+      
+      <img src="public/avatar.png" alt="Allan Batac" class="profile-img">
+      <h1>Allan "AJ" Batac</h1>
+      <p>Tech Leader | Web Applications Developer | Futurist | Ideator | SWE</p>
+
+      <div class="contact-info">
+          <a href="tel:+12042281074" title="Call">📞</a>
+          <a href="mailto:ajbatac@gmail.com" title="Email">✉️</a>
+          <a href="https://linkedin.com/in/ajbatac " target="_blank" rel="noopener noreferrer" title="LinkedIn">in</a>
+          <a href="https://ajbatac.com " target="_blank" rel="noopener noreferrer" title="Personal Website">🌐</a>
+      </div>
+    </header>
 
     <div class="jump-links">
-      <a href="#summary" title="Jump to the Summary section">Summary</a>
-      <a href="#recent-apps" title="Jump to the Recent Web Applications Developed section">Recent Apps</a>
-      <a href="#skills" title="Jump to the Skills section">Skills</a>
-      <a href="#experience" title="Jump to the Experience section">Experience</a>
-      <a href="#certifications" title="Jump to the Certifications section">Certifications</a>
-      <a href="#education" title="Jump to the Education section">Education</a>
-    </div>
-
-    <div class="contact-info">
-      <a href="tel:+12042281074">📱 +1 204 228 1074</a>
-      <a href="mailto:ajbatac@gmail.com">✉️ ajbatac@gmail.com</a>
-      <a href="https://linkedin.com/in/ajbatac " target="_blank" rel="noopener noreferrer" title="Allan Batac's LinkedIn Profile">💼 LinkedIn</a>
-      <a href="https://ajbatac.com " target="_blank" rel="noopener noreferrer" title="Allan Batac's Personal Website">🌐 Personal Site</a>
+        <a href="#summary" title="Jump to Summary">Summary</a>
+        <a href="#skills" title="Jump to Skills">Skills</a>
+        <a href="#experience" title="Jump to Experience">Experience</a>
+        <a href="#certifications" title="Jump to Certifications">Certifications</a>
+        <a href="#education" title="Jump to Education">Education</a>
     </div>
 
     <section id="summary">
@@ -60,45 +61,11 @@
       </div>
       <div class="section-content" id="summary-content">
         <ul>
-          <li>Designed and developed over 100 websites from ideation to launch.</li>
-          <li>Led and mentored diverse teams of developers, designers, and QA testers.</li>
-          <li>Ideated and invented new products to sell to 8 million users, with 4 million active daily users.</li>
-          <li>Managed a high-traffic website with over 500,000 daily views.</li>
-          <li>Contributed to a successful acquisition by Kleiner Perkins for a multi-million dollar sum.</li>
-          <li>Led the launch of a video streaming project featuring Dr. Fauci on CNN, reaching millions of concurrent viewers.</li>
-          <li>Engineered scalable and resilient cloud solutions on AWS, GCP, and Digital Ocean.</li>
-          <li>Mastered both LAMP and MERN stacks for robust back-end development.</li>
+          <li>Proven Tech Leader with 25+ years of experience in tech leadership and web application development.</li>
+          <li>Expert in developing scalable web applications and resilient cloud solutions on AWS, GCP, and Digital Ocean.</li>
+          <li>Passionate about AI integration, exploring Generative AI, AI Agents, and LLMs to drive future solutions.</li>
           <li>Championed exceptional user experiences with a focus on UI/UX and AODA/WCAG 2.1 compliance.</li>
-          <li>Innovated with emerging technologies, including Generative AI, AI Agents, and LLMs.</li>
         </ul>
-      </div>
-    </section>
-
-    <section id="recent-apps">
-      <div class="section-header" aria-expanded="true" aria-controls="recent-apps-content" role="button" tabindex="0">
-        <h2>🚀 Recent Web Applications Designed and Developed (AI-Powered)</h2>
-      </div>
-      <div class="section-content" id="recent-apps-content">
-        <div class="apps-grid">
-          <div class="app-card"><h3>Colour Palette Generator</h3><p>A professional-grade color palette generator that helps users create beautiful and accessible color schemes with advanced harmony algorithms and color blindness simulation.</p><a href="https://colourpalettes.techhive.net/" target="_blank" rel="noopener noreferrer">Visit Colour Palette Generator</a></div>
-          <div class="app-card"><h3>kulay</h3><p>A modern web application for discovering, generating, and managing color palettes, helping designers find the perfect color scheme for their projects.</p><a href="https://kulay.ca/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Kulay website">Visit the Kulay website</a></div>
-          <div class="app-card"><h3>Palayok</h3><p>An AI-powered web application that helps users with cooking and baking by effortlessly converting units, scaling ingredients, and providing insightful cooking tips.</p><a href="https://palayok.ca/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Palayok website">Visit the Palayok website</a></div>
-          <div class="app-card"><h3>Celebrity r8r</h3><p>A platform where users can rate actors, movies, and TV shows, and view AI-powered summaries of their favorite celebrities and films.</p><a href="https://celebrity.r8r.website/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Celebrity R8r website">Visit the Celebrity R8r website</a></div>
-          <div class="app-card"><h3>Email Signatures</h3><p>A free email signature generator that allows users to create professional and stunning email signatures in seconds, compatible with all major email clients.</p><a href="https://www.emailsig.website/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Email Signatures website">Visit the Email Signatures website</a></div>
-          <div class="app-card"><h3>Headless Wordpress CMS to React</h3><p>A blog that explores the intersection of technology, AI, and photography, sharing insights and stories from behind the lens.</p><a href="https://photos-tech.netlify.app/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Headless Wordpress CMS to React application">Visit the Headless Wordpress CMS to React application</a></div>
-          <div class="app-card"><h3>Social Spark</h3><p>An AI-powered tool that auto-generates engaging content for social media, helping users save time and boost engagement.</p><a href="https://socialspark.website/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Social Spark website">Visit the Social Spark website</a></div>
-          <div class="app-card"><h3>Report Hotel</h3><p>A platform for reporting hotel issues and reading reviews from other travelers in Canada.</p><a href="https://reclamo.ca/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Report Hotel website">Visit the Report Hotel website</a></div>
-          <div class="app-card"><h3>Email IQ</h3><p>A tool that helps users analyze the quality of their emails to improve their communication effectiveness.</p><a href="https://www.emailiq.tech/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Email IQ website">Visit the Email IQ website</a></div>
-          <div class="app-card"><h3>Global Trends</h3><p>A web application that allows users to visualize and explore global trends using interactive data visualizations.</p><a href="https://gtrends.website/?=github" target="_blank" rel="noopener noreferrer" title="Visit the Global Trends website">Visit the Global Trends website</a></div>
-          <div class="app-card"><h3>SpotBack (Open-Source)</h3><p>An open-source tool for Spotify users to analyze their listening habits and data.</p><a href="https://spotback.website/?=github" target="_blank" rel="noopener noreferrer" title="Visit the SpotBack website (Open-Source)">Visit the SpotBack website</a></div>
-          <div class="app-card"><h3>MetaData Parser (Open-Source)</h3><p>An open-source tool that allows users to parse and view metadata from various file types.</p><a href="https://exif-parser.netlify.app/?=github" target="_blank" rel="noopener noreferrer" title="Visit the MetaData Parser application (Open-Source)">Visit the MetaData Parser application</a></div>
-          <div class="app-card"><h3>Critter Poop (Game)</h3><p>A fun and addictive game for casual gamers.</p><a href="https://critter-poop.netlify.app/?=github" target="_blank" rel="noopener noreferrer" title="Play the Critter Poop game">Play the Critter Poop game</a></div>
-          <div class="app-card"><h3>Type Invaders (Game)</h3><p>A typing game designed to help users improve their typing speed and accuracy in a fun and engaging way.</p><a href="https://www.typeinvaders.space/?=github" target="_blank" rel="noopener noreferrer" title="Play the Type Invaders game">Play the Type Invaders game</a></div>
-          <div class="app-card"><h3>Sudokuh (Game) (Open-Source)</h3><p>An open-source classic Sudoku game for puzzle enthusiasts.</p><a href="https://sudokuh.netlify.app/?=github" target="_blank" rel="noopener noreferrer" title="Play the Sudokuh game (Open-Source)">Play the Sudokuh game</a></div>
-          <div class="app-card"><h3>QRky (Open-Source)</h3><p>An open-source QR code generator and decoder.</p><a href="https://qrky.site/?=github" target="_blank" rel="noopener noreferrer" title="QRky QR Code Generator and Decoder (Open-Source)">Visit the QRky website</a></div>
-          <div class="app-card"><h3>Canvas Crop (Open Source)</h3><p>An open-source tool for cropping images on a canvas.</p><a href="https://canvas-crop.netlify.app/?=github" target="_blank" rel="noopener noreferrer" title="Canvas Crop">Visit the Canvas Crop website</a></div>
-          <div class="app-card"><h3>RetroSnap (Nostalgia)</h3><p>A tool to add a retro look to your photos, perfect for creating nostalgic images.</p><a href="https://retrosnap.ca/?=github" target="_blank" rel="noopener noreferrer" title="RetroSnap">Visit the RetroSnap website</a></div>
-        </div>
       </div>
     </section>
 
@@ -107,32 +74,46 @@
         <h2>🛠️ Skills</h2>
       </div>
       <div class="section-content" id="skills-content">
-        <div class="skills-controls">
-          <input type="text" id="skill-search" placeholder="Search skills...">
-          <button id="reset-skills-btn">Reset Filters</button>
-        </div>
         <div class="skills">
-          <div class="skill-tag">Leadership</div>
-          <div class="skill-tag">Project Management</div>
-          <div class="skill-tag">AWS</div>
-          <div class="skill-tag">GCP</div>
-          <div class="skill-tag">Digital Ocean</div>
-          <div class="skill-tag">LAMP Stack</div>
-          <div class="skill-tag">MERN Stack</div>
-          <div class="skill-tag">React</div>
-          <div class="skill-tag">Node.js</div>
-          <div class="skill-tag">PHP</div>
-          <div class="skill-tag">SQL</div>
-          <div class="skill-tag">HTML</div>
-          <div class="skill-tag">JavaScript</div>
-          <div class="skill-tag">Jira</div>
-          <div class="skill-tag">Flutter</div>
-          <div class="skill-tag">UI/UX</div>
-          <div class="skill-tag">AI</div>
-          <div class="skill-tag">LLM</div>
-          <div class="skill-tag">RAG</div>
-          <div class="skill-tag">MCP</div>
-          <div class="skill-tag">Context Engineering</div>
+            <div class="skill-category">
+                <strong>Languages:</strong>
+                <div class="skill-pills">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">HTML</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <strong>Frameworks:</strong>
+                <div class="skill-pills">
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Flutter</span>
+                    <span class="skill-tag">LAMP</span>
+                    <span class="skill-tag">MERN</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <strong>Tools:</strong>
+                <div class="skill-pills">
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">GCP</span>
+                    <span class="skill-tag">Jira</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <strong>AI:</strong>
+                <div class="skill-pills">
+                    <span class="skill-tag">LLM</span>
+                    <span class="skill-tag">RAG</span>
+                    <span class="skill-tag">AI Agents</span>
+                    <span class="skill-tag">Context Engineering</span>
+                </div>
+            </div>
         </div>
       </div>
     </section>
@@ -143,35 +124,34 @@
       </div>
       <div class="section-content" id="experience-content" aria-live="polite">
         <div class="experience">
-          <p><span class="job-title">Senior Webmaster</span> <span class="time-location">Mar 2023 – Present | Toronto, Ontario</span></p>
-          <p><strong>Financial Services Regulatory Authority of Ontario (FSRA)</strong></p>
+          <div class="job-title">Senior Webmaster</div>
+          <div class="company-name">Financial Services Regulatory Authority of Ontario (FSRA)</div>
+          <span class="time-location">Mar 2023 – Present | Toronto, Ontario</span>
           <ul>
             <li>Lead technical development and deployment of public-facing web platforms including FSRA's website and social media channels.</li>
             <li>Collaborate with cross-functional teams to ensure exceptional user experiences aligned with stakeholder needs.</li>
-            <li>Leverage expertise in cloud infrastructure, programming languages, and web tools to build scalable applications.</li>
           </ul>
         </div>
 
         <div class="experience">
-          <p><span class="job-title">IT Leader</span> <span class="time-location">May 2022 – Mar 2023 | Winnipeg, Manitoba</span></p>
-          <p><strong>Association TV</strong></p>
+          <div class="job-title">IT Leader</div>
+          <div class="company-name">Association TV</div>
+          <span class="time-location">May 2022 – Mar 2023 | Winnipeg, Manitoba</span>
           <ul>
             <li>Managed IT and Web professionals to enhance technology infrastructure and systems performance.</li>
             <li>Migrated sites to load-balanced auto-scaling clusters; reduced response time by 30%.</li>
-            <li>Streamlined workflows and led digital transformation initiatives.</li>
           </ul>
         </div>
 
         <div class="experience">
-          <p><span class="job-title">Web Team Leader</span> <span class="time-location">Aug 2010 – Jun 2022 | Winnipeg, Manitoba</span></p>
-          <p><strong>Association TV</strong></p>
-          <ul>
-            <li>Built and expanded a high-performing web team managing over 100 web properties.</li>
-            <li>Expert in LAMP stack, AWS, GCP, and Google Dart/Flutter.</li>
-            <li>Focused on UI/UX, accessibility, and continuous improvement through emerging tech trends.</li>
-          </ul>
-        </div>
-        <!-- Add more job entries as needed -->
+            <div class="job-title">Web Team Leader</div>
+            <div class="company-name">Association TV</div>
+            <span class="time-location">Aug 2010 – Jun 2022 | Winnipeg, Manitoba</span>
+            <ul>
+              <li>Built and expanded a high-performing web team managing over 100 web properties.</li>
+              <li>Expert in LAMP stack, AWS, GCP, and Google Dart/Flutter.</li>
+            </ul>
+          </div>
       </div>
     </section>
 
@@ -188,8 +168,6 @@
           <li>Building ChatGPT Plugins</li>
           <li>Understanding RAG/Inference</li>
           <li>Understanding Generative AI</li>
-          <li>HTML5/CSS3/Javascript Certifications</li>
-          <li>Advanced Google Analytics Certified</li>
           <li>AWS DevOps Certified</li>
         </ul>
       </div>
@@ -200,19 +178,123 @@
         <h2>🎓 Education</h2>
       </div>
       <div class="education section-content" id="education-content" aria-live="polite">
-        <p><strong>University of Santo Tomas</strong> – BSECE, Electronics and Communications</p>
-        <p><strong>Holy Angel University</strong> – BSCS, Computer Science</p>
-        <p><strong>Don Bosco Academy</strong> – Diploma, High School</p>
+        <p><strong>University of Santo Tomas</strong> <span class="time-location">BSECE, Electronics and Communications</span></p>
+        <p><strong>Holy Angel University</strong> <span class="time-location">BSCS, Computer Science</span></p>
+        <p><strong>Don Bosco Academy</strong> <span class="time-location">Diploma, High School</span></p>
       </div>
     </section>
 
+    <section id="recent-apps">
+        <div class="section-header" aria-expanded="true" aria-controls="recent-apps-content" role="button" tabindex="0">
+          <h2>🚀 Recent Web Apps</h2>
+        </div>
+        <div class="section-content" id="recent-apps-content">
+          <div class="apps-grid">
+            <div class="app-card">
+                <h3>Colour Palette Generator</h3>
+                <p>Professional-grade color palette generator with harmony algorithms and color blindness simulation.</p>
+                <a href="https://colourpalettes.techhive.net/" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>kulay</h3>
+                <p>Modern web application for discovering and managing color palettes.</p>
+                <a href="https://kulay.ca/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>Palayok</h3>
+                <p>AI-powered cooking companion for converting units and tips.</p>
+                <a href="https://palayok.ca/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+             <div class="app-card">
+                <h3>Celebrity r8r</h3>
+                <p>Rate actors and view AI-powered summaries of celebrities.</p>
+                <a href="https://celebrity.r8r.website/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>Email Signatures</h3>
+                <p>Free email signature generator for creating professional signatures compatible with major clients.</p>
+                <a href="https://www.emailsig.website/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>Headless WP to React</h3>
+                <p>Blog exploring technology, AI, and photography, built with Headless WordPress and React.</p>
+                <a href="https://photos-tech.netlify.app/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>Social Spark</h3>
+                <p>AI-powered tool that auto-generates engaging content for social media.</p>
+                <a href="https://socialspark.website/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>Report Hotel</h3>
+                <p>Platform for reporting hotel issues and reading reviews from other travelers in Canada.</p>
+                <a href="https://reclamo.ca/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>Email IQ</h3>
+                <p>Tool that helps users analyze the quality of their emails to improve communication.</p>
+                <a href="https://www.emailiq.tech/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>Global Trends</h3>
+                <p>Visualize and explore global trends using interactive data visualizations.</p>
+                <a href="https://gtrends.website/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>SpotBack (Open-Source)</h3>
+                <p>Open-source tool for Spotify users to analyze their listening habits and data.</p>
+                <a href="https://spotback.website/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>MetaData Parser</h3>
+                <p>Open-source tool that allows users to parse and view metadata from various file types.</p>
+                <a href="https://exif-parser.netlify.app/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>Critter Poop (Game)</h3>
+                <p>A fun and addictive game for casual gamers.</p>
+                <a href="https://critter-poop.netlify.app/?=github" target="_blank" rel="noopener noreferrer">Play Game</a>
+            </div>
+            <div class="app-card">
+                <h3>Type Invaders (Game)</h3>
+                <p>Typing game designed to help users improve speed and accuracy in a fun way.</p>
+                <a href="https://www.typeinvaders.space/?=github" target="_blank" rel="noopener noreferrer">Play Game</a>
+            </div>
+            <div class="app-card">
+                <h3>Sudokuh (Game)</h3>
+                <p>An open-source classic Sudoku game for puzzle enthusiasts.</p>
+                <a href="https://sudokuh.netlify.app/?=github" target="_blank" rel="noopener noreferrer">Play Game</a>
+            </div>
+            <div class="app-card">
+                <h3>QRky (Open-Source)</h3>
+                <p>An open-source QR code generator and decoder.</p>
+                <a href="https://qrky.site/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>Canvas Crop</h3>
+                <p>An open-source tool for cropping images on a canvas.</p>
+                <a href="https://canvas-crop.netlify.app/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>RetroSnap</h3>
+                <p>Tool to add a retro look to your photos, perfect for creating nostalgic images.</p>
+                <a href="https://retrosnap.ca/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
     <footer>
-      © <span id="current-year"></span> Allan Batac | All Rights Reserved
+      © <span id="current-year"></span> Allan Batac Inc. All rights reserved.
     </footer>
+  
+  </div> <!-- End Container -->
 
-  </div>
-
-  <button id="back-to-top-btn" title="Back to Top">⬆️</button>
+  <!-- Chat bubble button -->
+  <button id="back-to-top-btn" class="chat-bubble-btn" title="Back to Top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: -5px;"><path d="m18 15-6-6-6 6"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
 
   <script src="js/script.js"></script>
 
@@ -227,5 +309,4 @@
   </script>
 
 </body>
-
 </html>

@@ -1,89 +1,312 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Allan Batac's portfolio showcasing 25+ years of experience in tech leadership and web application development, including expertise in cloud platforms, LAMP/MERN stacks, UI/UX, CMS, and emerging AI technologies.">
+  <meta name="keywords" content="Allan Batac, AJ Batac, Tech Leader, Web Application Developer, Portfolio, AWS, GCP, Digital Ocean, LAMP Stack, MERN Stack, React, Node.js, PHP, UI/UX, CMS, Generative AI, AI Agents, LLM, Toronto, Canada">
+  <title>Allan Batac - Tech Leader & Full-Stack Portfolio</title>
+  <meta name="facebook-domain-verification" content="7h400rs8umk5vd6k3p41bu9jachsaf" />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ajbatac.github.io/">
+  <meta property="og:title" content="AJ Batac - Tech Leader & Web Developer">
+  <meta property="og:description" content="Allan Batac's portfolio showcasing 25+ years of experience in tech leadership and web application development, including expertise in cloud platforms, LAMP/MERN stacks, UI/UX, CMS, and emerging AI technologies.">
+  <meta property="og:image" content="avatar.png">
+  <meta property="og:image:alt" content="Allan Batac">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=SF+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+  
+  <div class="container">
+    <header>
+      <div class="header-controls">
+        <div class="theme-switch-wrapper">
+          <label class="theme-switch" for="theme-checkbox" title="Toggle Dark/Light Mode">
+            <input type="checkbox" id="theme-checkbox" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="font-sizer-wrapper">
+          <button class="font-sizer-btn" id="font-decrease" title="Decrease Font Size">-A</button>
+          <button class="font-sizer-btn" id="font-reset" title="Reset Font Size">T</button>
+          <button class="font-sizer-btn" id="font-increase" title="Increase Font Size">+A</button>
+        </div>
+      </div>
+      
+      <img src="avatar.png" alt="Allan Batac" class="profile-img">
+      <h1>Allan "AJ" Batac</h1>
+      <p>Tech Leader | Web Applications Developer | Futurist | Ideator | SWE</p>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/12.0.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/12.0.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/12.0.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/12.0.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/12.0.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/12.0.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/12.0.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/12.0.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/12.0.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/12.0.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+      <div class="contact-info">
+          <a href="tel:+12042281074" title="Call">📞</a>
+          <a href="mailto:ajbatac@gmail.com" title="Email">✉️</a>
+          <a href="https://linkedin.com/in/ajbatac " target="_blank" rel="noopener noreferrer" title="LinkedIn">in</a>
+          <a href="https://ajbatac.com " target="_blank" rel="noopener noreferrer" title="Personal Website">🌐</a>
+      </div>
+    </header>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <div class="jump-links">
+        <a href="#summary" title="Jump to Summary">Summary</a>
+        <a href="#skills" title="Jump to Skills">Skills</a>
+        <a href="#experience" title="Jump to Experience">Experience</a>
+        <a href="#certifications" title="Jump to Certifications">Certifications</a>
+        <a href="#education" title="Jump to Education">Education</a>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    <section id="summary">
+      <div class="section-header" aria-expanded="true" aria-controls="summary-content" role="button" tabindex="0">
+        <h2>📝 Summary</h2>
+      </div>
+      <div class="section-content" id="summary-content">
+        <ul>
+          <li>Proven Tech Leader with 25+ years of experience in tech leadership and web application development.</li>
+          <li>Expert in developing scalable web applications and resilient cloud solutions on AWS, GCP, and Digital Ocean.</li>
+          <li>Passionate about AI integration, exploring Generative AI, AI Agents, and LLMs to drive future solutions.</li>
+          <li>Championed exceptional user experiences with a focus on UI/UX and AODA/WCAG 2.1 compliance.</li>
+        </ul>
+      </div>
+    </section>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+    <section id="skills">
+      <div class="section-header" aria-expanded="true" aria-controls="skills-content" role="button" tabindex="0">
+        <h2>🛠️ Skills</h2>
+      </div>
+      <div class="section-content" id="skills-content">
+        <div class="skills">
+            <div class="skill-category">
+                <strong>Languages:</strong>
+                <div class="skill-pills">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">HTML</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <strong>Frameworks:</strong>
+                <div class="skill-pills">
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Flutter</span>
+                    <span class="skill-tag">LAMP</span>
+                    <span class="skill-tag">MERN</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <strong>Tools:</strong>
+                <div class="skill-pills">
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">GCP</span>
+                    <span class="skill-tag">Jira</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <strong>AI:</strong>
+                <div class="skill-pills">
+                    <span class="skill-tag">LLM</span>
+                    <span class="skill-tag">RAG</span>
+                    <span class="skill-tag">AI Agents</span>
+                    <span class="skill-tag">Context Engineering</span>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-header" aria-expanded="true" aria-controls="experience-content" role="button" tabindex="0">
+        <h2>🏢 Experience</h2>
+      </div>
+      <div class="section-content" id="experience-content" aria-live="polite">
+        <div class="experience">
+          <div class="job-title">Senior Webmaster</div>
+          <div class="company-name">Financial Services Regulatory Authority of Ontario (FSRA)</div>
+          <span class="time-location">Mar 2023 – Present | Toronto, Ontario</span>
+          <ul>
+            <li>Lead technical development and deployment of public-facing web platforms including FSRA's website and social media channels.</li>
+            <li>Collaborate with cross-functional teams to ensure exceptional user experiences aligned with stakeholder needs.</li>
+          </ul>
+        </div>
+
+        <div class="experience">
+          <div class="job-title">IT Leader</div>
+          <div class="company-name">Association TV</div>
+          <span class="time-location">May 2022 – Mar 2023 | Winnipeg, Manitoba</span>
+          <ul>
+            <li>Managed IT and Web professionals to enhance technology infrastructure and systems performance.</li>
+            <li>Migrated sites to load-balanced auto-scaling clusters; reduced response time by 30%.</li>
+          </ul>
+        </div>
+
+        <div class="experience">
+            <div class="job-title">Web Team Leader</div>
+            <div class="company-name">Association TV</div>
+            <span class="time-location">Aug 2010 – Jun 2022 | Winnipeg, Manitoba</span>
+            <ul>
+              <li>Built and expanded a high-performing web team managing over 100 web properties.</li>
+              <li>Expert in LAMP stack, AWS, GCP, and Google Dart/Flutter.</li>
+            </ul>
+          </div>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <div class="section-header" aria-expanded="true" aria-controls="certifications-content" role="button" tabindex="0">
+        <h2>📜 Certifications</h2>
+      </div>
+      <div class="section-content" id="certifications-content" aria-live="polite">
+        <ul>
+          <li>Inclusive Leadership</li>
+          <li>Critical Thinking for More Effective Communication</li>
+          <li>Managing a Multigenerational Team</li>
+          <li>Understanding Deepfake</li>
+          <li>Building ChatGPT Plugins</li>
+          <li>Understanding RAG/Inference</li>
+          <li>Understanding Generative AI</li>
+          <li>AWS DevOps Certified</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="section-header" aria-expanded="true" aria-controls="education-content" role="button" tabindex="0">
+        <h2>🎓 Education</h2>
+      </div>
+      <div class="education section-content" id="education-content" aria-live="polite">
+        <p><strong>University of Santo Tomas</strong> <span class="time-location">BSECE, Electronics and Communications</span></p>
+        <p><strong>Holy Angel University</strong> <span class="time-location">BSCS, Computer Science</span></p>
+        <p><strong>Don Bosco Academy</strong> <span class="time-location">Diploma, High School</span></p>
+      </div>
+    </section>
+
+    <section id="recent-apps">
+        <div class="section-header" aria-expanded="true" aria-controls="recent-apps-content" role="button" tabindex="0">
+          <h2>🚀 Recent Web Apps</h2>
+        </div>
+        <div class="section-content" id="recent-apps-content">
+          <div class="apps-grid">
+            <div class="app-card">
+                <h3>Colour Palette Generator</h3>
+                <p>Professional-grade color palette generator with harmony algorithms and color blindness simulation.</p>
+                <a href="https://colourpalettes.techhive.net/" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>kulay</h3>
+                <p>Modern web application for discovering and managing color palettes.</p>
+                <a href="https://kulay.ca/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>Palayok</h3>
+                <p>AI-powered cooking companion for converting units and tips.</p>
+                <a href="https://palayok.ca/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+             <div class="app-card">
+                <h3>Celebrity r8r</h3>
+                <p>Rate actors and view AI-powered summaries of celebrities.</p>
+                <a href="https://celebrity.r8r.website/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>Email Signatures</h3>
+                <p>Free email signature generator for creating professional signatures compatible with major clients.</p>
+                <a href="https://www.emailsig.website/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>Headless WP to React</h3>
+                <p>Blog exploring technology, AI, and photography, built with Headless WordPress and React.</p>
+                <a href="https://photos-tech.netlify.app/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>Social Spark</h3>
+                <p>AI-powered tool that auto-generates engaging content for social media.</p>
+                <a href="https://socialspark.website/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>Report Hotel</h3>
+                <p>Platform for reporting hotel issues and reading reviews from other travelers in Canada.</p>
+                <a href="https://reclamo.ca/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>Email IQ</h3>
+                <p>Tool that helps users analyze the quality of their emails to improve communication.</p>
+                <a href="https://www.emailiq.tech/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>Global Trends</h3>
+                <p>Visualize and explore global trends using interactive data visualizations.</p>
+                <a href="https://gtrends.website/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>SpotBack (Open-Source)</h3>
+                <p>Open-source tool for Spotify users to analyze their listening habits and data.</p>
+                <a href="https://spotback.website/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>MetaData Parser</h3>
+                <p>Open-source tool that allows users to parse and view metadata from various file types.</p>
+                <a href="https://exif-parser.netlify.app/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>Critter Poop (Game)</h3>
+                <p>A fun and addictive game for casual gamers.</p>
+                <a href="https://critter-poop.netlify.app/?=github" target="_blank" rel="noopener noreferrer">Play Game</a>
+            </div>
+            <div class="app-card">
+                <h3>Type Invaders (Game)</h3>
+                <p>Typing game designed to help users improve speed and accuracy in a fun way.</p>
+                <a href="https://www.typeinvaders.space/?=github" target="_blank" rel="noopener noreferrer">Play Game</a>
+            </div>
+            <div class="app-card">
+                <h3>Sudokuh (Game)</h3>
+                <p>An open-source classic Sudoku game for puzzle enthusiasts.</p>
+                <a href="https://sudokuh.netlify.app/?=github" target="_blank" rel="noopener noreferrer">Play Game</a>
+            </div>
+            <div class="app-card">
+                <h3>QRky (Open-Source)</h3>
+                <p>An open-source QR code generator and decoder.</p>
+                <a href="https://qrky.site/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>Canvas Crop</h3>
+                <p>An open-source tool for cropping images on a canvas.</p>
+                <a href="https://canvas-crop.netlify.app/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+            <div class="app-card">
+                <h3>RetroSnap</h3>
+                <p>Tool to add a retro look to your photos, perfect for creating nostalgic images.</p>
+                <a href="https://retrosnap.ca/?=github" target="_blank" rel="noopener noreferrer">Visit App</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <footer>
+      © <span id="current-year"></span> Allan Batac Inc. All rights reserved.
+    </footer>
+  
+  </div> <!-- End Container -->
+
+  <!-- Chat bubble button -->
+  <button id="back-to-top-btn" class="chat-bubble-btn" title="Back to Top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: -5px;"><path d="m18 15-6-6-6 6"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+  <script src="js/script.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CDK9WZYW14"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-CDK9WZYW14');
+  </script>
+
+</body>
 </html>

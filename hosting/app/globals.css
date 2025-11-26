@@ -1,17 +1,18 @@
+
 /* Typography improvements with modern font system */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 :root {
-  --primary-color: #3498db; /* A modern blue */
-  --accent-color: #2ecc71; /* A vibrant green for accents */
-  --text-color: #333333;
-  --bg-color: #f4f7f9; /* A light, clean background */
-  --section-bg-color: #FFFFFF;
-  --border-color: #e0e0e0;
+  --primary-color: #6b73ff; /* Purple/Blue primary */
+  --accent-color: #00d4ff; /* Cyan accent */
+  --text-color: #e0e0e0;
+  --bg-color: #121420; /* Deep dark background */
+  --section-bg-color: #1b1e2f; /* Slightly lighter section background */
+  --border-color: #2c2f48;
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   --font-headings: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
-  --shadow-color: rgba(0, 0, 0, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.4);
   
   /* Typography scale using modular scale (1.25 ratio) */
   --text-xs: 0.75rem;     /* 12px */
@@ -40,14 +41,14 @@
   --tracking-widest: 0.1em;
 }
 
-:root[data-theme="dark"] {
-  --primary-color: #3498db;
-  --accent-color: #2ecc71;
-  --text-color: #f4f7f9;
-  --bg-color: #1a1a1a;
-  --section-bg-color: #2c2c2c;
-  --border-color: #444444;
-  --shadow-color: rgba(0, 0, 0, 0.4);
+:root[data-theme="light"] {
+  --primary-color: #4a54e1;
+  --accent-color: #00b4d8;
+  --text-color: #333333;
+  --bg-color: #f0f2f5;
+  --section-bg-color: #ffffff;
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -63,7 +64,7 @@ body {
   font-family: var(--font-main);
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-size: var(--text-lg);
+  font-size: var(--text-base); /* Reduced from lg */
   line-height: var(--leading-relaxed);
   letter-spacing: var(--tracking-normal);
   font-weight: 400;
@@ -83,9 +84,9 @@ body {
 
 h1 {
   font-family: var(--font-headings);
-  color: var(--primary-color);
+  color: #fff;
   margin: 0;
-  font-size: var(--text-5xl);
+  font-size: var(--text-2xl);
   font-weight: 700;
   line-height: var(--leading-tight);
   letter-spacing: var(--tracking-tight);
@@ -98,34 +99,24 @@ h1 {
 
 h2 {
   font-family: var(--font-headings);
-  color: var(--primary-color);
-  border-bottom: 3px solid var(--accent-color);
-  padding-bottom: 0.8rem;
-  margin-bottom: 2rem;
-  font-size: var(--text-4xl);
+  color: #fff;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-size: var(--text-lg);
   font-weight: 700;
   line-height: var(--leading-snug);
   letter-spacing: var(--tracking-tight);
-  
-  /* Enhanced font smoothing for headings */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
 }
 
 h3 {
   font-family: var(--font-headings);
-  color: var(--primary-color);
-  font-size: var(--text-2xl);
-  margin-bottom: 1rem;
+  color: #fff;
+  font-size: var(--text-base);
+  margin-bottom: 0.5rem;
   font-weight: 600;
   line-height: var(--leading-snug);
   letter-spacing: var(--tracking-tight);
-  
-  /* Font smoothing for subheadings */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
 }
 
 p {
@@ -152,34 +143,75 @@ a:hover {
 }
 
 ul {
-  padding-left: 2rem;
-  margin-bottom: 1.5rem;
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 li {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   line-height: var(--leading-relaxed);
   font-size: var(--text-base);
   letter-spacing: var(--tracking-normal);
 }
 
-/* Responsive Typography */
-@media (max-width: 768px) {
-  body {
-    font-size: var(--text-base);
-  }
-
-  h1 {
-    font-size: var(--text-3xl);
-  }
-
-  h2 {
-    font-size: var(--text-3xl);
-  }
+/* Utilities */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-@media (max-width: 600px) {
-  h1 {
-    font-size: var(--text-2xl);
-  }
+/* Profile Image */
+.profile-img {
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    max-width: 80px !important;
+    max-height: 80px !important;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 4rem 1rem 2rem;
+  background: transparent;
+  color: #fff;
+  border-radius: 0;
+  position: relative;
+}
+
+/* Section */
+section {
+  background: var(--section-bg-color);
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: none;
+  margin-bottom: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid var(--border-color);
+}
+
+/* Timeline/Experience */
+.experience {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid #333; 
+  position: relative;
+}
+
+.experience::before {
+  content: '';
+  position: absolute;
+  left: -5px; 
+  top: 5px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-color); 
+  border-radius: 50%;
+  border: none; 
 }
