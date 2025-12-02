@@ -7,7 +7,7 @@
   --accent-color: #00d4ff; /* Cyan accent */
   --text-color: #e0e0e0;
   --heading-color: #ffffff; /* White headings for dark mode */
-  --subtext-color: #999999;
+  --subtext-color: #bbb;
   --bg-color: #121420; /* Deep dark background */
   --section-bg-color: #1b1e2f; /* Slightly lighter section background */
   --border-color: #2c2f48;
@@ -370,7 +370,7 @@ input:checked + .slider:before {
   background-color: transparent;
   color: var(--subtext-color); /* Changed from #aaa */
   border: none;
-  padding: 0 4px;
+  padding: 10px 12px;
   cursor: pointer;
   font-size: 10px; 
   margin: 0;
@@ -481,7 +481,7 @@ input:checked + .slider:before {
 
 .app-card a {
     font-size: var(--text-xs);
-    color: var(--primary-color);
+    color: #8892ff;
 }
 
 /* Chat bubble / Back to Top */
@@ -571,7 +571,7 @@ footer {
 }
 
 :root[data-theme="dark"] .time-location {
-  color: #777;
+  color: #999;
 }
 
 /* Responsive */
