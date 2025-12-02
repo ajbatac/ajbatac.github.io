@@ -12,19 +12,21 @@
   <meta property="og:url" content="https://ajbatac.github.io/">
   <meta property="og:title" content="AJ Batac - Tech Leader & Web Developer">
   <meta property="og:description" content="Allan Batac's portfolio showcasing 25+ years of experience in tech leadership and web application development, including expertise in cloud platforms, LAMP/MERN stacks, UI/UX, CMS, and emerging AI technologies.">
-  <meta property="og:image" content="public/avatar.png">
+  <meta property="og:image" content="public/avatar.webp">
   <meta property="og:image:alt" content="Allan Batac">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=SF+Mono&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=SF+Mono&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=SF+Mono&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css?v=5">
 </head>
 <body>
   
   <div class="container">
+    <main>
     <header>
       <div class="header-controls">
         <div class="theme-switch-wrapper">
           <label class="theme-switch" for="theme-checkbox" title="Toggle Dark/Light Mode">
-            <input type="checkbox" id="theme-checkbox" checked />
+            <input type="checkbox" id="theme-checkbox" checked aria-label="Theme switch" />
             <span class="slider round"></span>
           </label>
         </div>
@@ -35,7 +37,7 @@
         </div>
       </div>
       
-      <img src="public/avatar.png" alt="Allan Batac" class="profile-img">
+      <img src="public/avatar.webp" alt="Allan Batac" class="profile-img">
       <h1>Allan "AJ" Batac</h1>
       <p>Tech Leader | Web Applications Developer | Futurist | Ideator | SWE</p>
 
@@ -284,7 +286,7 @@
           </div>
         </div>
       </section>
-
+    </main>
     <footer>
       © <span id="current-year"></span> Allan Batac Inc. All rights reserved.
     </footer>
