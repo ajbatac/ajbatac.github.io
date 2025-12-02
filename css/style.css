@@ -18,7 +18,8 @@
   --link-color: #888;
   --link-active-bg: #2c2f48;
   --link-active-text: #e0e0e0;
-  
+  --app-link-color: #b3baff;
+
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   --font-headings: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
@@ -67,6 +68,7 @@
   --link-color: #666;
   --link-active-bg: #e0e0e0;
   --link-active-text: #222;
+  --app-link-color: #4a54e1;
   --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -481,7 +483,7 @@ input:checked + .slider:before {
 
 .app-card a {
     font-size: var(--text-xs);
-    color: #8892ff;
+    color: var(--app-link-color);
 }
 
 /* Chat bubble / Back to Top */
