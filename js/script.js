@@ -46,14 +46,19 @@ const fontResetBtn = document.getElementById('font-reset');
 const fontIncreaseBtn = document.getElementById('font-increase');
 const root = document.documentElement;
 
+const MIN_FONT_SIZE = 12;
+const MAX_FONT_SIZE = 24;
+const DEFAULT_FONT_SIZE = 16;
+
 const setFontSize = (size) => {
-  root.style.fontSize = size + 'px';
-  localStorage.setItem('font-size', size);
+  const fontSize = Math.max(MIN_FONT_SIZE, Math.min(MAX_FONT_SIZE, parseFloat(size)));
+  root.style.fontSize = fontSize + 'px';
+  localStorage.setItem('font-size', fontSize);
 };
 
 const savedFontSize = localStorage.getItem('font-size');
 if (savedFontSize) {
-  setFontSize(savedFontSize);
+  setFontSize(parseFloat(savedFontSize));
 }
 
 if (fontDecreaseBtn) {
@@ -65,7 +70,7 @@ if (fontDecreaseBtn) {
 
 if (fontResetBtn) {
     fontResetBtn.addEventListener('click', () => {
-        setFontSize(16); 
+        setFontSize(DEFAULT_FONT_SIZE); 
     });
 }
 
