@@ -450,6 +450,38 @@ input:checked+.slider:before {
   color: var(--heading-color);
 }
 
+/* Material Symbols Styling */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+  vertical-align: middle;
+}
+
+/* Icons in section headers */
+h2 .material-symbols-outlined {
+  font-size: 20px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+/* Icons in contact info */
+.contact-info .material-symbols-outlined {
+  font-size: 20px;
+}
+
 /* Skills */
 .skills {
   display: flex;
