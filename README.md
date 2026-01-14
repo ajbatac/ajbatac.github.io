@@ -4,6 +4,14 @@ Welcome to the repository for my personal portfolio website. This project showca
 
 You can view the live site here: [ajbatac.github.io](https://ajbatac.github.io/)
 
+## Recent Updates (v1.0.0 - January 2026)
+
+This checkpoint release includes:
+- **Footer Update**: Updated copyright year to 2026 and introduced version tracking (v1.0.0)
+- **Enhanced Portfolio**: Added comprehensive Business Summary section highlighting strategic, technical leadership, team management, process, soft skills, and emerging tech expertise
+- **Icon Modernization**: Migrated all icons to Google Material Icons for consistent, professional appearance across the portfolio
+- **Documentation**: Established changelog.md for tracking technical changes and improvements
+
 ---
 
 ## Sections
