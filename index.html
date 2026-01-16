@@ -18,8 +18,10 @@
     content="Allan Batac's portfolio showcasing 25+ years of experience in tech leadership and web application development, including expertise in cloud platforms, LAMP/MERN stacks, UI/UX, CMS, and emerging AI technologies.">
   <meta property="og:image" content="public/avatar.webp">
   <meta property="og:image:alt" content="Allan Batac">
+  <link rel="preload" as="image" href="public/avatar.webp" type="image/webp" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
   <link rel="preload"
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
     as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -52,7 +54,8 @@
           </div>
         </div>
 
-        <img src="public/avatar.webp" alt="Allan Batac" class="profile-img">
+        <img src="public/avatar.webp" alt="Allan Batac" class="profile-img" width="320" height="320"
+          decoding="async" fetchpriority="high">
         <h1>Allan "AJ" Batac</h1>
         <p>Tech Leader | Web Applications Developer | Futurist | Ideator | SWE</p>
 
