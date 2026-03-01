@@ -34,6 +34,37 @@ I am a results-driven Tech Leader with a proven ability to lead diverse teams (D
 
 I have designed and developed over 100 websites and applications from ideation to launch. The portfolio highlights a variety of recent projects, many of which are AI-powered.
 
+| Project | Description | Links |
+| :--- | :--- | :--- |
+| **Heather Tardiff** | Connection-driven wedding and family photography. | [Visit](https://htardiffphotography.ca/) |
+| **Marissa Naylor** | Timeless prairie-inspired wedding photography. | [Visit](https://marissanaylorphoto.ca/) |
+| **GreenRocket** | Community platform for tech founders. | [Visit](https://greenrocket.app/) |
+| **Beautiful Invoices** | Private, local-first professional invoicing. | [Visit](https://invoice.wpeg.app/) |
+| **LinkN** | Personalized digital presence profiles. | [Visit](https://linkn.ca/) |
+| **Tales** | AI short stories with generated art. | [Visit](https://tales.socialspark.website/) |
+| **Favicon.Love** | Professional favicon generator. | [Visit](https://favicon.love/) |
+| **Launch_Wizard** | Deployment checklists for engineers. | [Visit](https://launch-wizard.techhive.net/) |
+| **GlobalTrends** | Real-time search trends explorer. | [Visit](https://gtrends.website/) |
+| **Virtual Realty Staging** | AI virtual staging for real estate. | [Visit](https://realty.techhive.net/) |
+| **Colour Palette Generator** | Harmony-based color generator. | [Visit](https://colourpalettes.techhive.net/) |
+| **kulay** | Modern color palette management. | [Visit](https://kulay.ca/?=github) |
+| **Palayok** | AI cooking companion & unit converter. | [Visit](https://palayok.ca/?=github) |
+| **Celebrity r8r** | Celebrity rating and AI summaries. | [Visit](https://celebrity.r8r.website/?=github) |
+| **Email Signatures** | Professional signature generator. | [Visit](https://www.emailsig.website/?=github) |
+| **Headless WP to React** | Tech & photography blog. | [Visit](https://photos-tech.netlify.app/?=github) |
+| **SocialSpark (WIP)** | AI social media content generator. | [Visit](https://socialspark.website/?=github) |
+| **Report Hotel** | Hotel issue reporting platform. | [Visit](https://reclamo.ca/?=github) |
+| **Email IQ** | Email quality analysis tool. | [Visit](https://www.emailiq.tech/?=github) |
+| **SpotBack** | Spotify listening habit analytics. | [Visit](https://spotback.website/?=github) |
+| **MetaData Parser** | File metadata viewer. | [Visit](https://exif-parser.netlify.app/?=github) |
+| **Critter Poop** | Casual arcade game. | [Visit](https://critter-poop.netlify.app/?=github) |
+| **Type Invaders** | Speed typing training game. | [Visit](https://www.typeinvaders.space/?=github) |
+| **Sudokuh** | Classic Sudoku puzzle game. | [Visit](https://sudokuh.netlify.app/?=github) |
+| **QRky** | QR code generator/decoder. | [Visit](https://qrky.site/?=github) |
+| **Canvas Crop** | Online image cropping tool. | [Visit](https://canvas-crop.netlify.app/?=github) |
+| **RetroSnap** | Retro photo filter tool. | [Visit](https://retrosnap.ca/?=github) |
+
+
 ## 🛠️ Skills
 
 My technical skill set is broad and includes:
