@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2000/atom">
+<channel>
+  <title>Allan Batac Portfolio Changelog</title>
+  <link>https://ajbatac.github.io/changelog</link>
+  <description>Stay updated with the latest improvements, fixes, and milestones of Allan Batac's portfolio.</description>
+  <language>en-us</language>
+  <pubDate>Wed, 18 Mar 2026 00:00:00 GMT</pubDate>
+  <lastBuildDate>Wed, 18 Mar 2026 00:00:00 GMT</lastBuildDate>
+  <atom:link href="https://ajbatac.github.io/changelog/rss" rel="self" type="application/rss+xml" />
+
+  <item>
+    <title>v2.5.0 - UI Polish & Project Documentation</title>
+    <link>https://ajbatac.github.io/changelog#v2.5.0</link>
+    <guid isPermaLink="true">https://ajbatac.github.io/changelog#v2.5.0</guid>
+    <pubDate>Wed, 18 Mar 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[
+      <ul>
+        <li><strong>UI Polishing:</strong> Refined the profile layout by centering the avatar for a more balanced and professional header.</li>
+        <li><strong>Enhanced Discovery:</strong> Launched the unified changelog and project documentation system.</li>
+        <li><strong>Live Updates:</strong> Integrated an RSS feed allowing followers to subscribe to real-time project milestones.</li>
+        <li><strong>SEO Optimization:</strong> Updated search engine directives to ensure better visibility of the new project tracking system.</li>
+      </ul>
+    ]]></description>
+  </item>
+
+  <item>
+    <title>v1.0.0 - Professional Brand & Design Refresh</title>
+    <link>https://ajbatac.github.io/changelog#v1.0.0</link>
+    <guid isPermaLink="true">https://ajbatac.github.io/changelog#v1.0.0</guid>
+    <pubDate>Mon, 13 Jan 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[
+      <ul>
+        <li><strong>Professional Brand:</strong> Introduced the "Business Summary" section to showcase strategic and leadership competencies.</li>
+        <li><strong>Design Refresh:</strong> Migrated to a modern icon system using Google Material Symbols for a sleeker look.</li>
+        <li><strong>Version Control:</strong> Implemented the initial version tracking system and checkpoint methodology.</li>
+        <li><strong>Legacy Alignment:</strong> Updated the copyright structure for 2026 and cleaned up dynamic year JS for better performance.</li>
+      </ul>
+    ]]></description>
+  </item>
+
+</channel>
+</rss>

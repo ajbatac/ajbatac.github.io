@@ -8,6 +8,14 @@
     ],
     "rewrites": [
       {
+        "source": "/changelog",
+        "destination": "/changelog.html"
+      },
+      {
+        "source": "/changelog/rss",
+        "destination": "/rss.xml"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }

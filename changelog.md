@@ -2,6 +2,40 @@
 
 All notable technical changes to this project will be documented in this file.
 
+## [v2.5.0] - 2026-03-18
+
+### Added
+- **Public-facing Changelog**: Implemented unified `/changelog` page for high-level release notes.
+  - Linked to `changelog.html` via `firebase.json` rewrite.
+  - Omitted technical details for public security.
+- **Project RSS Feed**: Established validated XML feed at `/changelog/rss`.
+  - Linked to `rss.xml` via `firebase.json` rewrite.
+- **Search Engine Optimization**: Standardized project discovery directives.
+  - Created/Updated `sitemap.xml` with priority routes.
+  - Added sitemap link to `robots.txt`.
+
+### Changed
+- **Avatar Positioning**: Enhanced the profile image centering logic in `css/style.css:116-125`.
+  - Switched from inline-block to `display: block` with `margin: 0 auto`.
+- **Version Tracking (v2.5.0)**: Updated project milestone across multiple files.
+  - Footer in `index.html:508`: updated version and wrapped in clickable link to `/changelog`.
+  - Meta tags and documentation in `README.md`.
+
+### Technical Details
+- **Files Affected**:
+  - `index.html`: Footer and versioning update.
+  - `css/style.css`: Profile image styling.
+  - `firebase.json`: Routing for new static pages.
+  - `changelog.html`: Public release page.
+  - `rss.xml`: Content syndication feed.
+  - `sitemap.xml`, `robots.txt`: SEO directives.
+- **Code Snippets**:
+  - CSS centering: `.profile-img { display: block; margin: 0 auto; }`
+  - Footer link: `<a href="/changelog">v2.5.0</a>`
+- **Dependencies**: None.
+
+---
+
 ## [v1.0.0] - 2026-01-13
 
 ### Added
