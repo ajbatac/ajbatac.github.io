@@ -4,14 +4,14 @@ Welcome to the repository for my personal portfolio website. This project showca
 
 You can view the live site here: [ajbatac.github.io](https://ajbatac.github.io/)
 
-## Recent Updates (v2.5.0 - March 2026)
+## Recent Updates (v2.6.0 - June 2026)
 
 This checkpoint release includes:
-- **Major Version Bump**: Incremented platform version to v2.5.0 for a significant milestone update.
-- **Enhanced UI Persistence**: Improved the profile image centering and layout reliability for a premium experience.
-- **Public Changelog**: Launched the dedicated [/changelog](/changelog) page for transparency and user-friendly update summaries.
-- **Unified Documentation**: Established a dual-layer logging system with detailed internal technical changelogs and high-level public release notes.
-- **Project Discoverability**: Optimized sitemap and robots directives, and introduced an automated RSS feed at [/changelog/rss](/changelog/rss).
+- **Static UI Refresh**: Updated the typography, layout, spacing, and project cards for a cleaner resume-style portfolio.
+- **Pure HTML/CSS Delivery**: Removed JavaScript-powered controls and analytics from the deployed pages.
+- **Recent Product Additions**: Added Mekeni, Pixel IQ, FOSSY, and WPEG.app to the project section.
+- **Source Cleanup**: Removed the stale duplicate Next/TypeScript implementation so the root static site remains the source of truth.
+- **Project Discoverability**: Refreshed sitemap and RSS metadata for the latest public update.
 
 ---
 
@@ -37,6 +37,10 @@ I have designed and developed over 100 websites and applications from ideation t
 
 | Project | Description | Links |
 | :--- | :--- | :--- |
+| **Mekeni** | Filipino-Canadian business directory for discovering top-rated community businesses across Canada. | [Visit](https://mekeni.ca/) |
+| **Pixel IQ** | AI-powered image intelligence platform for content, metadata, color, and forensics analysis. | [Visit](https://pixeliq.ca/) |
+| **FOSSY** | Curated FOSS directory and contributor discovery platform using live GitHub signal. | [Visit](https://fossy.dev/) |
+| **WPEG.app** | Winnipeg micro-apps portal for local services, tools, weather, news, events, and alerts. | [Visit](https://portal.wpeg.app/) |
 | **Heather Tardiff** | Connection-driven wedding and family photography. | [Visit](https://htardiffphotography.ca/) |
 | **Marissa Naylor** | Timeless prairie-inspired wedding photography. | [Visit](https://marissanaylorphoto.ca/) |
 | **GreenRocket** | Community platform for tech founders. | [Visit](https://greenrocket.app/) |

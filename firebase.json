@@ -4,7 +4,11 @@
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**"
+      "**/node_modules/**",
+      "README.md",
+      "changelog.md",
+      "requirements.txt",
+      "tests/**"
     ],
     "rewrites": [
       {
@@ -22,7 +26,7 @@
     ],
     "headers": [
       {
-        "source": "**/*.@(jpg|jpeg|gif|png|webp|css|js)",
+        "source": "**/*.@(jpg|jpeg|gif|png|webp|css)",
         "headers": [
           {
             "key": "Cache-Control",

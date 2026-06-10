@@ -2,6 +2,38 @@
 
 All notable technical changes to this project will be documented in this file.
 
+## [v2.6.0] - 2026-06-10
+
+### Added
+- **Recent Product Additions**: Added four static project cards to `index.html`.
+  - Mekeni: Filipino-Canadian business directory.
+  - Pixel IQ: AI-powered image intelligence platform.
+  - FOSSY: Curated FOSS directory and contributor discovery surface.
+  - WPEG.app: Winnipeg micro-apps portal.
+
+### Changed
+- **Static UI Refresh**: Reworked `css/style.css` around a lighter editorial portfolio layout.
+  - Simplified typography to one readable sans-serif system.
+  - Removed dark glassmorphism and script-dependent visual states.
+  - Added print-oriented styles for resume-style output.
+- **Pure HTML/CSS Contract**: Removed JavaScript-powered controls from the deployed pages.
+  - Removed theme toggle, font sizer, dynamic back-to-top button, and analytics script tags from `index.html`.
+  - Removed the shared script include from `changelog.html`.
+  - Deleted the unused `js/script.js` file.
+- **Source of Truth Cleanup**: Removed the stale duplicate Next/TypeScript portfolio surface under `hosting/`.
+  - Firebase hosting serves the repository root, so the static `index.html` remains authoritative.
+
+### Technical Details
+- **Files Affected**:
+  - `index.html`: Static markup, project additions, script removal, version update.
+  - `css/style.css`: UI, typography, layout, responsive, and print refresh.
+  - `changelog.html`, `changelog.md`, `rss.xml`, `sitemap.xml`, `README.md`: Version and release metadata.
+  - `tests/test_index.py`: Updated tests for static HTML/CSS behavior.
+  - `firebase.json`: Removed obsolete JavaScript cache target and ignored non-site files.
+- **Dependencies**: Removed unused Node/Next/TypeScript project files.
+
+---
+
 ## [v2.5.0] - 2026-03-18
 
 ### Added
@@ -58,7 +90,7 @@ All notable technical changes to this project will be documented in this file.
 - **Footer Copyright Year**: Updated from dynamic year display to static "2026" (`index.html:438`)
   - Previous: `© <span id="current-year"></span> Allan Batac Inc. All rights reserved.`
   - Current: `© 2026 Allan Batac Inc. All rights reserved. | v1.0.0`
-  - Note: JavaScript year setter still present in `js/script.js:108-111` but no longer used
+  - Note: This was later superseded in v2.6.0 when the unused script file was removed.
 
 - **Icon System**: migrated all icons from emoji/text to Google Material Icons (`index.html:30-32`)
   - Added Material Symbols Outlined stylesheet
@@ -83,4 +115,5 @@ All notable technical changes to this project will be documented in this file.
 ---
 
 ## Version History
+- **v2.6.0** (2026-06-10): Static UI refresh, pure HTML/CSS delivery, new project cards
 - **v1.0.0** (2026-01-13): Initial versioning, Business Summary addition, 2026 checkpoint update

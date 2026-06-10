@@ -5,12 +5,27 @@
   <link>https://ajbatac.github.io/changelog</link>
   <description>Stay updated with the latest improvements, fixes, and milestones of Allan Batac's portfolio.</description>
   <language>en-us</language>
-  <pubDate>Wed, 18 Mar 2026 00:00:00 GMT</pubDate>
-  <lastBuildDate>Wed, 18 Mar 2026 00:00:00 GMT</lastBuildDate>
+  <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+  <lastBuildDate>Wed, 10 Jun 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://ajbatac.github.io/changelog/rss" rel="self" type="application/rss+xml" />
 
   <item>
-    <title>v2.5.0 - UI Polish & Project Documentation</title>
+    <title>v2.6.0 - Static UI Refresh</title>
+    <link>https://ajbatac.github.io/changelog#v2.6.0</link>
+    <guid isPermaLink="true">https://ajbatac.github.io/changelog#v2.6.0</guid>
+    <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[
+      <ul>
+        <li><strong>Static Portfolio Refresh:</strong> Updated typography, layout, and project cards for a cleaner resume-style experience.</li>
+        <li><strong>Pure HTML/CSS Delivery:</strong> Removed JavaScript-powered controls and analytics from deployed pages.</li>
+        <li><strong>Project Additions:</strong> Added Mekeni, Pixel IQ, FOSSY, and WPEG.app.</li>
+        <li><strong>Cleaner Structure:</strong> Removed the stale duplicate app implementation so the static site remains the source of truth.</li>
+      </ul>
+    ]]></description>
+  </item>
+
+  <item>
+    <title>v2.5.0 - UI Polish &amp; Project Documentation</title>
     <link>https://ajbatac.github.io/changelog#v2.5.0</link>
     <guid isPermaLink="true">https://ajbatac.github.io/changelog#v2.5.0</guid>
     <pubDate>Wed, 18 Mar 2026 00:00:00 GMT</pubDate>
@@ -25,7 +40,7 @@
   </item>
 
   <item>
-    <title>v1.0.0 - Professional Brand & Design Refresh</title>
+    <title>v1.0.0 - Professional Brand &amp; Design Refresh</title>
     <link>https://ajbatac.github.io/changelog#v1.0.0</link>
     <guid isPermaLink="true">https://ajbatac.github.io/changelog#v1.0.0</guid>
     <pubDate>Mon, 13 Jan 2026 00:00:00 GMT</pubDate>
@@ -34,7 +49,7 @@
         <li><strong>Professional Brand:</strong> Introduced the "Business Summary" section to showcase strategic and leadership competencies.</li>
         <li><strong>Design Refresh:</strong> Migrated to a modern icon system using Google Material Symbols for a sleeker look.</li>
         <li><strong>Version Control:</strong> Implemented the initial version tracking system and checkpoint methodology.</li>
-        <li><strong>Legacy Alignment:</strong> Updated the copyright structure for 2026 and cleaned up dynamic year JS for better performance.</li>
+        <li><strong>Legacy Alignment:</strong> Updated the copyright structure for 2026 and cleaned up dynamic year handling for better performance.</li>
       </ul>
     ]]></description>
   </item>

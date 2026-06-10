@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -29,12 +29,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
-  <!-- Google Material Icons -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link rel="stylesheet" href="css/style.css?v=6">
+  <link rel="stylesheet" href="css/style.css?v=8">
 </head>
 
 <body>
@@ -42,33 +39,16 @@
   <div class="container">
     <main>
       <header>
-        <div class="header-controls">
-          <div class="theme-switch-wrapper">
-            <label class="theme-switch" for="theme-checkbox" title="Toggle Dark/Light Mode">
-              <input type="checkbox" id="theme-checkbox" checked aria-label="Theme switch" />
-              <span class="slider round"></span>
-            </label>
-          </div>
-          <div class="font-sizer-wrapper">
-            <button class="font-sizer-btn" id="font-decrease" title="Decrease Font Size">-A</button>
-            <button class="font-sizer-btn" id="font-reset" title="Reset Font Size">T</button>
-            <button class="font-sizer-btn" id="font-increase" title="Increase Font Size">+A</button>
-          </div>
-        </div>
-
         <img src="public/avatar.webp" alt="Allan Batac" class="profile-img">
         <h1>Allan "AJ" Batac</h1>
         <p>Tech Leader | Web Applications Developer | Futurist | Ideator | SWE</p>
 
         <div class="contact-info">
-          <a href="tel:+12042281074" title="Call"><span class="material-symbols-outlined">phone</span></a>
-          <a href="mailto:ajbatac@gmail.com" title="Email"><span class="material-symbols-outlined">mail</span></a>
-          <a href="https://linkedin.com/in/ajbatac " target="_blank" rel="noopener noreferrer" title="LinkedIn"><span
-              class="material-symbols-outlined">work</span></a>
-          <a href="https://github.com/ajbatac" target="_blank" rel="noopener noreferrer" title="GitHub"><span
-              class="material-symbols-outlined">code</span></a>
-          <a href="https://ajbatac.com " target="_blank" rel="noopener noreferrer" title="Personal Website"><span
-              class="material-symbols-outlined">language</span></a>
+          <a href="tel:+12042281074">Phone</a>
+          <a href="mailto:ajbatac@gmail.com">Email</a>
+          <a href="https://linkedin.com/in/ajbatac" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/ajbatac" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://ajbatac.com" target="_blank" rel="noopener noreferrer">Website</a>
         </div>
       </header>
 
@@ -83,8 +63,8 @@
       </div>
 
       <section id="summary">
-        <div class="section-header" aria-expanded="true" aria-controls="summary-content" role="button" tabindex="0">
-          <h2><span class="material-symbols-outlined">description</span> Summary</h2>
+        <div class="section-header">
+          <h2>Summary</h2>
         </div>
         <div class="section-content" id="summary-content">
           <ul>
@@ -99,9 +79,8 @@
       </section>
 
       <section id="business-summary">
-        <div class="section-header" aria-expanded="true" aria-controls="business-summary-content" role="button"
-          tabindex="0">
-          <h2><span class="material-symbols-outlined">business_center</span> Business Summary</h2>
+        <div class="section-header">
+          <h2>Business Summary</h2>
         </div>
         <div class="section-content" id="business-summary-content">
           <div class="skills">
@@ -171,8 +150,8 @@
       </section>
 
       <section id="skills">
-        <div class="section-header" aria-expanded="true" aria-controls="skills-content" role="button" tabindex="0">
-          <h2><span class="material-symbols-outlined">build</span> Skills</h2>
+        <div class="section-header">
+          <h2>Skills</h2>
         </div>
         <div class="section-content" id="skills-content">
           <div class="skills">
@@ -220,8 +199,8 @@
       </section>
 
       <section id="experience">
-        <div class="section-header" aria-expanded="true" aria-controls="experience-content" role="button" tabindex="0">
-          <h2><span class="material-symbols-outlined">apartment</span> Experience</h2>
+        <div class="section-header">
+          <h2>Experience</h2>
         </div>
         <div class="section-content" id="experience-content" aria-live="polite">
           <div class="experience">
@@ -259,9 +238,8 @@
       </section>
 
       <section id="certifications">
-        <div class="section-header" aria-expanded="true" aria-controls="certifications-content" role="button"
-          tabindex="0">
-          <h2><span class="material-symbols-outlined">workspace_premium</span> Certifications</h2>
+        <div class="section-header">
+          <h2>Certifications</h2>
         </div>
         <div class="section-content" id="certifications-content" aria-live="polite">
           <ul>
@@ -278,8 +256,8 @@
       </section>
 
       <section id="education">
-        <div class="section-header" aria-expanded="true" aria-controls="education-content" role="button" tabindex="0">
-          <h2><span class="material-symbols-outlined">school</span> Education</h2>
+        <div class="section-header">
+          <h2>Education</h2>
         </div>
         <div class="education section-content" id="education-content" aria-live="polite">
           <p><strong>University of Santo Tomas</strong> <span class="time-location">BSECE, Electronics and
@@ -290,12 +268,36 @@
       </section>
 
       <section id="recent-apps">
-        <div class="section-header" aria-expanded="true" aria-controls="recent-apps-content" role="button" tabindex="0">
-          <h2><span class="material-symbols-outlined">rocket_launch</span> Recent Products</h2>
+        <div class="section-header">
+          <h2>Recent Products</h2>
           <span class="tag">Ideation to Execution</span>
         </div>
         <div class="section-content" id="recent-apps-content">
           <div class="apps-grid">
+            <div class="app-card featured">
+              <h3>Mekeni</h3>
+              <p>Filipino-Canadian business directory helping people discover and support top-rated Filipino-owned restaurants, grocery stores, bakeries, professional services, beauty providers, and health services across Canada.</p>
+              <a href="https://mekeni.ca/" target="_blank" rel="noopener noreferrer"
+                aria-label="Visit Mekeni">Visit App</a>
+            </div>
+            <div class="app-card featured">
+              <h3>Pixel IQ</h3>
+              <p>AI-powered image intelligence platform for creators, combining content analysis, EXIF metadata, histogram interpretation, color palette extraction, image forensics, XMP preset generation, and publishing workflows.</p>
+              <a href="https://pixeliq.ca/" target="_blank" rel="noopener noreferrer"
+                aria-label="Visit Pixel IQ">Visit App</a>
+            </div>
+            <div class="app-card featured">
+              <h3>FOSSY</h3>
+              <p>Curated FOSS directory for discovering, discussing, and ranking open-source software and contributors using live GitHub signals, featured picks, language filters, platform filters, and community context.</p>
+              <a href="https://fossy.dev/" target="_blank" rel="noopener noreferrer"
+                aria-label="Visit FOSSY">Visit App</a>
+            </div>
+            <div class="app-card featured">
+              <h3>WPEG.app</h3>
+              <p>Winnipeg micro-apps portal for local services, attractions, tools, weather, news, events, alerts, digital identity, newsletters, and practical city-focused utilities in one hub.</p>
+              <a href="https://portal.wpeg.app/" target="_blank" rel="noopener noreferrer"
+                aria-label="Visit WPEG.app">Visit App</a>
+            </div>
             <div class="app-card">
               <h3>DotsLife</h3>
               <p>DotsLife turns your life into a living timeline of dots, so you can see how far you've come, honor the moments that shaped you, and gently choose how to spend the weeks you have left.</p>
@@ -505,34 +507,10 @@
       </section>
     </main>
     <footer>
-      © 2026 Allan Batac Inc. All rights reserved. | <a href="/changelog" style="color: inherit; text-decoration: underline;">v2.5.0</a>
+      © 2026 Allan Batac Inc. All rights reserved. | <a href="/changelog">v2.6.0</a>
     </footer>
 
   </div> <!-- End Container -->
-
-  <!-- Chat bubble button -->
-  <button id="back-to-top-btn" class="chat-bubble-btn" title="Back to Top">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: -5px;">
-      <path d="m18 15-6-6-6 6" />
-    </svg>
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-      <path d="m18 15-6-6-6 6" />
-    </svg>
-  </button>
-
-  <script defer src="js/script.js?v=3"></script>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CDK9WZYW14"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-CDK9WZYW14');
-  </script>
 
 </body>
 
