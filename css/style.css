@@ -1,6 +1,7 @@
 :root {
   color-scheme: light;
-  --bg: #ffffff;
+
+  --bg: #fff;
   --surface: #f6f7f8;
   --surface-strong: #eceff1;
   --ink: #131519;
@@ -10,8 +11,8 @@
   --accent: #087f7a;
   --accent-strong: #0b5f5b;
   --accent-warm: #b83232;
-  --shadow: 0 16px 36px rgba(19, 21, 25, 0.08);
-  --font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --shadow: 0 16px 36px rgb(19 21 25 / 8%);
+  --font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; /* stylelint-disable-line value-keyword-case */
   --radius: 8px;
   --measure: 76ch;
 }
@@ -34,7 +35,7 @@ body {
   line-height: 1.65;
   letter-spacing: 0;
   overflow-x: hidden;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -42,14 +43,14 @@ body {
 a {
   color: var(--accent-strong);
   font-weight: 700;
-  text-decoration-color: rgba(8, 127, 122, 0.28);
+  text-decoration-color: rgb(8 127 122 / 28%);
   text-decoration-thickness: 2px;
   text-underline-offset: 0.2em;
 }
 
 a:hover {
   color: var(--accent-warm);
-  text-decoration-color: currentColor;
+  text-decoration-color: currentcolor;
 }
 
 .container {
@@ -101,6 +102,12 @@ h1 {
   letter-spacing: 0;
 }
 
+p {
+  max-width: var(--measure);
+  margin-bottom: 16px;
+  color: var(--ink);
+}
+
 header > p {
   max-width: 760px;
   margin-bottom: 22px;
@@ -138,21 +145,16 @@ header > p {
   font-size: 0.9rem;
 }
 
-.contact-info a:hover {
-  border-color: var(--accent);
-  color: var(--accent-strong);
-}
-
 .jump-links {
   position: sticky;
   top: 0;
   z-index: 10;
   margin: 0 -16px;
   padding: 14px 16px;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgb(255 255 255 / 94%);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px); /* stylelint-disable-line property-no-vendor-prefix */
 }
 
 .jump-links a {
@@ -160,11 +162,6 @@ header > p {
   color: var(--muted);
   font-size: 0.82rem;
   font-weight: 800;
-}
-
-.jump-links a:hover {
-  background: var(--surface);
-  color: var(--ink);
 }
 
 section {
@@ -196,12 +193,6 @@ h3 {
   font-weight: 800;
   line-height: 1.25;
   letter-spacing: 0;
-}
-
-p {
-  max-width: var(--measure);
-  margin-bottom: 16px;
-  color: var(--ink);
 }
 
 ul {
@@ -340,12 +331,12 @@ li {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--bg);
-  box-shadow: 0 1px 0 rgba(19, 21, 25, 0.04);
+  box-shadow: 0 1px 0 rgb(19 21 25 / 4%);
 }
 
 .app-card.featured {
-  border-color: rgba(8, 127, 122, 0.34);
-  background: linear-gradient(180deg, #f8fbfb 0%, #ffffff 100%);
+  border-color: rgb(8 127 122 / 34%);
+  background: linear-gradient(180deg, #f8fbfb 0%, #fff 100%);
 }
 
 .app-card h3 {
@@ -355,7 +346,7 @@ li {
   align-items: center;
 }
 
-.app-card p {
+.app-card p { /* stylelint-disable-line no-descending-specificity */
   margin-bottom: 18px;
   color: var(--muted);
   font-size: 0.92rem;
@@ -363,12 +354,12 @@ li {
   flex: 1;
 }
 
-.app-card a {
+.app-card a { /* stylelint-disable-line no-descending-specificity */
   width: 100%;
   padding: 9px 12px;
   border: 1px solid var(--accent);
   background: var(--accent);
-  color: #ffffff;
+  color: #fff;
   font-size: 0.85rem;
   font-weight: 800;
 }
@@ -376,7 +367,17 @@ li {
 .app-card a:hover {
   border-color: var(--accent-warm);
   background: var(--accent-warm);
-  color: #ffffff;
+  color: #fff;
+}
+
+.contact-info a:hover {
+  border-color: var(--accent);
+  color: var(--accent-strong);
+}
+
+.jump-links a:hover {
+  background: var(--surface);
+  color: var(--ink);
 }
 
 footer {
@@ -386,17 +387,17 @@ footer {
   text-align: center;
 }
 
-footer a {
+footer a { /* stylelint-disable-line no-descending-specificity */
   color: inherit;
 }
 
-@media (max-width: 980px) {
+@media (width <= 980px) {
   .app-card {
     grid-column: span 6;
   }
 }
 
-@media (max-width: 760px) {
+@media (width <= 760px) {
   .container {
     width: calc(100% - 24px);
     max-width: 1180px;
@@ -442,8 +443,8 @@ footer a {
 
 @media print {
   body {
-    color: #000000;
-    background: #ffffff;
+    color: #000;
+    background: #fff;
     font-size: 11pt;
   }
 
@@ -461,7 +462,7 @@ footer a {
   }
 
   a {
-    color: #000000;
+    color: #000;
     text-decoration: none;
   }
 

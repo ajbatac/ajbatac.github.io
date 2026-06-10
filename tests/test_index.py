@@ -57,7 +57,7 @@ def test_jump_links(page: Page):
     expect(jump_links).to_have_count(len(expected_links))
 
     for link_text, href in expected_links.items():
-        link = jump_links.filter(has_text=link_text)
+        link = jump_links.filter(has_text=re.compile(f"^{re.escape(link_text)}$"))
         expect(link).to_have_count(1)
         expect(link).to_have_attribute("href", href)
 
