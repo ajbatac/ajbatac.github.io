@@ -107,4 +107,3 @@ Let's connect!
 *   **Email:** [ajbatac@gmail.com](mailto:ajbatac@gmail.com)
 *   **LinkedIn:** [linkedin.com/in/ajbatac](https://linkedin.com/in/ajbatac)
 *   **Personal Site:** [ajbatac.com](https://ajbatac.com)
-*   **Phone:** [+1 204 228 1074](tel:+12042281074)
