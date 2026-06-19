@@ -1,4 +1,4 @@
-# Allan "AJ" Batac - Tech Leader & Full-Stack Portfolio
+# Allan Batac - Tech Leader & Full-Stack Portfolio
 
 Welcome to the repository for my personal portfolio website. This project showcases my 25+ years of experience in tech leadership and web application development.
 
