@@ -4,9 +4,11 @@ Welcome to the repository for my personal portfolio website. This project showca
 
 You can view the live site here: [ajbatac.github.io](https://ajbatac.github.io/)
 
-## Recent Updates (v2.6.0 - June 2026)
+## Recent Updates (v2.6.2 - June 2026)
 
 This checkpoint release includes:
+- **Versioning & Source Control**: Added explicit listing of Git, GitHub, GitLab, Bitbucket, and SVN systems under Skills.
+- **Summary & Skills Update**: Integrated advanced deployment platforms (Vercel, Netlify, Cloudflare), RAG (Retrieval-Augmented Generation) expertise, and System/Software Design Document (SDD) capabilities.
 - **Static UI Refresh**: Updated the typography, layout, spacing, and project cards for a cleaner resume-style portfolio.
 - **Pure HTML/CSS Delivery**: Removed JavaScript-powered controls and analytics from the deployed pages.
 - **Recent Product Additions**: Added Mekeni, Pixel IQ, FOSSY, and WPEG.app to the project section.
@@ -29,7 +31,7 @@ This checkpoint release includes:
 
 ## 📝 Summary
 
-I am a results-driven Tech Leader with a proven ability to lead diverse teams (Development, UI/UX, DevOps, QA) and deliver successful website launches. My expertise includes cloud platforms (AWS, GCP, Digital Ocean), LAMP/MERN stacks, and a strong focus on creating accessible, user-friendly experiences (AODA/WCAG 2.1 compliance). I am passionate about innovation and am currently exploring Generative AI, AI Agents, and LLMs to drive future solutions.
+I am a results-driven Tech Leader with a proven ability to lead diverse teams (Development, UI/UX, DevOps, QA) and deliver successful website launches. My expertise spans cloud infrastructure and modern hosting platforms (AWS, GCP, Digital Ocean, Vercel, Netlify, Cloudflare), LAMP/MERN stacks, and a strong focus on creating accessible, user-friendly experiences (AODA/WCAG 2.1 compliance) driven by clear System/Software Design Documents (SDD). I am passionate about AI innovation, actively leveraging LLMs, Retrieval-Augmented Generation (RAG), and AI Agents to build intelligent, production-ready applications.
 
 ## 🚀 Recent Web Applications
 
@@ -73,11 +75,12 @@ I have designed and developed over 100 websites and applications from ideation t
 ## 🛠️ Skills
 
 My technical skill set is broad and includes:
-*   **Leadership:** Project Management, Team Leadership & Mentoring
-*   **Cloud Platforms:** AWS, GCP, Digital Ocean
+*   **Leadership & Design:** Project Management, Team Leadership & Mentoring, System Design Documents (SDD)
+*   **Cloud & Deployment:** AWS, GCP, Digital Ocean, Vercel, Netlify, Cloudflare
+*   **Versioning & Source Control:** Git, GitHub, GitLab, Bitbucket, SVN
 *   **Stacks:** LAMP & MERN
 *   **Languages & Frameworks:** React, Node.js, PHP, JavaScript, HTML, SQL
-*   **Emerging Tech:** AI, LLM, RAG, MCP, Context Engineering
+*   **AI & Emerging Tech:** LLMs, RAG, AI Agents, MCP, Context Engineering
 
 ## 🏢 Experience
 

@@ -2,6 +2,17 @@
 
 All notable technical changes to this project will be documented in this file.
 
+## [v2.6.2] - 2026-06-26
+
+### Added
+- **Versioning & Source Control**: Added a dedicated section to showcase experience across Git, GitHub, GitLab, Bitbucket, and SVN version control systems.
+
+## [v2.6.1] - 2026-06-26
+
+### Changed
+- **Summary & Skills Refresh**: Enhanced the professional summary and skill sets across the portfolio and README to reflect expertise in modern hosting platforms (Vercel, Netlify, Cloudflare), RAG (Retrieval-Augmented Generation), and System/Software Design Documents (SDD).
+- **Metadata Keywords**: Updated SEO metadata keywords for better discoverability of newly listed technologies.
+
 ## [v2.6.0] - 2026-06-10
 
 ### Added
@@ -115,5 +126,7 @@ All notable technical changes to this project will be documented in this file.
 ---
 
 ## Version History
+- **v2.6.2** (2026-06-26): Versioning & source control skill additions (Git, GitHub, GitLab, Bitbucket, SVN)
+- **v2.6.1** (2026-06-26): Summary & skills update (Vercel, Netlify, Cloudflare, RAG, SDD)
 - **v2.6.0** (2026-06-10): Static UI refresh, pure HTML/CSS delivery, new project cards
 - **v1.0.0** (2026-01-13): Initial versioning, Business Summary addition, 2026 checkpoint update

@@ -5,9 +5,34 @@
   <link>https://ajbatac.github.io/changelog</link>
   <description>Stay updated with the latest improvements, fixes, and milestones of Allan Batac's portfolio.</description>
   <language>en-us</language>
-  <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
-  <lastBuildDate>Wed, 10 Jun 2026 00:00:00 GMT</lastBuildDate>
+  <pubDate>Fri, 26 Jun 2026 00:00:00 GMT</pubDate>
+  <lastBuildDate>Fri, 26 Jun 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://ajbatac.github.io/changelog/rss" rel="self" type="application/rss+xml" />
+
+  <item>
+    <title>v2.6.2 - Versioning &amp; Source Control Update</title>
+    <link>https://ajbatac.github.io/changelog#v2.6.2</link>
+    <guid isPermaLink="true">https://ajbatac.github.io/changelog#v2.6.2</guid>
+    <pubDate>Fri, 26 Jun 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[
+      <ul>
+        <li><strong>Versioning &amp; Source Control:</strong> Added a dedicated section to showcase experience across Git, GitHub, GitLab, Bitbucket, and SVN version control systems.</li>
+      </ul>
+    ]]></description>
+  </item>
+
+  <item>
+    <title>v2.6.1 - Summary &amp; Skills Update</title>
+    <link>https://ajbatac.github.io/changelog#v2.6.1</link>
+    <guid isPermaLink="true">https://ajbatac.github.io/changelog#v2.6.1</guid>
+    <pubDate>Fri, 26 Jun 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[
+      <ul>
+        <li><strong>Summary &amp; Skills Update:</strong> Enhanced professional summary and technical skill sets to highlight expertise in modern hosting platforms (Vercel, Netlify, Cloudflare), RAG, and System Design Documents (SDD).</li>
+        <li><strong>Metadata Optimization:</strong> Refreshed SEO keywords for better discoverability.</li>
+      </ul>
+    ]]></description>
+  </item>
 
   <item>
     <title>v2.6.0 - Static UI Refresh</title>
