@@ -63,11 +63,11 @@ I have designed and developed over 100 websites and applications from ideation t
 | **kulay** | Modern color palette management. | [Visit](https://kulay.ca/?=github) |
 | **Palayok** | AI cooking companion & unit converter. | [Visit](https://palayok.ca/?=github) |
 | **Celebrity r8r** | Celebrity rating and AI summaries. | [Visit](https://celebrity.r8r.website/?=github) |
-| **Email Signatures** | Professional signature generator. | [Visit](https://www.emailsig.website/?=github) |
+| **EmailSig** | Create brilliant email signatures in seconds with 20 templates, logo support, and instant HTML or text exports. | [Visit](https://www.emailsig.website/) |
 | **Headless WP to React** | Tech & photography blog. | [Visit](https://photos-tech.netlify.app/?=github) |
 | **SocialSpark (WIP)** | AI social media content generator. | [Visit](https://socialspark.website/?=github) |
 | **Report Hotel** | Hotel issue reporting platform. | [Visit](https://reclamo.ca/?=github) |
-| **Email IQ** | Email quality analysis tool. | [Visit](https://www.emailiq.tech/?=github) |
+| **Email IQ (Archived)** | Archived email quality analysis tool. | [View archive](https://www.emailiq.tech/?=github) |
 | **SpotBack** | Spotify listening habit analytics. | [Visit](https://spotback.website/?=github) |
 | **MetaData Parser** | File metadata viewer. | [Visit](https://exif-parser.netlify.app/?=github) |
 | **Critter Poop** | Casual arcade game. | [Visit](https://critter-poop.netlify.app/?=github) |

@@ -98,6 +98,7 @@ def test_recent_apps_are_static_unique_and_linked(page: Page):
         "aHREFna – Domain Intelligence. Engineered.": "https://ahrefna.com",
         "FOSSY – Curated FOSS Directory": "https://fossy.dev",
         "Mekeni": "https://mekeni.ca/",
+        "EmailSig": "https://www.emailsig.website/",
     }
 
     for project, url in expected_projects.items():
@@ -110,6 +111,11 @@ def test_recent_apps_are_static_unique_and_linked(page: Page):
             "element => getComputedStyle(element, '::before').backgroundImage"
         )
         assert icon_background != "none"
+
+    email_iq = page.locator(".app-card", has=page.locator("h3", has_text="Email IQ"))
+    expect(email_iq).to_have_count(1)
+    expect(email_iq.locator(".tag")).to_have_text("Archived")
+    expect(email_iq.locator("a")).to_have_text("View Archive")
 
 
 def test_layout_css_is_linked(page: Page):
