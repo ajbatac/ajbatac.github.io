@@ -376,11 +376,101 @@ li {
   flex: 1;
 }
 
-.app-card a { /* stylelint-disable-line no-descending-specificity */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 16px;
+}
+
+.tech-stack span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 3px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.app-card a,
+.app-availability { /* stylelint-disable-line no-descending-specificity */
   width: 100%;
   padding: 9px 12px;
   font-size: 0.85rem;
   font-weight: 800;
+}
+
+.app-availability {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--soft);
+  text-align: center;
+}
+
+.app-drawer {
+  margin-top: 18px;
+}
+
+.app-drawer summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  min-height: 58px;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 800;
+  list-style-position: inside;
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.app-drawer summary:hover {
+  border-color: var(--soft);
+  background: var(--surface-strong);
+}
+
+.app-drawer summary:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.app-drawer summary small {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.app-drawer summary small::after {
+  color: var(--ink);
+  content: "+";
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.app-drawer[open] summary small::after {
+  content: "−";
+}
+
+.app-drawer[open] summary {
+  margin-bottom: 14px;
 }
 
 .contact-info a:hover,
@@ -451,6 +541,11 @@ footer a { /* stylelint-disable-line no-descending-specificity */
     grid-template-columns: 1fr;
   }
 
+  .app-drawer summary {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
   .skill-category {
     grid-template-columns: 1fr;
     gap: 8px;
@@ -491,5 +586,13 @@ footer a { /* stylelint-disable-line no-descending-specificity */
   .tag,
   .contact-info a {
     box-shadow: none;
+  }
+
+  .app-drawer summary {
+    display: none;
+  }
+
+  .app-drawer > .app-drawer-grid {
+    display: grid !important;
   }
 }

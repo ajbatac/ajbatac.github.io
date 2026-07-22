@@ -88,15 +88,15 @@ def test_section_headers(page: Page):
 def test_recent_apps_are_static_unique_and_linked(page: Page):
     page.goto("http://localhost:3000")
     expected_projects = {
-        "WPEG Classifieds – Local marketplace": "https://classifieds.wpeg.ca",
-        "Explore WPEG – AI Trip Planner": "https://explore.wpeg.ca",
+        "WPEG Classifieds — Local marketplace": "https://classifieds.wpeg.ca",
+        "Explore WPEG — AI Trip Planner": "https://explore.wpeg.ca",
         "Winnipeg Jobs": "https://jobs.wpeg.app",
-        "WPEG Portal – Winnipeg Micro Apps Hub": "https://portal.wpeg.app",
-        "Quilala – Canada’s Real-Time Community": "https://quilala.ca",
-        "Erutrepa – Photo AI Explainer": "https://app.erutrepa.com",
-        "Pixel IQ – AI-Powered Image Intelligence": "https://pixeliq.ca",
-        "aHREFna – Domain Intelligence. Engineered.": "https://ahrefna.com",
-        "FOSSY – Curated FOSS Directory": "https://fossy.dev",
+        "WPEG Portal — Winnipeg Micro Apps Hub": "https://portal.wpeg.app",
+        "Quilala — Canada’s Real-Time Community": "https://quilala.ca",
+        "Erutrepa — Photo AI Explainer": "https://app.erutrepa.com",
+        "Pixel IQ — AI-Powered Image Intelligence": "https://pixeliq.ca",
+        "aHREFna — Domain Intelligence. Engineered.": "https://ahrefna.com",
+        "FOSSY — Curated FOSS Directory": "https://fossy.dev",
         "Mekeni": "https://mekeni.ca/",
         "EmailSig": "https://www.emailsig.website/",
     }
@@ -115,17 +115,101 @@ def test_recent_apps_are_static_unique_and_linked(page: Page):
     email_iq = page.locator(".app-card", has=page.locator("h3", has_text="Email IQ"))
     expect(email_iq).to_have_count(1)
     expect(email_iq.locator(".tag")).to_have_text("Archived")
-    expect(email_iq.locator("a")).to_have_text("View Archive")
+    expect(email_iq.locator("a")).to_have_count(0)
+    expect(email_iq.locator(".app-availability")).to_have_text("URL unavailable")
 
     for project in ("Headless WP to React", "Canvas Crop"):
         open_source_card = page.locator(
             ".app-card", has=page.locator("h3", has_text=project)
         )
         expect(open_source_card).to_have_count(1)
-        expect(open_source_card.locator(".tag")).to_have_text("Open-Source")
+        expect(open_source_card.locator(".tag")).to_have_text("Open Source")
+
+
+def test_app_drawer_and_technology_stacks(page: Page):
+    page.goto("http://localhost:3000")
+
+    expected_stacks = {
+        "WPEG Classifieds — Local marketplace": ["Next.js", "Firebase App Hosting"],
+        "Explore WPEG — AI Trip Planner": ["Next.js", "Firebase App Hosting"],
+        "Winnipeg Jobs": ["React", "Vite", "Supabase", "Cloudflare Edge"],
+        "WPEG Portal — Winnipeg Micro Apps Hub": ["Next.js", "Firebase App Hosting"],
+        "Quilala — Canada’s Real-Time Community": ["Next.js", "Cloudflare Edge"],
+        "Erutrepa — Photo AI Explainer": ["Next.js", "Firebase App Hosting"],
+        "Pixel IQ — AI-Powered Image Intelligence": ["Next.js", "Firebase App Hosting"],
+        "aHREFna — Domain Intelligence. Engineered.": ["Next.js", "Netlify", "Cloudflare Edge"],
+        "FOSSY — Curated FOSS Directory": ["React", "TanStack Router", "Vite", "Supabase", "Clerk", "Tailwind CSS", "Cloudflare Edge"],
+        "Mekeni": ["Next.js", "Firebase App Hosting"],
+        "DotsLife": ["React", "Vite", "Supabase", "Cloudflare Edge"],
+        "RephrAIs": ["React", "Vite", "Supabase", "Cloudflare Edge"],
+        "Joye": ["Next.js", "Firebase App Hosting"],
+        "Heather Tardiff": ["WordPress", "jQuery"],
+        "Marissa Naylor": ["WordPress", "jQuery"],
+        "GreenRocket": ["React", "Vite", "Supabase", "Netlify"],
+        "Beautiful Invoices": ["React", "Vite", "Netlify"],
+        "LinkN": ["React", "Supabase", "Cloudflare Edge"],
+        "Tales": ["Next.js", "Firebase App Hosting"],
+        "Favicon.Love": ["React", "Vite", "Netlify"],
+        "Launch_Wizard": ["React", "Vite", "Tailwind CSS", "Netlify"],
+        "GlobalTrends": ["React", "Vite", "Netlify"],
+        "Virtual Realty Staging": ["Technology unverified"],
+        "Colour Palette Generator": ["React", "Vite", "Netlify", "Cloudflare Edge"],
+        "kulay": ["Next.js", "Firebase App Hosting"],
+        "Palayok": ["Next.js", "Firebase App Hosting", "Cloudflare Edge"],
+        "Celebrity r8r": ["Next.js", "Firebase App Hosting", "Cloudflare Edge", "Redirects"],
+        "EmailSig": ["Next.js", "Cloudflare Edge"],
+        "Headless WP to React": ["React", "Vite", "WordPress.com API", "Netlify"],
+        "SocialSpark": ["Next.js", "Firebase App Hosting"],
+        "Report Hotel": ["Next.js", "Firebase App Hosting"],
+        "Email IQ": ["Technology unverified"],
+        "SpotBack": ["Next.js", "Firebase App Hosting"],
+        "MetaData Parser": ["React", "Vite", "Netlify"],
+        "Critter Poop": ["Next.js", "Netlify"],
+        "Type Invaders": ["React", "Vite", "Supabase", "Cloudflare Edge"],
+        "Sudokuh": ["Next.js", "Netlify"],
+        "QRky": ["React", "Vite", "Netlify"],
+        "Canvas Crop": ["Next.js", "Netlify"],
+        "RetroSnap": ["Next.js", "Netlify", "Cloudflare Edge"],
+    }
+
+    cards = page.locator(".app-card")
+    expect(cards).to_have_count(40)
+    expect(page.locator("#recent-apps-content > .apps-grid > .app-card")).to_have_count(10)
+    expect(page.locator(".app-drawer-grid > .app-card")).to_have_count(30)
+
+    actual_stacks = cards.evaluate_all(
+        """
+        cards => Object.fromEntries(cards.map(card => {
+          const title = Array.from(card.querySelector('h3').childNodes)
+            .filter(node => node.nodeType === Node.TEXT_NODE)
+            .map(node => node.textContent)
+            .join('')
+            .trim();
+          const stack = Array.from(card.querySelectorAll('.tech-stack span'))
+            .map(item => item.textContent.trim());
+          return [title, stack];
+        }))
+        """
+    )
+    assert actual_stacks == expected_stacks
+
+    drawer = page.locator(".app-drawer")
+    expect(drawer).not_to_have_attribute("open", "")
+    expect(drawer.locator("summary > span")).to_have_text("Open the app drawer")
+    expect(drawer.locator("summary > small")).to_have_text("30 more builds inside")
+    drawer.locator("summary").click()
+    expect(drawer).to_have_attribute("open", "")
+    expect(drawer.locator(".app-card").first).to_be_visible()
+
+    for project in ("Virtual Realty Staging", "Email IQ"):
+        unavailable_card = page.locator(
+            ".app-card", has=page.locator("h3", has_text=project)
+        )
+        expect(unavailable_card.locator("a")).to_have_count(0)
+        expect(unavailable_card.locator(".app-availability")).to_have_text("URL unavailable")
 
 
 def test_layout_css_is_linked(page: Page):
     page.goto("http://localhost:3000")
-    stylesheet = page.locator('link[rel="stylesheet"][href="css/style.css?v=10"]')
+    stylesheet = page.locator('link[rel="stylesheet"][href="css/style.css?v=11"]')
     expect(stylesheet).to_have_count(1)
