@@ -11,6 +11,7 @@ All notable technical changes to this project will be documented in this file.
 - Renamed the Recent Products section to Recently built apps.
 - Refreshed the WPEG Portal, Pixel IQ, and FOSSY names and descriptions.
 - Added site favicons or logos beside app titles, with a neutral fallback for unavailable legacy assets.
+- Reworked links, app buttons, featured cards, and interaction states into a restrained grayscale system for cleaner employer-focused scanning.
 
 ## [v2.6.2] - 2026-06-26
 

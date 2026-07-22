@@ -114,5 +114,5 @@ def test_recent_apps_are_static_unique_and_linked(page: Page):
 
 def test_layout_css_is_linked(page: Page):
     page.goto("http://localhost:3000")
-    stylesheet = page.locator('link[rel="stylesheet"][href="css/style.css?v=9"]')
+    stylesheet = page.locator('link[rel="stylesheet"][href="css/style.css?v=10"]')
     expect(stylesheet).to_have_count(1)

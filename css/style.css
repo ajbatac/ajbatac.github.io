@@ -8,9 +8,6 @@
   --muted: #5f6670;
   --soft: #7a828c;
   --border: #d9dee3;
-  --accent: #087f7a;
-  --accent-strong: #0b5f5b;
-  --accent-warm: #b83232;
   --shadow: 0 16px 36px rgb(19 21 25 / 8%);
   --font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; /* stylelint-disable-line value-keyword-case */
   --radius: 8px;
@@ -41,16 +38,21 @@ body {
 }
 
 a {
-  color: var(--accent-strong);
+  color: var(--ink);
   font-weight: 700;
-  text-decoration-color: rgb(8 127 122 / 28%);
+  text-decoration-color: rgb(19 21 25 / 24%);
   text-decoration-thickness: 2px;
   text-underline-offset: 0.2em;
 }
 
 a:hover {
-  color: var(--accent-warm);
+  color: var(--muted);
   text-decoration-color: currentcolor;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
 }
 
 .container {
@@ -137,11 +139,16 @@ header > p {
   text-align: center;
 }
 
-.contact-info a {
-  padding: 8px 12px;
+.contact-info a,
+.app-card a { /* stylelint-disable-line no-descending-specificity */
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--ink);
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.contact-info a {
+  padding: 8px 12px;
   font-size: 0.9rem;
 }
 
@@ -263,7 +270,7 @@ li {
   max-width: var(--measure);
   margin-bottom: 24px;
   padding-left: 18px;
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid var(--ink);
 }
 
 .experience:last-child {
@@ -333,12 +340,11 @@ li {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--bg);
-  box-shadow: 0 1px 0 rgb(19 21 25 / 4%);
 }
 
 .app-card.featured {
-  border-color: rgb(8 127 122 / 34%);
-  background: linear-gradient(180deg, #f8fbfb 0%, #fff 100%);
+  border-color: #b8bec5;
+  background: #fbfbfc;
 }
 
 .app-card h3 {
@@ -373,22 +379,20 @@ li {
 .app-card a { /* stylelint-disable-line no-descending-specificity */
   width: 100%;
   padding: 9px 12px;
-  border: 1px solid var(--accent);
-  background: var(--accent);
-  color: #fff;
   font-size: 0.85rem;
   font-weight: 800;
 }
 
-.app-card a:hover {
-  border-color: var(--accent-warm);
-  background: var(--accent-warm);
-  color: #fff;
+.contact-info a:hover,
+.app-card a:hover { /* stylelint-disable-line no-descending-specificity */
+  border-color: var(--soft);
+  background: var(--surface-strong);
+  color: var(--ink);
 }
 
-.contact-info a:hover {
-  border-color: var(--accent);
-  color: var(--accent-strong);
+.contact-info a:active,
+.app-card a:active { /* stylelint-disable-line no-descending-specificity */
+  transform: translateY(1px);
 }
 
 .jump-links a:hover {
