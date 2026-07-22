@@ -15,9 +15,9 @@ def test_page_title(page: Page):
 def test_header_content(page: Page):
     page.goto("http://localhost:3000")
     header = page.locator("header")
-    expect(header.locator("h1")).to_have_text('Allan "AJ" Batac')
+    expect(header.locator("h1")).to_have_text("Allan Batac")
     expect(header.locator("p")).to_have_text(
-        "Tech Leader | Web Applications Developer | Futurist | Ideator | SWE"
+        "Full-Stack Engineer · UI/UX & Tech Leader"
     )
 
 
@@ -76,9 +76,8 @@ def test_section_headers(page: Page):
         "Business Summary",
         "Skills",
         "Experience",
-        "Certifications",
         "Education",
-        "Recent Products Ideation to Execution",
+        "Recently built apps Ideation to Execution",
     ]
 
     section_headers = page.locator("section .section-header")
@@ -86,22 +85,34 @@ def test_section_headers(page: Page):
     expect(section_headers).to_contain_text(expected_headers)
 
 
-def test_new_projects_are_static_and_linked(page: Page):
+def test_recent_apps_are_static_unique_and_linked(page: Page):
     page.goto("http://localhost:3000")
     expected_projects = {
+        "WPEG Classifieds – Local marketplace": "https://classifieds.wpeg.ca",
+        "Explore WPEG – AI Trip Planner": "https://explore.wpeg.ca",
+        "Winnipeg Jobs": "https://jobs.wpeg.app",
+        "WPEG Portal – Winnipeg Micro Apps Hub": "https://portal.wpeg.app",
+        "Quilala – Canada’s Real-Time Community": "https://quilala.ca",
+        "Erutrepa – Photo AI Explainer": "https://app.erutrepa.com",
+        "Pixel IQ – AI-Powered Image Intelligence": "https://pixeliq.ca",
+        "aHREFna – Domain Intelligence. Engineered.": "https://ahrefna.com",
+        "FOSSY – Curated FOSS Directory": "https://fossy.dev",
         "Mekeni": "https://mekeni.ca/",
-        "Pixel IQ": "https://pixeliq.ca/",
-        "FOSSY": "https://fossy.dev/",
-        "WPEG.app": "https://portal.wpeg.app/",
     }
 
     for project, url in expected_projects.items():
-        card = page.locator(".app-card").filter(has_text=project)
+        card = page.locator(".app-card", has=page.locator("h3", has_text=re.compile(f"^{re.escape(project)}$")))
         expect(card).to_have_count(1)
         expect(card.locator("a")).to_have_attribute("href", url)
+
+    for card in page.locator(".app-card").all():
+        icon_background = card.locator("h3").evaluate(
+            "element => getComputedStyle(element, '::before').backgroundImage"
+        )
+        assert icon_background != "none"
 
 
 def test_layout_css_is_linked(page: Page):
     page.goto("http://localhost:3000")
-    stylesheet = page.locator('link[rel="stylesheet"][href^="css/style.css"]')
+    stylesheet = page.locator('link[rel="stylesheet"][href="css/style.css?v=9"]')
     expect(stylesheet).to_have_count(1)

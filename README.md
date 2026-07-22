@@ -20,7 +20,7 @@ This checkpoint release includes:
 ## Sections
 
 *   [Summary](#-summary)
-*   [Recent Applications](#-recent-web-applications)
+*   [Recently built apps](#-recently-built-apps)
 *   [Skills](#-skills)
 *   [Experience](#-experience)
 *   [Certifications](#-certifications)
@@ -33,16 +33,22 @@ This checkpoint release includes:
 
 I am a results-driven Tech Leader with a proven ability to lead diverse teams (Development, UI/UX, DevOps, QA) and deliver successful website launches. My expertise spans cloud infrastructure and modern hosting platforms (AWS, GCP, Digital Ocean, Vercel, Netlify, Cloudflare), LAMP/MERN stacks, and a strong focus on creating accessible, user-friendly experiences (AODA/WCAG 2.1 compliance) driven by clear System/Software Design Documents (SDD). I am passionate about AI innovation, actively leveraging LLMs, Retrieval-Augmented Generation (RAG), and AI Agents to build intelligent, production-ready applications.
 
-## 🚀 Recent Web Applications
+## 🚀 Recently built apps
 
 I have designed and developed over 100 websites and applications from ideation to launch. The portfolio highlights a variety of recent projects, many of which are AI-powered.
 
 | Project | Description | Links |
 | :--- | :--- | :--- |
+| **WPEG Classifieds – Local marketplace** | Winnipeg-first buy and sell marketplace with simple category browsing, clean listing cards, and a modern alternative to legacy local classifieds. | [Visit](https://classifieds.wpeg.ca) |
+| **Explore WPEG – AI Trip Planner** | AI-powered Winnipeg trip planner that builds time-boxed, personalized routes from attractions, restaurants, and hidden gems. | [Visit](https://explore.wpeg.ca) |
+| **Winnipeg Jobs** | Focused Winnipeg jobs and gigs board with quality local opportunities, a no-spam/no-scams promise, and a direct feedback channel. | [Visit](https://jobs.wpeg.app) |
+| **WPEG Portal – Winnipeg Micro Apps Hub** | PWA-style portal and single entry point for the WPEG suite of Winnipeg digital services and attractions. | [Visit](https://portal.wpeg.app) |
+| **Quilala – Canada’s Real-Time Community** | Real-time community network for honest conversations, meeting neighbours, and building lasting friendships. | [Visit](https://quilala.ca) |
+| **Erutrepa – Photo AI Explainer** | Photographer-grade image analysis covering exposure, composition, color, EXIF, authenticity, and Lightroom-ready preset styles. | [Visit](https://app.erutrepa.com) |
+| **Pixel IQ – AI-Powered Image Intelligence** | Advanced image intelligence for content, metadata, color relationships, forensics, narrative reports, and WordPress-friendly content. | [Visit](https://pixeliq.ca) |
+| **aHREFna – Domain Intelligence. Engineered.** | Command-driven DNS, TLS, WHOIS, security, and SEO diagnostics consolidated into a domain health report. | [Visit](https://ahrefna.com) |
+| **FOSSY – Curated FOSS Directory** | Community-centric directory for popular GitHub projects, contributors, stacks, discussion, and curation. | [Visit](https://fossy.dev) |
 | **Mekeni** | Filipino-Canadian business directory for discovering top-rated community businesses across Canada. | [Visit](https://mekeni.ca/) |
-| **Pixel IQ** | AI-powered image intelligence platform for content, metadata, color, and forensics analysis. | [Visit](https://pixeliq.ca/) |
-| **FOSSY** | Curated FOSS directory and contributor discovery platform using live GitHub signal. | [Visit](https://fossy.dev/) |
-| **WPEG.app** | Winnipeg micro-apps portal for local services, tools, weather, news, events, and alerts. | [Visit](https://portal.wpeg.app/) |
 | **Heather Tardiff** | Connection-driven wedding and family photography. | [Visit](https://htardiffphotography.ca/) |
 | **Marissa Naylor** | Timeless prairie-inspired wedding photography. | [Visit](https://marissanaylorphoto.ca/) |
 | **GreenRocket** | Community platform for tech founders. | [Visit](https://greenrocket.app/) |

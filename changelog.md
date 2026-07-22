@@ -2,6 +2,16 @@
 
 All notable technical changes to this project will be documented in this file.
 
+## [Unreleased]
+
+### Added
+- **Recently built apps**: Added WPEG Classifieds, Explore WPEG, Winnipeg Jobs, Quilala, Erutrepa, and aHREFna to the portfolio.
+
+### Changed
+- Renamed the Recent Products section to Recently built apps.
+- Refreshed the WPEG Portal, Pixel IQ, and FOSSY names and descriptions.
+- Added site favicons or logos beside app titles, with a neutral fallback for unavailable legacy assets.
+
 ## [v2.6.2] - 2026-06-26
 
 ### Added
