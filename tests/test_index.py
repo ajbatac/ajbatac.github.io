@@ -211,7 +211,7 @@ def test_app_drawer_and_technology_stacks(page: Page):
 
 def test_layout_css_is_linked(page: Page):
     page.goto("http://localhost:3000")
-    stylesheet = page.locator('link[rel="stylesheet"][href="css/style.css?v=12"]')
+    stylesheet = page.locator('link[rel="stylesheet"][href="css/style.css?v=13"]')
     expect(stylesheet).to_have_count(1)
 
 
@@ -231,3 +231,51 @@ def test_display_typography_uses_instrument_serif(page: Page):
         assert "Instrument Serif" in styles["family"]
         assert styles["style"] == "italic"
         assert styles["weight"] == "400"
+
+
+def test_borders_use_the_faint_hairline_system(page: Page):
+    page.goto("http://localhost:3000")
+
+    styles = page.evaluate(
+        """
+        () => {
+          const hr = document.createElement('hr');
+          document.querySelector('main').append(hr);
+          const readBorder = (selector, side) => {
+            const style = getComputedStyle(document.querySelector(selector));
+            return {
+              width: style[`border${side}Width`],
+              color: style[`border${side}Color`],
+            };
+          };
+
+          return {
+            header: readBorder('header', 'Bottom'),
+            section: readBorder('section', 'Top'),
+            experience: readBorder('.experience', 'Left'),
+            card: readBorder('.app-card:not(.featured)', 'Top'),
+            featuredCard: readBorder('.app-card.featured', 'Top'),
+            hr: readBorder('hr', 'Top'),
+          };
+        }
+        """
+    )
+
+    featured_card = styles.pop("featuredCard")
+
+    for border in styles.values():
+        assert border["width"] == "1px"
+        assert border["color"] == "rgba(19, 21, 25, 0.1)"
+
+    assert featured_card["width"] == "1px"
+    assert featured_card["color"] == "rgba(19, 21, 25, 0.18)"
+
+    underlined_link = page.locator("footer a").first
+    underlined_link.hover()
+    assert underlined_link.evaluate(
+        "element => getComputedStyle(element).textDecorationColor"
+    ) == "rgba(19, 21, 25, 0.18)"
+    underlined_link.focus()
+    assert underlined_link.evaluate(
+        "element => getComputedStyle(element).outlineWidth"
+    ) == "2px"
