@@ -211,5 +211,23 @@ def test_app_drawer_and_technology_stacks(page: Page):
 
 def test_layout_css_is_linked(page: Page):
     page.goto("http://localhost:3000")
-    stylesheet = page.locator('link[rel="stylesheet"][href="css/style.css?v=11"]')
+    stylesheet = page.locator('link[rel="stylesheet"][href="css/style.css?v=12"]')
     expect(stylesheet).to_have_count(1)
+
+
+def test_display_typography_uses_instrument_serif(page: Page):
+    page.goto("http://localhost:3000")
+
+    font_stylesheet = page.locator(
+        'link[rel="stylesheet"][href*="family=Instrument+Serif:ital@0;1"]'
+    )
+    expect(font_stylesheet).to_have_count(1)
+
+    for selector in ("h1", "h2", "h3"):
+        heading = page.locator(selector).first
+        styles = heading.evaluate(
+            "element => ({ family: getComputedStyle(element).fontFamily, style: getComputedStyle(element).fontStyle, weight: getComputedStyle(element).fontWeight })"
+        )
+        assert "Instrument Serif" in styles["family"]
+        assert styles["style"] == "italic"
+        assert styles["weight"] == "400"
