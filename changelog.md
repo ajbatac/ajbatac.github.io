@@ -14,6 +14,7 @@ All notable technical changes to this project will be documented in this file.
 - Reworked links, app buttons, featured cards, and interaction states into a restrained grayscale system for cleaner employer-focused scanning.
 - Renamed Email Signatures to EmailSig, refreshed its description, and removed the legacy tracking query from its URL.
 - Marked Email IQ as archived in the portfolio and documentation.
+- Marked Headless WP to React and Canvas Crop as open-source.
 
 ## [v2.6.2] - 2026-06-26
 

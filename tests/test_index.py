@@ -117,6 +117,13 @@ def test_recent_apps_are_static_unique_and_linked(page: Page):
     expect(email_iq.locator(".tag")).to_have_text("Archived")
     expect(email_iq.locator("a")).to_have_text("View Archive")
 
+    for project in ("Headless WP to React", "Canvas Crop"):
+        open_source_card = page.locator(
+            ".app-card", has=page.locator("h3", has_text=project)
+        )
+        expect(open_source_card).to_have_count(1)
+        expect(open_source_card.locator(".tag")).to_have_text("Open-Source")
+
 
 def test_layout_css_is_linked(page: Page):
     page.goto("http://localhost:3000")
